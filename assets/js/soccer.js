@@ -213,7 +213,6 @@ function goal_ajax(match, referee) {
     (local_id == document.getElementById('goal-team').value) ? "&local=true" : "&visitor=true";  
     xhr.send(formData + "&match-id=" + match + "&referee-id=" + referee + "&match-score=" + match_score());
 }
-
 function match_score() {
     return (document.querySelectorAll(".goal-container")[0].innerHTML + "," + document.querySelectorAll(".goal-container")[1].innerHTML);
 }

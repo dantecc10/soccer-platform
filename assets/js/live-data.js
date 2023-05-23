@@ -9,7 +9,6 @@ function update_live_stats() {
         id_string = id.substr(6, id.length);
         id_number = parseInt(id_string);
         update_event_data(element, id_number);
-
         console.log("Elemento " + index + "; id: " + id_number);
     }
     console.log("Hubo " + containers_array.length + " elementos");
@@ -23,11 +22,7 @@ function update_event_data(element, id) {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const response_array = xhr.response.split("*");
             console.log(response_array[0] + ":" + response_array[1]);
-            if (element != null) {
-                element.innerHTML = response_array[0];
-            } else {
-                document.getElementById('match-' + id).innerHTML = response_array[0];
-            }
+            (element != null) ? element.innerHTML = response_array[0] : document.getElementById('match-' + id).innerHTML = response_array[0];
             update_goal_container(element, id, response_array[1]);
         }
     };
