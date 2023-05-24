@@ -199,7 +199,7 @@ if (!isset($_SESSION["referee_id_user"])) {
                         <div class="row text-center rounded-3 my-2 live-match-container" style="border: 1px solid var(--main-background-color);background: linear-gradient(90deg, #406f10, #203103);">
                             <div class="col">
                                 <div class="row rounded-top" style="background-color: var(--submain-background-color);">
-                                    <div class="col"><span class="fs-4"><i class="la la-trophy"></i>&nbsp;EXAGON CHAMPIONS</span></div>
+                                    <div class="col"><span class="fs-4"><i class="la la-trophy"></i> EXAGON CHAMPIONS</span></div>
                                 </div>
                                 <div class="row rounded-4">
                                     <div class="col"><span class="fs-4">
