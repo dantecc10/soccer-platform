@@ -214,9 +214,7 @@ if (!isset($_SESSION["referee_id_user"])) {
                                             ?>
                                         </span></div>
                                 </div>
-                                <div class="row">
-                                    <div class="col" style="height: 2rem !important;"><span class="px-4 py-1 mt-1 rounded-3" style="background-color: orangered;">EN VIVO</span></div>
-                                </div>
+                                <div class="row"><div class="col" style="height: 2rem !important;"><span class="px-4 py-1 mt-1 rounded-3" style="background-color: orangered;">EN VIVO</span></div></div>
                                 <div class="row py-2">
                                     <div class="col align-self-center">
                                         <div class="row">
