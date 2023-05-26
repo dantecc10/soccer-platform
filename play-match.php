@@ -205,21 +205,11 @@ if (!isset($_SESSION["referee_id_user"])) {
                                     <div class="col"><span class="fs-4">
                                             <?php
                                             switch ($match_info[11]) {
-                                                case 0:
-                                                    echo "Programado";
-                                                    break;
-                                                case 1:
-                                                    echo "1er tiempo";
-                                                    break;
-                                                case 2:
-                                                    echo "Descanso";
-                                                    break;
-                                                case 3:
-                                                    echo "2do tiempo";
-                                                    break;
-                                                default:
-                                                    echo "Finalizado";
-                                                    break;
+                                                case 0: echo "Programado"; break;
+                                                case 1: echo "1er tiempo"; break;
+                                                case 2: echo "Descanso"; break;
+                                                case 3: echo "2do tiempo"; break;
+                                                default: echo "Finalizado"; break;
                                             }
                                             ?>
                                         </span></div>
