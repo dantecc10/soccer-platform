@@ -4,3 +4,4 @@ $top_scorers = "SELECT * FROM `players` ORDER BY (`goals_player`) DESC;";
 $top_assisters = "SELECT * FROM `players` ORDER BY (`assists_player`) DESC;";
 $top_fouls = "SELECT * FROM `players` ORDER BY (`fouls_player`) DESC;";
 $x_team_players = "SELECT * FROM `players` WHERE (`player_team_id` = 1) ORDER BY (`dorsal_player`) ASC;";
+$referees = "SELECT * FROM `referees`;";
