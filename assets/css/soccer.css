@@ -1,9 +1,22 @@
 :root {
   --main-background-color: #adee00;
   --submain-background-color: #1a2600;
+  --main-font: "Russo One", sans-serif;
 }
 
 .main-bg-color {
   background-color: var(--main-background-color) !important;
+}
+
+.russo-one-regular {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.custom-font {
+  font-family: var(--main-font) !important;
+  font-weight: 600 !important;
+  font-style: normal;
 }
 
