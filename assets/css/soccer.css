@@ -8,6 +8,18 @@
   background-color: var(--main-background-color) !important;
 }
 
+.submain-bg-color {
+  background-color: var(--submain-background-color) !important;
+}
+
+.main-color {
+  color: var(--main-background-color) !important;
+}
+
+.submain-color {
+  color: var(--submain-background-color) !important;
+}
+
 .russo-one-regular {
   font-family: "Russo One", sans-serif;
   font-weight: 400;
