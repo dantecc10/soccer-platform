@@ -1,6 +1,8 @@
 :root {
   --main-background-color: #adee00;
   --submain-background-color: #1a2600;
+  --third-background-color: #1a2600;
+  --third-color: #1c2700;
   --main-font: "Russo One", sans-serif;
 }
 
@@ -18,6 +20,10 @@
 
 .submain-color {
   color: var(--submain-background-color) !important;
+}
+
+.third-color {
+  color: var(--third-color) !important;
 }
 
 .russo-one-regular {
