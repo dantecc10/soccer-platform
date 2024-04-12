@@ -18,6 +18,14 @@
   color: var(--main-background-color) !important;
 }
 
+button.main-color:hover, a.main-color:hover {
+  color: white !important;
+}
+
+button.submain-color:hover, a.main-color:hover {
+  color: white !important;
+}
+
 .submain-color {
   color: var(--submain-background-color) !important;
 }
