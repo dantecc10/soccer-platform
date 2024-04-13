@@ -272,7 +272,7 @@ function debug_data_printer($info)
     $data = $info[0];
     $fields = $info[1];
 
-    echo ('<table">');
+    echo ('<table>');
     echo ('<thead>');
     echo ('<tr>');
     for ($i = 0; $i < sizeof($fields); $i++) {
