@@ -15,6 +15,5 @@ $player_fields = [
     'red_cards_player'
 ];
 
-
 error_reporting(E_ALL);
 debug_data_printer(sql_debug_fetcher('players', $player_fields));
