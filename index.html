@@ -18,13 +18,13 @@
             "url": "https://soccer.castelancarpinteyro.com"
         }
     </script>
-    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=9d5b0c4f2ade358d1686461858e250b9">
-    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20WHITE%20EDITION.png?h=06d61aa7028ccccff33002770613fc1c" media="(prefers-color-scheme: dark)">
-    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=9d5b0c4f2ade358d1686461858e250b9">
-    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20WHITE%20EDITION.png?h=06d61aa7028ccccff33002770613fc1c" media="(prefers-color-scheme: dark)">
-    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=9d5b0c4f2ade358d1686461858e250b9">
-    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=9d5b0c4f2ade358d1686461858e250b9">
-    <link rel="icon" type="image/png" sizes="2224x2002" href="assets/img/deportex/DEPORTEX%20BLACK%20VERSION.png?h=210cb61e1f24778ba4be5e97e41a4030">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=6baf041d5b489f75a71934a78277e96f">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20WHITE%20EDITION.png?h=6baf041d5b489f75a71934a78277e96f" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=6baf041d5b489f75a71934a78277e96f">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20WHITE%20EDITION.png?h=6baf041d5b489f75a71934a78277e96f" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=6baf041d5b489f75a71934a78277e96f">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=6baf041d5b489f75a71934a78277e96f">
+    <link rel="icon" type="image/png" sizes="2224x2002" href="assets/img/deportex/DEPORTEX%20BLACK%20VERSION.png?h=6baf041d5b489f75a71934a78277e96f">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=254a09188e530cb03e8e344c8d2feb3e">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
@@ -34,22 +34,22 @@
 
 <body>
     <nav class="navbar navbar-expand-lg fixed-top bg-white clean-navbar main-bg-color navbar-light">
-        <div class="container"><a class="navbar-brand logo" href="#"><img class="bs-icon-sm" src="assets/img/deportex/Dep_Dark.png?h=96f2c7a0f61004ac8ba15372782ace44" style="max-height: 45px !important;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand logo" href="#"><img class="bs-icon-sm" src="assets/img/deportex/Dep_Dark.png?h=6baf041d5b489f75a71934a78277e96f" style="max-height: 45px !important;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link active text-center custom-font third-color" href="index.html"><img src="assets/img/tendencias.svg?h=8bd6f1ce9e9a57f1db4ce2ed7258606f" style="max-height: 1.5rem;">&nbsp;INICIO</a></li>
-                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="features.html"><img src="assets/img/campeonato.svg?h=01092fb3c738b4b6a7d72189df6ef84c" style="max-height: 1.5rem;">&nbsp;TABLA</a></li>
-                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="features.html"><img src="assets/img/partidos.svg?h=36b065f3221927e7bb2a9c325ec727ee" style="max-height: 1.5rem;">&nbsp;PARTIDOS</a></li>
-                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="about-us.html"><img src="assets/img/equipos.svg?h=aae65204222a76747c588d6f54718acd" style="max-height: 1.5rem;">&nbsp;EQUIPOS</a></li>
-                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="contact-us.html"><img src="assets/img/jugadores.svg?h=e73a3b92b7dddc7a7081e84fb673954f" style="max-height: 1.5rem;">&nbsp;JUGADORES</a></li>
+                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link active text-center custom-font third-color" href="index.html"><img src="assets/img/deportex/tendencias.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;INICIO</a></li>
+                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="features.html"><img src="assets/img/deportex/campeonato.svg?h=75f1c01ec367425d54761cc2d03b86b7" style="max-height: 1.5rem;">&nbsp;TABLA</a></li>
+                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="features.html"><img src="assets/img/deportex/partidos.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;PARTIDOS</a></li>
+                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="about-us.html"><img src="assets/img/deportex/equipos.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;EQUIPOS</a></li>
+                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="contact-us.html"><img src="assets/img/deportex/jugadores.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;JUGADORES</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <main class="page landing-page" style="background-color: var(--third-background-color);">
-        <section class="clean-block clean-hero p-0" style="color: rgba(26,38,0,0.75);background-image: url(&quot;assets/img/field-4.png?h=a15b3f7fe1d3fd12316cceb774fcd6a8&quot;);">
+        <section class="clean-block clean-hero p-0" style="color: rgba(26,38,0,0.75);background-image: url(&quot;assets/img/deportex/field-4.png?h=1fd7a22190fe07882dd12f90bcdafbee&quot;);">
             <div class="text">
-                <h2 class="custom-font custom-shadow d-flex align-items-center text-center justify-content-center main-color">¡Bienvenido a<img src="assets/img/logo-green-transparent.png?h=d485d31c4aada16e128778e4a1ed1d7f" style="max-inline-size: 3rem;">!</h2>
+                <h2 class="custom-font custom-shadow d-flex align-items-center text-center justify-content-center main-color">¡Bienvenido a&nbsp;<img src="assets/img/deportex/deportex_logo_bienvenida_lime.svg?h=365c85da4681217dad3862b272e0f3bf" style="max-inline-size: 8rem;" width="128" height="20">!</h2>
                 <p class="custom-font main-color">Una plataforma hecha para administrar la pasión de tu liga de fútbol, ¡bienvenido, hincha!</p><a class="btn btn-outline btn-lg custom-font main-color submain-bg-color" href="#see-more" type="button" style="border: 1px solid white;">Conoce más</a>
             </div>
         </section>
@@ -82,7 +82,7 @@
                                         <td class="align-middle submain-bg-color main-color px-0" style="background-color: var(--third-color) !important;">1°</td>
                                         <td class="align-middle submain-bg-color" style="background-color: var(--third-color) !important;">
                                             <div class="row">
-                                                <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=1" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="assets/img/deportex/DeportEX%20Logo%20Disruptivo%20v1.png?h=ee958d7b2a2a6fa2ca6c85ca2a305d0a" style="max-height: 40px;"></a></div>
+                                                <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=1" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="assets/img/deportex/DeportEX%20Logo%20Disruptivo%20v1.png?h=6baf041d5b489f75a71934a78277e96f" style="max-height: 40px;"></a></div>
                                                 <div class="col d-flex align-items-center col-12 col-md-9 px-1 ps-0"><span class="d-flex align-middle justify-content-center col-12 main-color">Bayern München</span></div>
                                             </div>
                                         </td>
@@ -99,7 +99,7 @@
                                         <td class="align-middle submain-bg-color main-color px-0" style="background-color: var(--third-color) !important;">2°</td>
                                         <td class="align-middle submain-bg-color" style="background-color: var(--third-color) !important;">
                                             <div class="row">
-                                                <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=1" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="assets/img/deportex/DeportEX%20Logo%20Disruptivo%20v1.png?h=ee958d7b2a2a6fa2ca6c85ca2a305d0a" style="max-height: 40px;"></a></div>
+                                                <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=1" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="assets/img/deportex/DeportEX%20Logo%20Disruptivo%20v1.png?h=6baf041d5b489f75a71934a78277e96f" style="max-height: 40px;"></a></div>
                                                 <div class="col d-flex align-items-center col-12 col-md-9 px-1 ps-0"><span class="d-flex align-middle justify-content-center col-12 main-color">Club de los Jubilados FC</span></div>
                                             </div>
                                         </td>
@@ -116,7 +116,7 @@
                                         <td class="align-middle submain-bg-color main-color px-0" style="background-color: var(--third-color) !important;">3°</td>
                                         <td class="align-middle submain-bg-color" style="background-color: var(--third-color) !important;">
                                             <div class="row">
-                                                <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=1" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="assets/img/deportex/DeportEX%20Logo%20Disruptivo%20v1.png?h=ee958d7b2a2a6fa2ca6c85ca2a305d0a" style="max-height: 40px;"></a></div>
+                                                <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=1" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="assets/img/deportex/DeportEX%20Logo%20Disruptivo%20v1.png?h=6baf041d5b489f75a71934a78277e96f" style="max-height: 40px;"></a></div>
                                                 <div class="col d-flex align-items-center col-12 col-md-9 px-1 ps-0"><span class="d-flex align-middle justify-content-center col-12 main-color">Club de los Jubilados FC</span></div>
                                             </div>
                                         </td>
@@ -138,9 +138,9 @@
         </section>
         <section class="clean-block clean-info dark main-bg-color submain-color">
             <div class="container">
-                <div class="block-heading">
-                    <h2 class="text-info submain-color">Goleadores</h2>
-                    <p class="submain-color">Conoce a los goleadores de esta temporada</p>
+                <div class="block-heading mb-1">
+                    <h2 class="text-info submain-color mb-1">Mejores jugadores</h2>
+                    <p class="submain-color">Conoce a los jugadores que mejor rendimiento han tenido esta temporada</p>
                 </div>
                 <div class="row align-items-center">
                     <div class="col">
@@ -377,7 +377,7 @@
             </div>
         </section>
     </main><!-- Start: Footer Dark -->
-    <footer class="page-footer dark" style="background-image: url(&quot;assets/img/grass.jpg?h=8e93e870c79309ebb5fe283e1a8123b8&quot;);">
+    <footer class="page-footer dark" style="background-image: url(&quot;assets/img/deportex/grass.jpg?h=1fd7a22190fe07882dd12f90bcdafbee&quot;);">
         <div class="container">
             <div class="row rounded-4" style="background-color: rgba(173,238,0,0.39);">
                 <div class="col-sm-3">
