@@ -148,14 +148,14 @@
                             <div class="carousel-inner custom-font">
                                 <div class="carousel-item active">
                                     <div class="row" style="max-height: 40rem;">
-                                        <div class="col col-12 col-sm-5 ps-sm-4" style="max-height: inherit;">
+                                        <div class="col col-12 col-sm-5 col-md-6 col-xxl-5 ps-sm-4" style="max-height: inherit;">
                                             <div class="row">
                                                 <div class="col">
-                                                    <h1 class="text-center submain-color m-0 custom-font">Harry Kane</h1>
+                                                    <h1 class="text-center submain-color m-0 custom-font fs-4">Harry Kane</h1>
                                                 </div>
                                             </div>
                                             <div class="row" style="max-height: 20rem;">
-                                                <div class="col text-center p-0" style="background: url(&quot;assets/img/samples/logo-bayern.png?h=689f785b0d375e5269cde4eff9a00b5c&quot;) center / contain no-repeat;filter: drop-shadow(0 10px rgba(0, 0, 0, 0.5));max-height: inherit;"><img src="assets/img/samples/players/harry-kane.png?h=fd6f8cfcbe3cdd4018c28ccc323fb7b4" style="max-height: inherit;filter: drop-shadow(-10px 10px rgba(0, 0, 0, 0.5));max-width: inherit;"></div>
+                                                <div class="col text-center p-0" style="background: url(&quot;assets/img/samples/logo-bayern.png?h=689f785b0d375e5269cde4eff9a00b5c&quot;) center / contain no-repeat;filter: drop-shadow(0 10px 1rem rgba(0, 0, 0, 0.5));max-height: inherit;"><img src="assets/img/samples/players/harry-kane.png?h=fd6f8cfcbe3cdd4018c28ccc323fb7b4" style="max-height: inherit;filter: drop-shadow(-10px 10px rgba(0, 0, 0, 0.5));max-width: inherit;"></div>
                                             </div>
                                         </div>
                                         <div class="col align-middle align-self-center mt-3 mt-sm-0" style="max-height: inherit;">
@@ -224,11 +224,11 @@
                                         <div class="col col-12 col-sm-5 ps-sm-4" style="max-height: inherit;">
                                             <div class="row">
                                                 <div class="col">
-                                                    <h1 class="text-center submain-color m-0 custom-font">Leroy Sané</h1>
+                                                    <h1 class="text-center submain-color m-0 custom-font fs-4">Leroy Sané</h1>
                                                 </div>
                                             </div>
                                             <div class="row" style="max-height: 20rem;">
-                                                <div class="col text-center p-0" style="background: url(&quot;assets/img/samples/logo-bayern.png?h=689f785b0d375e5269cde4eff9a00b5c&quot;) center / contain no-repeat;filter: drop-shadow(0 10px rgba(0, 0, 0, 0.5));max-height: inherit;"><img src="assets/img/samples/players/leroy_sane.png?h=fd6f8cfcbe3cdd4018c28ccc323fb7b4" style="max-height: inherit;filter: drop-shadow(-10px 10px rgba(0, 0, 0, 0.5));max-width: inherit;"></div>
+                                                <div class="col text-center p-0" style="background: url(&quot;assets/img/samples/logo-bayern.png?h=689f785b0d375e5269cde4eff9a00b5c&quot;) center / contain no-repeat;filter: drop-shadow(0 10px 1rem rgba(0, 0, 0, 0.5));max-height: inherit;"><img src="assets/img/samples/players/leroy_sane.png?h=fd6f8cfcbe3cdd4018c28ccc323fb7b4" style="max-height: inherit;filter: drop-shadow(-10px 10px rgba(0, 0, 0, 0.5));max-width: inherit;"></div>
                                             </div>
                                         </div>
                                         <div class="col align-middle align-self-center mt-3 mt-sm-0" style="max-height: inherit;">
@@ -297,11 +297,11 @@
                                         <div class="col col-12 col-sm-5 ps-sm-4" style="max-height: inherit;">
                                             <div class="row">
                                                 <div class="col">
-                                                    <h1 class="text-center submain-color m-0 custom-font">David "el Teacher" Herrero Ríos</h1>
+                                                    <h1 class="fs-4 fw-normal text-center submain-color m-0 custom-font">David "el Teacher" Herrero Ríos</h1>
                                                 </div>
                                             </div>
                                             <div class="row" style="max-height: 20rem;">
-                                                <div class="col text-center p-0" style="background: url(&quot;assets/img/samples/masters-fc.png?h=b2ccd38b407a40501e86cf611779775b&quot;) center / contain no-repeat;filter: drop-shadow(0 10px rgba(0, 0, 0, 0.5));max-height: inherit;"><img src="assets/img/avatars/male_unknown_player.png?h=70220feb3890f96f23262521479a626c" style="max-height: inherit;filter: drop-shadow(-10px 10px rgba(0, 0, 0, 0.5));max-width: inherit;"></div>
+                                                <div class="col text-center p-0" style="background: url(&quot;assets/img/samples/masters-fc.png?h=b2ccd38b407a40501e86cf611779775b&quot;) center / contain no-repeat;filter: drop-shadow(0 10px 1rem rgba(0, 0, 0, 0.5));max-height: inherit;"><img src="assets/img/avatars/male_unknown_player.png?h=70220feb3890f96f23262521479a626c" style="max-height: inherit;filter: drop-shadow(-10px 10px rgba(0, 0, 0, 0.5));max-width: inherit;"></div>
                                             </div>
                                         </div>
                                         <div class="col align-middle align-self-center mt-3 mt-sm-0" style="max-height: inherit;">
