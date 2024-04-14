@@ -264,7 +264,7 @@ function sql_debug_fetcher($table, $fields)
     //    }
     //    echo ('</tr>');
     //}
-    
+
     return [$data, $fields];
 }
 
@@ -291,4 +291,38 @@ function debug_data_printer($info)
     }
     echo ('</tbody>');
     echo ('</table>');
+}
+
+/*function get_day_name($date)
+{
+    $fecha = $date; #"2022-04-11"; // Ejemplo de fecha obtenida de la base de datos
+
+    // Establecer el idioma local a español
+    setlocale(LC_TIME, 'es_ES.UTF-8');
+
+    // Convertir la fecha a un formato legible
+    $formated_date = date("Y-m-d", strtotime($date));
+
+    // Obtener el nombre del día de la semana en español
+    $weekday_name = strftime("%A", strtotime($date));
+
+    #echo "La fecha $fecha_formateada cayó en un $nombre_dia_semana.";
+    return $weekday_name;
+}*/
+
+function get_day_name($date)
+{
+    $fecha = $date; #"2022-04-11"; // Ejemplo de fecha obtenida de la base de datos
+
+    // Convertir la fecha a un formato legible
+    $formated_date = date("Y-m-d", strtotime($date));
+
+    // Crear un formateador de fecha
+    $formatter = new IntlDateFormatter('es_ES', IntlDateFormatter::FULL, IntlDateFormatter::FULL);
+    $formatter->setPattern('EEEE');
+
+    // Obtener el nombre del día de la semana en español
+    $weekday_name = $formatter->format(new DateTime($date));
+
+    return $weekday_name;
 }
