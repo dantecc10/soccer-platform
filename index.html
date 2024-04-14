@@ -39,7 +39,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link active text-center custom-font third-color" href="index.html"><img src="assets/img/deportex/tendencias.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;INICIO</a></li>
                     <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link active text-center custom-font third-color" href="/#table"><img src="assets/img/deportex/campeonato.svg?h=75f1c01ec367425d54761cc2d03b86b7" style="max-height: 1.5rem;">&nbsp;TABLA</a></li>
-                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="features.html"><img src="assets/img/deportex/partidos.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;PARTIDOS</a></li>
+                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link active text-center custom-font third-color" href="/#matches"><img src="assets/img/deportex/partidos.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;PARTIDOS</a></li>
                     <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="about-us.html"><img src="assets/img/deportex/equipos.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;EQUIPOS</a></li>
                     <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="contact-us.html"><img src="assets/img/deportex/jugadores.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;JUGADORES</a></li>
                 </ul>
@@ -55,7 +55,7 @@
         </section>
         <section id="table" class="clean-block features">
             <div class="container">
-                <div class="block-heading mb-2 pt-3">
+                <div class="block-heading mb-2">
                     <h2 class="text-info mb-0 main-color custom-font">Tabla de posiciones</h2>
                     <p class="main-color custom-font">Consulta los puntos y posiciones de los equipos</p>
                 </div>
@@ -136,7 +136,7 @@
                 </div>
             </div>
         </section>
-        <section class="clean-block clean-info dark main-bg-color submain-color">
+        <section id="top-players" class="clean-block clean-info dark main-bg-color submain-color">
             <div class="container">
                 <div class="block-heading mb-1">
                     <h2 class="text-info mb-1 submain-color custom-font">Mejores jugadores</h2>
@@ -371,6 +371,44 @@
                                 <!-- Start: Next --><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a><!-- End: Next -->
                             </div>
                             <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2"></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="matches" class="clean-block features">
+            <div class="container">
+                <div class="block-heading mb-2">
+                    <h2 class="text-info mb-0 main-color custom-font">Próximos partidos</h2>
+                    <p class="main-color custom-font">Consulta las fechas y horarios de los próximos partidos</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col" style="text-align: center;"><span class="text-muted">Sábado | 14 / 04 / 2024 - 03:00 p. m. | Polideportivo, Campo 2</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col col-12">
+                                        <div class="row">
+                                            <div class="col text-center"><span class="fs-4">FC Bayern München</span>
+                                                <hr class="m-0"><span class="fs-6">1° en la tabla general</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row justify-content-center">
+                                            <div class="col text-center col-12 col-lg-7 col-xl-6"><img class="col-8" src="assets/img/samples/logo-bayern.png?h=689f785b0d375e5269cde4eff9a00b5c"></div>
+                                            <div class="col col-12">
+                                                <div class="row col-11"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col align-self-center col-1 px-0" style="text-align: center;"><span class="fs-5">VS</span></div>
+                            <div class="col"></div>
                         </div>
                     </div>
                 </div>
