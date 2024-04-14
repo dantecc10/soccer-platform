@@ -390,25 +390,45 @@
                         <div class="row">
                             <div class="col">
                                 <div class="row">
-                                    <div class="col col-12">
+                                    <div class="col col-12 mb-1">
                                         <div class="row">
-                                            <div class="col text-center"><span class="fs-4">FC Bayern München</span>
-                                                <hr class="m-0"><span class="fs-6">1° en la tabla general</span>
+                                            <div class="col text-center"><span class="fs-4 custom-font">FC Bayern München</span>
+                                                <hr class="m-0"><span class="fs-6 custom-font">1° en liga</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <div class="row justify-content-center">
-                                            <div class="col text-center col-12 col-lg-7 col-xl-6"><img class="col-8" src="assets/img/samples/logo-bayern.png?h=689f785b0d375e5269cde4eff9a00b5c"></div>
-                                            <div class="col col-12">
-                                                <div class="row col-11"></div>
+                                        <div class="row">
+                                            <div class="col col-12 pb-3">
+                                                <div class="row justify-content-center">
+                                                    <div class="col text-center col-12 col-lg-7 col-xl-6"><img class="col-8" src="assets/img/samples/logo-bayern.png?h=689f785b0d375e5269cde4eff9a00b5c"></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col align-self-center col-1 px-0" style="text-align: center;"><span class="fs-5">VS</span></div>
-                            <div class="col"></div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col col-12 mb-2">
+                                        <div class="row">
+                                            <div class="col text-center"><span class="fs-4 custom-font">Masters FC</span>
+                                                <hr class="m-0"><span class="fs-6 custom-font">2° en liga</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col col-12 pb-3">
+                                                <div class="row justify-content-center">
+                                                    <div class="col text-center col-12 col-lg-7 col-xl-6"><img class="col-8" src="assets/img/samples/masters-fc.png?h=b2ccd38b407a40501e86cf611779775b"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
