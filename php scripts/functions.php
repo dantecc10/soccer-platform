@@ -301,7 +301,7 @@ function debug_data_printer($info)
     setlocale(LC_TIME, 'es_ES.UTF-8');
 
     // Convertir la fecha a un formato legible
-    $formated_date = date("Y-m-d", strtotime($date));
+    $formatted_date = date("Y-m-d", strtotime($date));
 
     // Obtener el nombre del día de la semana en español
     $weekday_name = strftime("%A", strtotime($date));
