@@ -46,3 +46,7 @@ button.submain-color:hover, a.main-color:hover {
   font-style: normal;
 }
 
+.page-footer ul li:before, .page-footer ul li:after {
+  background-color: var(--main-background-color);
+}
+
