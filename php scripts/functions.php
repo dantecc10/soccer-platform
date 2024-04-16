@@ -350,6 +350,7 @@ function generate_league_table()
     echo ('<th>DG</th>');
     echo ('<th>Pts.</th>');
     echo ('<th></th>');
+
     echo ("</thead></tr>");
     for ($i = 0; $i < sizeof($data); $i++) {
         echo ("<tr>");
