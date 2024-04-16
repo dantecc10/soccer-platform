@@ -39,7 +39,8 @@ $player_fields = [
     'assists_player',
     'fouls_player',
     'yellow_cards_player',
-    'red_cards_player'
+    'red_cards_player',
+    'img_player'
 ];
 
 $stats_fields = [
