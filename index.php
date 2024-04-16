@@ -65,77 +65,10 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col">
-                        <div class="table-responsive">
-                            <table class="table main-color rounded-5 custom-font">
-                                <thead class="text-center main-bg-color">
-                                    <tr class="submain-bg-color">
-                                        <th class="submain-bg-color main-color px-0" style="background-color: var(--third-color) !important;">#</th>
-                                        <th class="col-3 submain-bg-color main-color" style="background-color: var(--third-color) !important;">Club</th>
-                                        <th class="submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">PJ</th>
-                                        <th class="submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">G</th>
-                                        <th class="submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">E</th>
-                                        <th class="submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">P</th>
-                                        <th class="d-none d-sm-table-cell submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">GF</th>
-                                        <th class="d-none d-sm-table-cell submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">GC</th>
-                                        <th class="submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">DG</th>
-                                        <th class="submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">Pts.</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-center table-striped">
-                                    <tr>
-                                        <td class="align-middle submain-bg-color main-color px-0" style="background-color: var(--third-color) !important;">1°</td>
-                                        <td class="align-middle submain-bg-color" style="background-color: var(--third-color) !important;">
-                                            <div class="row">
-                                                <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=1" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="assets/img/samples/logo-bayern.png?h=689f785b0d375e5269cde4eff9a00b5c" style="max-height: 40px;width: auto;"></a></div>
-                                                <div class="col d-flex align-items-center col-12 col-md-9 px-1 ps-0"><span class="d-flex align-middle justify-content-center col-12 main-color">FC Bayern München</span></div>
-                                            </div>
-                                        </td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">12</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">3</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">9</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">0</td>
-                                        <td class="d-none d-sm-table-cell align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">27</td>
-                                        <td class="d-none d-sm-table-cell align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">7</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">20</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">18</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="align-middle submain-bg-color main-color px-0" style="background-color: var(--third-color) !important;">2°</td>
-                                        <td class="align-middle submain-bg-color" style="background-color: var(--third-color) !important;">
-                                            <div class="row">
-                                                <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=1" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="assets/img/samples/masters-fc.png?h=b2ccd38b407a40501e86cf611779775b" style="max-height: 40px;width: auto;" width="40" height="40"></a></div>
-                                                <div class="col d-flex align-items-center col-12 col-md-9 px-1 ps-0"><span class="d-flex align-middle justify-content-center col-12 main-color">Masters FC</span></div>
-                                            </div>
-                                        </td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">12</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">3</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">9</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">0</td>
-                                        <td class="d-none d-sm-table-cell align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">27</td>
-                                        <td class="d-none d-sm-table-cell align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">7</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">20</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">18</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="align-middle submain-bg-color main-color px-0" style="background-color: var(--third-color) !important;">3°</td>
-                                        <td class="align-middle submain-bg-color" style="background-color: var(--third-color) !important;">
-                                            <div class="row">
-                                                <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=1" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="assets/img/deportex/DeportEX%20Logo%20Disruptivo%20v1.png?h=6baf041d5b489f75a71934a78277e96f" style="max-height: 40px;"></a></div>
-                                                <div class="col d-flex align-items-center col-12 col-md-9 px-1 ps-0"><span class="d-flex align-middle justify-content-center col-12 main-color">Club de los Jubilados FC</span></div>
-                                            </div>
-                                        </td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">12</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">3</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">9</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">0</td>
-                                        <td class="d-none d-sm-table-cell align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">27</td>
-                                        <td class="d-none d-sm-table-cell align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">7</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">20</td>
-                                        <td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">18</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <?php
+                        include_once "php scripts/functions.php";
+                        generate_league_table();
+                        ?>
                     </div>
                 </div>
             </div>
