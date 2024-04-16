@@ -331,30 +331,30 @@ function get_day_name($date)
 
 function generate_league_table()
 {
-    //include_once "connection.php";
     include "soccer_queries.php";
-    //if (!include_once "soccer_queries.php") {
-    //    include_once "php scripts/soccer_queries.php";
-    //}
     $sql = $league_query;
 
     $data = fetch_fields('teams', $league_table_fields, '', $sql);
 
-    //$stmt = $connection->prepare($sql);
-    //$stmt->execute();
-    //$result = $stmt->get_result();
-    //$data = $result->fetch_all(MYSQLI_ASSOC);
-    //$stmt->close();
     echo ("<table>");
     echo ("<tr><thead>");
-    for ($i = 0; $i < sizeof($league_table_fields); $i++) {
-        echo ("<th>" . $league_table_fields[$i] . "</th>");
-    }
+    //for ($i = 0; $i < sizeof($league_table_fields); $i++) { echo ("<th>" . $league_table_fields[$i] . "</th>"); }
+    echo ('<th>Logo</th>');
+    echo ('<th>Equipo</th>');
+    echo ('<th>PJ</th>');
+    echo ('<th>G</th>');
+    echo ('<th>E</th>');
+    echo ('<th>P</th>');
+    echo ('<th>GF</th>');
+    echo ('<th>GC</th>');
+    echo ('<th>DG</th>');
+    echo ('<th>Pts.</th>');
+    echo ('<th></th>');
     echo ("</thead></tr>");
-    for ($i=0; $i < sizeof($data); $i++) {
+    for ($i = 0; $i < sizeof($data); $i++) {
         echo ("<tr>");
-        for($j=0; $j < sizeof($league_table_fields); $j++) {
-            if($j != 0) {
+        for ($j = 0; $j < sizeof($league_table_fields); $j++) {
+            if ($j != 0) {
                 echo ("<td>" . $data[$i][$j] . "</td>");
             } else {
                 echo ("<td><img src='" . ($data[$i][$j]) . "' height='20px' width='auto'></td>");

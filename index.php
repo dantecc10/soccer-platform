@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Inicio - DEPORTEX</title>
     <meta property="og:image" content="https://soccer.castelancarpinteyro.com/assets/img/deportex/DeportEX Gold Edition VFX.png">
@@ -28,7 +31,8 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=254a09188e530cb03e8e344c8d2feb3e">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/soccer.css?h=69dbbfe3d013faf1fdc7ed8b28a1edb1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap'">
+    <link rel="stylesheet" href="assets/css/soccer.css?h=bb91f2a49d4604bb3b7d68f7f2729e35">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css?h=e737f76df021b46fa7180f48799a5d20">
 </head>
 
@@ -37,11 +41,11 @@
         <div class="container"><a class="navbar-brand logo" href="#"><img class="bs-icon-sm" src="assets/img/deportex/Dep_Dark.png?h=6baf041d5b489f75a71934a78277e96f" style="max-height: 45px !important;"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link active text-center custom-font third-color" href="index.html"><img src="assets/img/deportex/tendencias.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;INICIO</a></li>
-                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link active text-center custom-font third-color" href="/#table"><img src="assets/img/deportex/campeonato.svg?h=75f1c01ec367425d54761cc2d03b86b7" style="max-height: 1.5rem;">&nbsp;TABLA</a></li>
-                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link active text-center custom-font third-color" href="/#matches"><img src="assets/img/deportex/partidos.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;PARTIDOS</a></li>
-                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="about-us.html"><img src="assets/img/deportex/equipos.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;EQUIPOS</a></li>
-                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="contact-us.html"><img src="assets/img/deportex/jugadores.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="max-height: 1.5rem;">&nbsp;JUGADORES</a></li>
+                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link active text-center custom-font third-color" href="index.html" style="font-size: 1.5rem;"><img src="assets/img/deportex/tendencias.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="height: 1.5rem;">&nbsp;INICIO</a></li>
+                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link active text-center custom-font third-color" href="/#table" style="font-size: 1.5rem;"><img src="assets/img/deportex/campeonato.svg?h=75f1c01ec367425d54761cc2d03b86b7" style="height: 1.5rem;">&nbsp;TABLA</a></li>
+                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link active text-center custom-font third-color" href="/#matches" style="font-size: 1.5rem;"><img src="assets/img/deportex/partidos.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="height: 1.5rem;">&nbsp;PARTIDOS</a></li>
+                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="about-us.html" style="font-size: 1.5rem;"><img src="assets/img/deportex/equipos.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="height: 1.5rem;">&nbsp;EQUIPOS</a></li>
+                    <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color" href="contact-us.html" style="font-size: 1.5rem;"><img src="assets/img/deportex/jugadores.svg?h=1fd7a22190fe07882dd12f90bcdafbee" style="height: 1.5rem;">&nbsp;JUGADORES</a></li>
                 </ul>
             </div>
         </div>
@@ -49,8 +53,8 @@
     <main class="page landing-page" style="background-color: var(--third-background-color);">
         <section class="clean-block clean-hero p-0" style="color: rgba(26,38,0,0.75);background: url(&quot;assets/img/deportex/field-4.png?h=1fd7a22190fe07882dd12f90bcdafbee&quot;) center / cover;">
             <div class="text">
-                <h2 class="custom-font custom-shadow d-flex align-items-center text-center justify-content-center main-color">¡Bienvenido a&nbsp;<img src="assets/img/deportex/deportex_logo_bienvenida_lime.svg?h=365c85da4681217dad3862b272e0f3bf" style="max-inline-size: 8rem;" width="128" height="20">!</h2>
-                <p class="custom-font main-color">Una plataforma hecha para administrar la pasión de tu liga de fútbol, ¡bienvenido, hincha!</p><a class="btn btn-outline btn-lg custom-font main-color submain-bg-color" href="#table" type="button" style="border: 1px solid white;">Consultar</a>
+                <h2 class="custom-font custom-shadow d-flex align-items-center text-center justify-content-center main-color" style="max-height: 3.5rem;">¡Bienvenido a&nbsp;<img src="assets/img/deportex/deportex_logo_bienvenida_lime.svg?h=365c85da4681217dad3862b272e0f3bf" width="129" height="20" style="max-height: 5rem;width: auto;">!</h2>
+                <p class="custom-font main-color" style="font-size: 2rem;">Una plataforma hecha para administrar la pasión de tu liga de fútbol, ¡bienvenido, hincha!</p><a class="btn btn-outline btn-lg custom-font main-color submain-bg-color" href="#table" type="button" style="border: 1px solid white;">Consultar</a>
             </div>
         </section>
         <section id="table" class="clean-block features">
@@ -385,7 +389,7 @@
                 <div class="row justify-content-center">
                     <div class="col">
                         <div class="row">
-                            <div class="col" style="text-align: center;"><span class="text-muted">Sábado | 14 / 04 / 2024 - 03:00 p. m. | Polideportivo, Campo 2</span></div>
+                            <div class="col" style="text-align: center;"><span class="text-muted custom-font">Sábado | 14 / 04 / 2024 - 03:00 p. m. | Polideportivo, Campo 2</span></div>
                         </div>
                         <div class="row">
                             <div class="col">
@@ -435,9 +439,9 @@
             </div>
         </section>
     </main><!-- Start: Footer Dark -->
-    <footer class="page-footer dark" style="background-image: url(&quot;assets/img/deportex/grass.jpg?h=1fd7a22190fe07882dd12f90bcdafbee&quot;);">
+    <footer class="page-footer dark" style="background: linear-gradient(rgba(173,238,0,0.33), rgba(0,0,0,0.55) 77%, var(--third-background-color)), url(&quot;assets/img/deportex/grass.jpg?h=1fd7a22190fe07882dd12f90bcdafbee&quot;), var(--submain-background-color);">
         <div class="container">
-            <div class="row rounded-4" style="background-color: rgba(173,238,0,0.39);">
+            <div class="row rounded-4" style="background-color: rgba(14,20,1,0.83);">
                 <div class="col-sm-3">
                     <h5 style="filter: blur(0px) !important;">Empieza</h5>
                     <ul>
@@ -471,7 +475,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright" style="background: rgb(13,27,0);">
             <p>© 2024 Copyright DEPORTEX</p>
         </div>
     </footer><!-- End: Footer Dark -->
