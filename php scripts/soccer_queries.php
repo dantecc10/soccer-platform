@@ -75,3 +75,21 @@ $referees_fields = [
 ];
 
 $matches = "SELECT * FROM `matches` ORDER BY (`start_schedule_match`) DESC;";
+$league_query = "SELECT `icon_team`, `name_team`,
+            (`wins_team` + `draws_team` + `losses_team`) AS `played_games`,
+            `wins_team`, `draws_team`, `losses_team`, `goals_for_team`, `goals_against_team`,
+            (`goals_for_team` - `goals_against_team`) AS `goals_difference`,
+            ((3 * `wins_team`) + `draws_team`) AS `points`
+            FROM `teams` ORDER BY `points` DESC;";
+$league_table_fields = [
+    'icon_team',
+    'name_team',
+    'played_games',
+    'wins_team',
+    'draws_team',
+    'losses_team',
+    'goals_for_team',
+    'goals_against_team',
+    'goals_difference',
+    'points'
+];

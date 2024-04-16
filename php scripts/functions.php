@@ -247,10 +247,12 @@ function import_env_configs()
     return $dotenv;
     //$dotenv->load();
 }
-function sql_debug_fetcher($table, $fields)
+function sql_debug_fetcher($table, $fields, $custom_query)
 {
     include_once "connection.php";
-    $sql = "SELECT * FROM `" . $table . "`";
+    $sql = ("custom_query" != null && "custom_query" != "") ? $custom_query : ("SELECT * FROM `" . $table . "`");
+
+    //$sql = "SELECT * FROM `" . $table . "`";
     $stmt = $connection->prepare($sql);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -325,4 +327,15 @@ function get_day_name($date)
     $weekday_name = $formatter->format(new DateTime($date));
 
     return $weekday_name;
+}
+
+function generate_league_table()
+{
+    include_once "connection.php";
+    $sql = "SELECT * FROM `teams` ORDER BY (`wins_team` * 3) + (`draws_team` * 1) DESC";
+    $stmt = $connection->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $data = $result->fetch_all(MYSQLI_ASSOC);
+    $stmt->close();
 }
