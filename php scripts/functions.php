@@ -382,9 +382,9 @@ function generate_league_table()
                                 </div>
                             </td>');
                     break;
-                case 6:
-                    echo ('<td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">' . $data[$i][$j] . '</td>');
-                    break;
+//                case 6:
+                    //echo ('<td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">' . $data[$i][$j] . '</td>');
+                    //break;
 
                 default:
                     if (($j >= 2 && $j <= 5) || ($j == 8 || $j == 9)) {
