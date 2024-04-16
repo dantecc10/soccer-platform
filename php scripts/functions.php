@@ -336,7 +336,7 @@ function generate_league_table()
 
     $data = fetch_fields('teams', $league_table_fields, '', $sql);
 
-    echo ("<table>");
+    /*echo ("<table>");
     echo ("<tr><thead>");
     //for ($i = 0; $i < sizeof($league_table_fields); $i++) { echo ("<th>" . $league_table_fields[$i] . "</th>"); }
     echo ('<th>Logo</th>');
@@ -349,7 +349,7 @@ function generate_league_table()
     echo ('<th>GC</th>');
     echo ('<th>DG</th>');
     echo ('<th>Pts.</th>');
-    echo ('<th></th>');
+    echo ('<th></th>');*/
 
     echo (' <div class="table-responsive">
                 <table class="table main-color rounded-5 custom-font">
@@ -394,15 +394,10 @@ function generate_league_table()
                         echo ('<td class="d-none d-sm-table-cell align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">27</td>');
                     break;
             }
-
-            if ($j != 0) {
-                echo ("<td>" . $data[$i][$j] . "</td>");
-            } else {
-            }
         }
         echo ("</tr>");
     }
-    echo ("</table>");
+    echo ("</tbody></table></div>");
 }
 
 function fetch_fields($table, $fields, $id, $custom_query)
