@@ -17,4 +17,6 @@ $referees_fields = $fields_array[4];
 
 echo (substr($fields_array[0][0], 3, strlen($fields_array[0][0])));
 error_reporting(E_ALL);
-debug_data_printer(sql_debug_fetcher('matches', $matches_fields, ""));
+//debug_data_printer(sql_debug_fetcher('matches', $matches_fields, ""));
+include_once "soccer_queries.php";
+debug_data_printer(sql_debug_fetcher('', $league_table_fields, $league_query));
