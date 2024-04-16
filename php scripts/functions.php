@@ -374,7 +374,7 @@ function generate_league_table()
         for ($j = 0; $j < sizeof($league_table_fields); $j++) {
             switch ($j) {
                 case 0:
-                    echo ('<td class="align-middle submain-bg-color main-color px-0" style="background-color: var(--third-color) !important;">' . ($j + 1) . '°</td>');
+                    echo ('<td class="align-middle submain-bg-color main-color px-0" style="background-color: var(--third-color) !important;">' . ($i + 1) . '°</td>');
                     echo (' <td class="align-middle submain-bg-color" style="background-color: var(--third-color) !important;">
                                 <div class="row">
                                     <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=' . $data[$i][($j + 1)] . '" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="' . $data[$i][$j] . '" style="max-height: 40px;width: auto;"></a></div>
