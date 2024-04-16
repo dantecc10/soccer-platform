@@ -332,10 +332,10 @@ function get_day_name($date)
 function generate_league_table()
 {
     //include_once "connection.php";
-    //include_once "soccer_queries.php";
-    if (!include_once "soccer_queries.php") {
-        include_once "php scripts/soccer_queries.php";
-    }
+    include "soccer_queries.php";
+    //if (!include_once "soccer_queries.php") {
+    //    include_once "php scripts/soccer_queries.php";
+    //}
     $sql = $league_query;
 
     $data = fetch_fields('teams', $league_table_fields, '', $sql);
