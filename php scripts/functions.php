@@ -357,7 +357,7 @@ function generate_league_table()
             if($j != 0) {
                 echo ("<td>" . $data[$i][$j] . "</td>");
             } else {
-                echo ("<td><img src='" . ($data[$i][$j]) . "' height='1rem' width='auto'></td>");
+                echo ("<td><img src='" . ($data[$i][$j]) . "' height='20px' width='auto'></td>");
             }
         }
         echo ("</tr>");
