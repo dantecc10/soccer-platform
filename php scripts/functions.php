@@ -354,7 +354,11 @@ function generate_league_table()
     for ($i=0; $i < sizeof($data); $i++) {
         echo ("<tr>");
         for($j=0; $j < sizeof($league_table_fields); $j++) {
-            echo ("<td>" . $data[$i][$j] . "</td>");
+            if($j != 0) {
+                echo ("<td>" . $data[$i][$j] . "</td>");
+            } else {
+                echo ("<td><img src='" . ($data[$i][$j]) . "' height='1rem' width='auto'></td>");
+            }
         }
         echo ("</tr>");
     }
