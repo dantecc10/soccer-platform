@@ -351,14 +351,53 @@ function generate_league_table()
     echo ('<th>Pts.</th>');
     echo ('<th></th>');
 
-    echo ("</thead></tr>");
+    echo (' <div class="table-responsive">
+                <table class="table main-color rounded-5 custom-font">
+                    <thead class="text-center main-bg-color">
+                        <tr class="submain-bg-color">
+                            <th class="submain-bg-color main-color px-0" style="background-color: var(--third-color) !important;">#</th>
+                            <th class="col-3 submain-bg-color main-color" style="background-color: var(--third-color) !important;">Club</th>
+                            <th class="submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">PJ</th>
+                            <th class="submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">G</th>
+                            <th class="submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">E</th>
+                            <th class="submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">P</th>
+                            <th class="d-none d-sm-table-cell submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">GF</th>
+                            <th class="d-none d-sm-table-cell submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">GC</th>
+                            <th class="submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">DG</th>
+                            <th class="submain-bg-color main-color px-1" style="background-color: var(--third-color) !important;">Pts.</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center table-striped">');
+
     for ($i = 0; $i < sizeof($data); $i++) {
         echo ("<tr>");
         for ($j = 0; $j < sizeof($league_table_fields); $j++) {
+            switch ($j) {
+                case 0:
+                    echo ('<td class="align-middle submain-bg-color main-color px-0" style="background-color: var(--third-color) !important;">' . ($j + 1) . '°</td>');
+                    echo (' <td class="align-middle submain-bg-color" style="background-color: var(--third-color) !important;">
+                                <div class="row">
+                                    <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=' . $data[$i][($j + 1)] . '" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="' . $data[$i][$j] . '" style="max-height: 40px;width: auto;"></a></div>
+                                    <div class="col d-flex align-items-center col-12 col-md-9 px-1 ps-0"><span class="d-flex align-middle justify-content-center col-12 main-color">' . $data[$i][($j + 1)] . '</span></div>
+                                </div>
+                            </td>');
+                    break;
+                case 6:
+                    echo ('<td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">' . $data[$i][$j] . '</td>');
+                    break;
+
+                default:
+                    if (($j >= 2 && $j <= 5) || ($j == 8 || $j == 9)) {
+                        echo ('<td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">' . $data[$i][$j] . '</td>');
+                    }
+                    if ($j == 7 || $j == 6)
+                        echo ('<td class="d-none d-sm-table-cell align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">27</td>');
+                    break;
+            }
+
             if ($j != 0) {
                 echo ("<td>" . $data[$i][$j] . "</td>");
             } else {
-                echo ("<td><img src='" . ($data[$i][$j]) . "' height='20px' width='auto'></td>");
             }
         }
         echo ("</tr>");
