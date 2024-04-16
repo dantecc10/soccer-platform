@@ -65,7 +65,7 @@ li.nav-item a.nav-link.rem-adjustment img, li.nav-item a.nav-link.rem-adjustment
   height: 1.5rem !important;
 }
 
-.clean-block.clean-form form {
+.clean-block.clean-form form#login-form {
   box-shadow: 0px 0px 25px 10px var(--main-background-color) !important;
 }
 
