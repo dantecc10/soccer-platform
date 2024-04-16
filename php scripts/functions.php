@@ -331,11 +331,75 @@ function get_day_name($date)
 
 function generate_league_table()
 {
-    include_once "connection.php";
-    $sql = "SELECT * FROM `teams` ORDER BY (`wins_team` * 3) + (`draws_team` * 1) DESC";
-    $stmt = $connection->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $data = $result->fetch_all(MYSQLI_ASSOC);
-    $stmt->close();
+    //include_once "connection.php";
+    include_once "soccer_queries.php";
+    $sql = $league_query;
+
+    $data = fetch_fields('teams', $league_table_fields, '', $sql);
+
+    //$stmt = $connection->prepare($sql);
+    //$stmt->execute();
+    //$result = $stmt->get_result();
+    //$data = $result->fetch_all(MYSQLI_ASSOC);
+    //$stmt->close();
+    echo ("<table>");
+    echo ("<tr><thead>");
+    for ($i = 0; $i < sizeof($league_table_fields); $i++) {
+        echo ("<th>" . $league_table_fields[$i] . "</th>");
+    }
+    echo ("</thead></tr>");
+    for ($i=0; $i < sizeof($data); $i++) {
+        echo ("<tr>");
+        for($j=0; $j < sizeof($league_table_fields); $j++) {
+            echo ("<td>" . $data[$i][$league_table_fields[$j]] . "</td>");
+        }
+        echo ("</tr>");
+    }
+    echo ("</table>");
+}
+
+function fetch_fields($table, $fields, $id, $custom_query)
+{
+    #$connection = new mysqli("localhost", "cuinos_fc", "CuinosFC24!!", "cuinos_fc");
+    if (!include_once "connection.php") {
+        include_once "php scripts/connection.php";
+    }
+    //session_start();
+    //(($_SESSION['email'] == "demo_user@system.com") or ($_SESSION['user'] == "demo_user")) ? $connection = new mysqli("localhost", "comercial_demo", $data[1], ($table . "_demo")):(false);
+    if ($custom_query != "" && $custom_query != null) {
+        $query = $custom_query;
+    } else {
+        if ($id == "" or $id == null) {
+            $query = "SELECT * FROM `$table`";
+        } else {
+            $query_field = ($fields[0]);
+            $query = "SELECT * FROM `$table` WHERE `$query_field` = '$id'";
+        }
+    }
+
+    $result = mysqli_query($connection, $query) or die("Error en la consulta a la base de datos");
+    $data = array();
+
+    // Comprobar si las filas son mayores que 0
+    $result = $connection->query($query);
+    // Verificar si se encontró un usuario válido
+    if ($result->num_rows > 0) {
+        if ((stripos($query, "UPDATE") === false) && (stripos($query, "INSERT") === false)) {
+            $i = 0;
+            // Hacer fetch a los datos
+            while ($row = $result->fetch_array()) {
+                // Procesar cada registro obtenido
+                $n = sizeof($fields);
+                for ($j = 0; $j < $n; $j++) {
+                    ($id == "" or $id == null) ? $data[$i][$j] = $row[$fields[$j]] : $data[$j] = $row[$fields[$j]];
+                }
+                $i++;
+            }
+            return $data;
+        }
+    } else {
+        // No hay registros en la tabla, o la consulta hizo una actualización: devolver null
+        $connection->close();
+        return null;
+    }
 }
