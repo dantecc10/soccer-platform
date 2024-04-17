@@ -69,3 +69,7 @@ li.nav-item a.nav-link.rem-adjustment img, li.nav-item a.nav-link.rem-adjustment
   box-shadow: 0px 0px 25px 10px var(--main-background-color) !important;
 }
 
+.clean-pricing-item.custom-shadow {
+  box-shadow: 0px 0px 1rem .1rem var(--main-background-color) !important;
+}
+
