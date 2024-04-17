@@ -61,7 +61,7 @@ li.nav-item a.nav-link.rem-adjustment {
   height: 2rem !important;
 }
 
-li.nav-item a.nav-link.rem-adjustment img, li.nav-item a.nav-link.rem-adjustment .icon {
+li.nav-item a.nav-link.rem-adjustment img, li.nav-item a.nav-link.rem-adjustment .icon, img.rem-adjustment {
   height: 1.5rem !important;
 }
 
