@@ -358,7 +358,7 @@ function generate_league_table()
                                 </div>
                             </td>');
                     break;
-//                case 6:
+                    //                case 6:
                     //echo ('<td class="align-middle submain-bg-color main-color" style="background-color: var(--third-color) !important;">' . $data[$i][$j] . '</td>');
                     //break;
 
