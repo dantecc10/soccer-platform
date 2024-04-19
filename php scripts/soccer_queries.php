@@ -88,8 +88,8 @@ $match_basic_data_query = "SELECT
             `local_team`.`name_team`, `local_team`.`icon_team`, `matches`.`local_goals_match`, `matches`.`visitor_goals_match`,
             `visitor_team`.`name_team`, `visitor_team`.`icon_team`, `matches`.`start_schedule_match`
             FROM `matches`
-            INNER JOIN `team`` AS `local_team` ON `matches`.`local_team_id` = `local_team`.`id_team`
-            INNER JOIN `team`` AS `visitor_team` ON `matches`.`visitor_team_id` = `visitor_team`.`id_team`
+            INNER JOIN `team` AS `local_team` ON `matches`.`local_team_id` = `local_team`.`id_team`
+            INNER JOIN `team` AS `visitor_team` ON `matches`.`visitor_team_id` = `visitor_team`.`id_team`
             WHERE (`matches`.`finish_schedule_match` < CURRENT_DATE) ORDER BY `matches`.`start_schedule_match` DESC";
 
 $match_basic_data_fields = [
