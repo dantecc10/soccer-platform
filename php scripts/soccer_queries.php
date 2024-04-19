@@ -76,12 +76,32 @@ $referees_fields = [
 ];
 
 $matches = "SELECT * FROM `matches` ORDER BY (`start_schedule_match`) DESC;";
+
 $league_query = "SELECT `icon_team`, `name_team`,
             (`wins_team` + `draws_team` + `losses_team`) AS `played_games`,
             `wins_team`, `draws_team`, `losses_team`, `goals_for_team`, `goals_against_team`,
             (`goals_for_team` - `goals_against_team`) AS `goals_difference`,
             ((3 * `wins_team`) + `draws_team`) AS `points`
             FROM `teams` ORDER BY `points` DESC, `goals_difference` DESC;";
+
+$match_basic_data_query = "SELECT
+            `local_team`.`name_team`, `local_team`.`icon_team`, `matches`.`local_goals_match`, `matches`.`visitor_goals_match`,
+            `visitor_team`.`name_team`, `visitor_team`.`icon_team`, `matches`.`start_schedule_match`
+            FROM `matches`
+            INNER JOIN `team`` AS `local_team` ON `matches`.`local_team_id` = `local_team`.`id_team`
+            INNER JOIN `team`` AS `visitor_team` ON `matches`.`visitor_team_id` = `visitor_team`.`id_team`
+            WHERE (`matches`.`finish_schedule_match` < CURRENT_DATE) ORDER BY `matches`.`start_schedule_match` DESC";
+
+$match_basic_data_fields = [
+    'name_team',
+    'icon_team',
+    'local_goals_match',
+    'visitor_goals_match',
+    'name_team',
+    'icon_team',
+    'start_schedule_match'
+];
+
 $league_table_fields = [
     'icon_team',
     'name_team',
