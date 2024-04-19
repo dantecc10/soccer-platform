@@ -57,12 +57,12 @@ button.submain-color:hover, a.main-color:hover {
   background-color: var(--main-background-color);
 }
 
-li.nav-item a.nav-link.rem-adjustment {
-  height: 2rem !important;
-}
-
 li.nav-item a.nav-link.rem-adjustment img, li.nav-item a.nav-link.rem-adjustment .icon, img.rem-adjustment {
   height: 1.5rem !important;
+}
+
+li.nav-item a.nav-link.rem-adjustment {
+  height: 2.5rem !important;
 }
 
 .clean-block.clean-form form#login-form {
@@ -71,5 +71,15 @@ li.nav-item a.nav-link.rem-adjustment img, li.nav-item a.nav-link.rem-adjustment
 
 .clean-pricing-item.custom-shadow {
   box-shadow: 0px 0px 1rem .1rem var(--main-background-color) !important;
+}
+
+.matches-links button.btn.btn-primary.nav-link {
+  color: var(--main-background-color) !important;
+  border: 2px solid var(--main-background-color) !important;
+}
+
+.matches-links button.btn.btn-primary.nav-link.active {
+  color: var(--submain-background-color) !important;
+  background-color: var(--main-background-color) !important;
 }
 
