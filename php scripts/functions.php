@@ -259,14 +259,6 @@ function sql_debug_fetcher($table, $fields, $custom_query)
     $data = $result->fetch_all(MYSQLI_ASSOC);
     $stmt->close();
 
-    //for ($i = 0; $i < sizeof($data); $i++) {
-    //    echo ('<tr>');
-    //    for ($j = 0; $j < sizeof($fields); $j++) {
-    //        echo ("<td>" . $data[$i][$fields[$j]] . "</td>");
-    //    }
-    //    echo ('</tr>');
-    //}
-
     return [$data, $fields];
 }
 

@@ -83,3 +83,9 @@ li.nav-item a.nav-link.rem-adjustment {
   background-color: var(--main-background-color) !important;
 }
 
+.matches-links button.btn.btn-primary.nav-link:hover {
+  background-color: transparent !important;
+  color: var(--main-background-color) !important;
+  border: 1px solid var(--main-background-color) !important;
+}
+
