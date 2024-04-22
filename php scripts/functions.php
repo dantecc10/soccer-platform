@@ -421,3 +421,9 @@ function fetch_fields($table, $fields, $id, $custom_query)
         return null;
     }
 }
+
+function create_match($info){
+    include_once "connection.php";
+
+    $sql = "INSERT INTO `matches` VALUES ('', ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+}
