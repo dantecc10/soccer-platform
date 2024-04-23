@@ -85,23 +85,41 @@ $league_query = "SELECT `icon_team`, `name_team`,
             ((3 * `wins_team`) + `draws_team`) AS `points`
             FROM `teams` ORDER BY `points` DESC, `goals_difference` DESC;";
 
-$match_basic_data_query = "SELECT
-            `local_team`.`name_team`, `local_team`.`icon_team`, `matches`.`local_goals_match`, `matches`.`visitor_goals_match`,
-            `visitor_team`.`name_team`, `visitor_team`.`icon_team`, `matches`.`start_schedule_match`
-            FROM `matches`
-            INNER JOIN `teams` AS `local_team` ON `matches`.`local_team_id` = `local_team`.`id_team`
-            INNER JOIN `teams` AS `visitor_team` ON `matches`.`visitor_team_id` = `visitor_team`.`id_team`
-            WHERE (`matches`.`finish_schedule_match` < CURRENT_DATE) ORDER BY `matches`.`start_schedule_match` DESC";
+$match_basic_data_queries = [
+    "SELECT m.start_schedule_match, m.field_match,
+       t1.name_team AS local_name_team, t1.icon_team AS local_icon_team, m.local_goals_match,
+       m.visitor_goals_match, t2.icon_team AS visitor_icon_team, t2.name_team AS visitor_name_team,
+       r.name_referee, r.last_names_referee
+    FROM matches m
+    JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
+    WHERE m.status_match = 4 ORDER BY m.start_schedule_match DESC LIMIT 5;",
+    "SELECT m.start_schedule_match, m.field_match,
+       t1.name_team AS local_name_team, t1.icon_team AS local_icon_team, m.local_goals_match,
+       m.visitor_goals_match, t2.icon_team AS visitor_icon_team, t2.name_team AS visitor_name_team,
+       r.name_referee, r.last_names_referee
+    FROM matches m
+    JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
+    WHERE ((m.status_match < 4) AND (m.status_match > 0)) ORDER BY m.start_schedule_match DESC LIMIT 5;",
+    "SELECT m.start_schedule_match, m.field_match,
+       t1.name_team AS local_name_team, t1.icon_team AS local_icon_team, m.local_goals_match,
+       m.visitor_goals_match, t2.icon_team AS visitor_icon_team, t2.name_team AS visitor_name_team,
+       r.name_referee, r.last_names_referee
+    FROM matches m
+    JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
+    WHERE (m.status_match = 0) ORDER BY m.start_schedule_match DESC LIMIT 5;"
+];
 
 $match_basic_data_fields = [
-    'name_team',
-    'icon_team',
+    'start_schedule_match',
+    'field_match',
+    'local_name_team',
+    'local_icon_team',
     'local_goals_match',
     'visitor_goals_match',
-    'name_team',
-    'icon_team',
-    'start_schedule_match',
-    'field_match'
+    'visitor_icon_team',
+    'visitor_name_team',
+    'name_referee',
+    'last_names_referee'
 ];
 
 $league_table_fields = [

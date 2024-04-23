@@ -474,9 +474,7 @@ function match_start_schedule_formatter($fechaInicio)
     // Formatear el resultado
     $result = ($day_name . ' | ' . $day_number . ' / ' . $month . ' / ' . $year . ' | ' . $time . ' ' . $ampm);
 
+    //echo (match_start_schedule_formatter($fechaInicio) . ' | Polideportivo, Campo 2');
+    //$fechaInicio = '2024-04-14 15:00:00';
     return $result;
 }
-
-// Ejemplo de uso
-$fechaInicio = '2024-04-14 15:00:00';
-echo (match_start_schedule_formatter($fechaInicio) . ' | Polideportivo, Campo 2');
