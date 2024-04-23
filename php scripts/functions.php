@@ -439,7 +439,9 @@ function create_match($info)
 
 function fetch_matches($time)
 {
-    include_once "connection.php";
+    if (!include_once "connection.php") {
+        include_once "php scripts/connection.php";
+    }
     include "soccer_queries.php";
     // Previous = 0, Current = 1, Next = 2
     $sql = $match_basic_data_queries[$time];
