@@ -453,6 +453,75 @@ function fetch_matches($time)
     return $data;
 }
 
+function matches_output($matches)
+{
+    $dom_acumulator = "";
+    $dom_pattern = ('<div class="row text-center rounded-3 my-2" style="border: 1px solid var(--main-background-color);background: linear-gradient(90deg, #406f10, #203103);">
+                        <div class="col">
+                            <div class="row mx-1">
+                                <div class="col px-1"><span style="height: .3rem !important;">DATE | FLAG</span></div>
+                            </div>
+                            <div class="row py-2 pb-1">
+                                <div class="col align-self-center px-0">
+                                    <div class="row mx-1 col-12">
+                                        <div class="col align-self-center text-end col-7 px-0"><span class="text-wrap">FLAG</span></div>
+                                        <div class="col align-self-center col-5"><img class="col-12" src="FLAG" style="/*min-height: 2.5rem !important;*/max-width: 4rem;"></div>
+                                    </div>
+                                </div>
+                                <div class="col align-self-center col-2 px-1">
+                                    <div><span class="fs-1">FLAG</span><span>&nbsp;-&nbsp;</span><span class="fs-1">FLAG</span></div>
+                                </div>
+                                <div class="col align-self-center px-0">
+                                    <div class="row mx-1 col-12 px-0">
+                                        <div class="col align-self-center col-5"><img class="col-12" src="FLAG" style="/*min-height: 2.5rem !important;*/max-width: 4rem;"></div>
+                                        <div class="col align-self-center text-start col-7 px-0"><span class="text-wrap">FLAG</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mx-1">
+                                <div class="col px-1">
+                                    <span class="submain-color">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                                            <g>
+                                                <rect fill="none" height="24" width="24"></rect>
+                                            </g>
+                                            <g>
+                                                <g>
+                                                    <g>
+                                                        <path d="M11.23,6C9.57,6,8.01,6.66,6.87,7.73C6.54,6.73,5.61,6,4.5,6C3.12,6,2,7.12,2,8.5C2,9.88,3.12,11,4.5,11 c0.21,0,0.41-0.03,0.61-0.08c-0.05,0.25-0.09,0.51-0.1,0.78c-0.18,3.68,2.95,6.68,6.68,6.27c2.55-0.28,4.68-2.26,5.19-4.77 c0.15-0.71,0.15-1.4,0.06-2.06c-0.09-0.6,0.38-1.13,0.99-1.13H22V6H11.23z M4.5,9C4.22,9,4,8.78,4,8.5C4,8.22,4.22,8,4.5,8 S5,8.22,5,8.5C5,8.78,4.78,9,4.5,9z M11,15c-1.66,0-3-1.34-3-3s1.34-3,3-3s3,1.34,3,3S12.66,15,11,15z"></path>
+                                                    </g>
+                                                    <g>
+                                                        <circle cx="11" cy="12" r="2"></circle>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>&nbsp;FLAG FLAG
+                                    </span></div>
+                            </div>
+                        </div>
+                    </div>');
+
+    for ($i = 0; $i < sizeof($matches); $i++) {
+        $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0])], [0]);
+        $dom_acumulator .= flag_replacer($temp_dom, 'FLAG', $matches[$i], [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    }
+    return $dom_acumulator;
+}
+function flag_replacer($text, $flag, $data_array, $indexes_array)
+{
+    $chars = strlen($flag);
+    $n = substr_count($text, $flag);
+    if ($n == sizeof($indexes_array)) {
+        // Las apariciones de la flag en la cadena son las mismas que la longitud del arreglo de índices
+        for ($i = 0; $i < $n; $i++) {
+            $position = strpos($text, $flag);
+            $text = substr_replace($text, $data_array[$indexes_array[$i]], $position, $chars);
+        }
+        return $text;
+    } else {
+        return null;
+    }
+}
+
 function match_start_schedule_formatter($fechaInicio)
 {
     // Convertir la fecha y hora a un objeto DateTime
