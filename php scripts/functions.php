@@ -439,7 +439,9 @@ function create_match($info)
 
 function fetch_matches($time)
 {
-    if (!include_once "connection.php") {
+    if (__DIR__ == "/var/www/vhosts/castelancarpinteyro.com/comercial.castelancarpinteyro.com/php scripts") {
+        include_once "connection.php";
+    } else {
         include_once "php scripts/connection.php";
     }
     include "soccer_queries.php";
