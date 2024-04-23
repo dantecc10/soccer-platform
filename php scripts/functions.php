@@ -501,7 +501,7 @@ function matches_output($matches)
                     </div>');
 
     for ($i = 0; $i < sizeof($matches); $i++) {
-        $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0])], [0]);
+        $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0][0])], [0]);
         $dom_acumulator .= flag_replacer($temp_dom, 'FLAG', $matches[$i], [1, 2, 3, 4, 5, 6, 7, 8, 9]);
     }
     return $dom_acumulator;
@@ -522,10 +522,10 @@ function flag_replacer($text, $flag, $data_array, $indexes_array)
     }
 }
 
-function match_start_schedule_formatter($fechaInicio)
+function match_start_schedule_formatter($start_date)
 {
     // Convertir la fecha y hora a un objeto DateTime
-    $datetime = new DateTime($fechaInicio);
+    $datetime = new DateTime($start_date);
 
     // Días de la semana en español
     $week_days = array('Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado');
