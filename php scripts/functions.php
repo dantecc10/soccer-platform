@@ -502,6 +502,12 @@ function matches_output($matches)
 
     for ($i = 0; $i < sizeof($matches[0]); $i++) {
         $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0][$i][$matches[1][0]])], [0]);
+        if ($matches[0][$i][$matches[1][4]] == NULL) {
+            $matches[0][$i][$matches[1][4]] == 0;
+        }
+        if ($matches[0][$i][$matches[1][5]] == NULL) {
+            $matches[0][$i][$matches[1][5]] == 0;
+        }
         $dom_acumulator .= flag_replacer($temp_dom, 'FLAG', [$matches[0][$i][$matches[1][0]], $matches[0][$i][$matches[1][1]], $matches[0][$i][$matches[1][2]], $matches[0][$i][$matches[1][3]], $matches[0][$i][$matches[1][4]], $matches[0][$i][$matches[1][5]], $matches[0][$i][$matches[1][6]], $matches[0][$i][$matches[1][7]], $matches[0][$i][$matches[1][8]], $matches[0][$i][$matches[1][9]]], [1, 2, 3, 4, 5, 6, 7, 8, 9]);
     }
     return $dom_acumulator;
