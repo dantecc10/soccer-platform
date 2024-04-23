@@ -7,3 +7,5 @@ function set_zeros() {
         }
     }
 }
+
+set_zeros();
