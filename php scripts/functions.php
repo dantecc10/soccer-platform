@@ -437,16 +437,19 @@ function create_match($info)
     $stmt->close();
 }
 
-function fetch_matches()
+function fetch_matches($time)
 {
     include_once "connection.php";
-    $sql = "SELECT * FROM `matches` WHERE `id_match` = ?";
+    include_once "soccer_queries.php";
+    // Previous = 0, Current = 1, Next = 2
+    $sql = $match_basic_data_queries[$time];
+
     $stmt = $connection->prepare($sql);
-    $stmt->bind_param("i", $id);
     $stmt->execute();
     $result = $stmt->get_result();
     $data = $result->fetch_all(MYSQLI_ASSOC);
     $stmt->close();
+
     return $data;
 }
 
