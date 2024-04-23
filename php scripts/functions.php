@@ -501,7 +501,7 @@ function matches_output($matches)
                     </div>');
 
     for ($i = 0; $i < sizeof($matches[0]); $i++) {
-        $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0][$i][$matches[1][0]])], [1]);
+        $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0][$i][$matches[1][0]])], [0]);
         $dom_acumulator .= flag_replacer($temp_dom, 'FLAG', $matches[0][$i], [1, 2, 3, 4, 5, 6, 7, 8, 9]);
     }
     return $dom_acumulator;
