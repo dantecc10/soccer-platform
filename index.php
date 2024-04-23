@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Inicio - DEPORTEX</title>
     <meta property="og:image" content="https://soccer.castelancarpinteyro.com/assets/img/deportex/DeportEX Gold Edition VFX.png">
@@ -316,57 +316,65 @@
         <section id="matches" class="clean-block features">
             <div class="container">
                 <div class="block-heading mb-2">
-                    <h2 class="text-info mb-0 main-color custom-font">Próximos partidos</h2>
-                    <p class="main-color custom-font">Consulta las fechas y horarios de los próximos partidos</p>
+                    <h2 class="text-info mb-0 main-color custom-font">Agenda de partidos</h2>
+                    <p class="main-color custom-font">Consulta los partidos recientes, en curso y Próximos</p>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col">
-                        <div class="row">
-                            <div class="col" style="text-align: center;"><span class="text-muted custom-font">Sábado | 14 / 04 / 2024 - 03:00 p. m. | Polideportivo, Campo 2</span></div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col col-12 mb-1">
-                                        <div class="row">
-                                            <div class="col text-center"><span class="fs-4 custom-font">FC Bayern München</span>
-                                                <hr class="m-0"><span class="fs-6 custom-font">1° en liga</span>
-                                            </div>
+                        <nav>
+                            <ul class="nav nav-pills mb-3 custom-font matches-links" role="tablist">
+                                <li class="nav-item col-4" role="presentation"><button class="btn btn-primary active nav-link col-12" id="pills-previus-tab" type="button" data-bs-toggle="pill" role="tab" data-bs-target="#pills-previus" aria-controls="pills-previus" aria-selected="true">Pasados</button></li>
+                                <li class="nav-item col-4" role="presentation"><button class="btn btn-primary nav-link col-12" id="pills-live-tab" type="button" data-bs-toggle="pill" role="tab" data-bs-target="#pills-live" aria-controls="pills-live" aria-selected="false">En marcha</button></li>
+                                <li class="nav-item col-4" role="presentation"><button class="btn btn-primary nav-link col-12" id="pills-next-tab" type="button" data-bs-toggle="pill" role="tab" data-bs-target="#pills-next" aria-controls="pills-next" aria-selected="false">Futuros</button></li>
+                            </ul>
+                            <div id="pills-tabContent" class="tab-content custom-font rounded-3" style="background-color: #2e4000;border: 1px solid var(--main-background-color);">
+                                <div id="pills-previus" class="show active tab-pane fade" role="tabpanel" aria-labbeledby="pills-previus-tab">
+                                    <div class="col px-3 py-0">
+                                        <?php
+                                        echo (matches_output(fetch_matches(0)));
+                                        ?>
+                                        <div class="row text-center rounded-3 my-2" style="border: 1px solid var(--submain-background-color);background: linear-gradient(90deg, var(--main-background-color), rgba(173,238,0,0.54));">
+                                            <div class="col"><a class="submain-color" href="matches.html#jugados"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-time-duration-90">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M8 14.25c0 .414 .336 .75 .75 .75h1.5a.75 .75 0 0 0 .75 -.75v-4.5a.75 .75 0 0 0 -.75 -.75h-1.5a.75 .75 0 0 0 -.75 .75v1.5c0 .414 .336 .75 .75 .75h2.25"></path>
+                                                        <path d="M14 10.5v3a1.5 1.5 0 0 0 3 0v-3a1.5 1.5 0 0 0 -3 0z"></path>
+                                                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                                    </svg>&nbsp;Ver más partidos finalizados</a></div>
                                         </div>
                                     </div>
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="col col-12 pb-3">
-                                                <div class="row justify-content-center">
-                                                    <div class="col text-center col-12 col-lg-7 col-xl-6"><img class="col-8" src="assets/img/samples/logo-bayern.png?h=689f785b0d375e5269cde4eff9a00b5c"></div>
-                                                </div>
-                                            </div>
+                                </div>
+                                <div id="pills-live" class="tab-pane fade" role="tabpanel" aria-labbeledby="pills-live-tab">
+                                    <div class="col px-3 py-0">
+                                        <?php
+                                        echo (matches_output(fetch_matches(1)));
+                                        ?>
+                                        <div class="row text-center rounded-3 my-2" style="border: 1px solid var(--submain-background-color);background: linear-gradient(90deg, var(--main-background-color), rgba(173,238,0,0.54));">
+                                            <div class="col"><a class="submain-color" href="matches.html#jugados"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-time-duration-90">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M8 14.25c0 .414 .336 .75 .75 .75h1.5a.75 .75 0 0 0 .75 -.75v-4.5a.75 .75 0 0 0 -.75 -.75h-1.5a.75 .75 0 0 0 -.75 .75v1.5c0 .414 .336 .75 .75 .75h2.25"></path>
+                                                        <path d="M14 10.5v3a1.5 1.5 0 0 0 3 0v-3a1.5 1.5 0 0 0 -3 0z"></path>
+                                                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                                    </svg>&nbsp;Ver más partidos finalizados</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="pills-next" class="tab-pane fade" role="tabpanel" aria-labbeledby="pills-next-tab">
+                                    <div class="col px-3 py-0">
+                                        <?php
+                                        echo (matches_output(fetch_matches(2)));
+                                        ?>
+                                        <div class="row text-center rounded-3 my-2" style="border: 1px solid var(--submain-background-color);background: linear-gradient(90deg, var(--main-background-color), rgba(173,238,0,0.54));">
+                                            <div class="col"><a class="submain-color" href="matches.html#jugados"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-time-duration-90">
+                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                        <path d="M8 14.25c0 .414 .336 .75 .75 .75h1.5a.75 .75 0 0 0 .75 -.75v-4.5a.75 .75 0 0 0 -.75 -.75h-1.5a.75 .75 0 0 0 -.75 .75v1.5c0 .414 .336 .75 .75 .75h2.25"></path>
+                                                        <path d="M14 10.5v3a1.5 1.5 0 0 0 3 0v-3a1.5 1.5 0 0 0 -3 0z"></path>
+                                                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                                    </svg>&nbsp;Ver más partidos agendados</a></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col align-self-center col-1 px-0" style="text-align: center;"><span class="fs-5">VS</span></div>
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col col-12 mb-2">
-                                        <div class="row">
-                                            <div class="col text-center"><span class="fs-4 custom-font">Masters FC</span>
-                                                <hr class="m-0"><span class="fs-6 custom-font">2° en liga</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="col col-12 pb-3">
-                                                <div class="row justify-content-center">
-                                                    <div class="col text-center col-12 col-lg-7 col-xl-6"><img class="col-8" src="assets/img/samples/masters-fc.png?h=b2ccd38b407a40501e86cf611779775b"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </nav>
                     </div>
                 </div>
             </div>
