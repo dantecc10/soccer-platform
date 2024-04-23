@@ -469,7 +469,7 @@ function matches_output($matches)
                                     </div>
                                 </div>
                                 <div class="col align-self-center col-2 px-1">
-                                    <div><span class="fs-1">FLAG</span><span>&nbsp;-&nbsp;</span><span class="fs-1">FLAG</span></div>
+                                    <div><span class="fs-1 goal-container">FLAG</span><span>&nbsp;-&nbsp;</span><span class="fs-1 goal-container">FLAG</span></div>
                                 </div>
                                 <div class="col align-self-center px-0">
                                     <div class="row mx-1 col-12 px-0">
