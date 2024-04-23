@@ -422,8 +422,13 @@ function fetch_fields($table, $fields, $id, $custom_query)
     }
 }
 
-function create_match($info){
+function create_match($info)
+{
     include_once "connection.php";
 
-    $sql = "INSERT INTO `matches` VALUES ('', ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    $sql = "INSERT INTO `matches` VALUES ('', ?, ?, ?, ?, ?, ?, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);";
+    #'id_match', 'local_team_id_match', 'visitor_team_id_match', 'match_referee_id_match', 'start_schedule_match', 'finish_schedule_match', 'status_match', 'local_goals_match', 'visitor_goals_match', 'local_shots_match', 'visitor_shots_match', 'local_fouls_match', 'visitor_fouls_match', 'local_corners_macth', 'visitor_corners_match', 'local_yellow_cards_match', 'visitor_yellow_cards_match', 'local_red_cards_match', 'visitor_red_cards_match'
+    $stmt = $connection->prepare($sql);
+    $stmt->bind_param("iiissi", $info[0], $info[1], $info[2], $info[3], $info[4], $info[5], $info[6]);
+
 }

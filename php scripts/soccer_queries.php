@@ -14,6 +14,7 @@ $matches_fields = [
     'start_schedule_match',
     'finish_schedule_match',
     'status_match',
+    'field_match',
     'local_goals_match',
     'visitor_goals_match',
     'local_shots_match',
@@ -99,7 +100,8 @@ $match_basic_data_fields = [
     'visitor_goals_match',
     'name_team',
     'icon_team',
-    'start_schedule_match'
+    'start_schedule_match',
+    'field_match'
 ];
 
 $league_table_fields = [
