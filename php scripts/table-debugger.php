@@ -25,4 +25,6 @@ include_once "soccer_queries.php";
 //create_match([2, 5, 3, '2021-05-01 12:00:00', '2021-05-01 14:00:00', 1, 'Allianz Arena']);
 //debug_data_printer(sql_debug_fetcher('matches', $match_basic_data_fields, $match_basic_data_query));
 
-debug_data_printer(sql_debug_fetcher('matches', $match_basic_data_fields, $match_basic_data_queries[0]));
+//debug_data_printer(sql_debug_fetcher('matches', $match_basic_data_fields, $match_basic_data_queries[0]));
+
+print_r(fetch_matches(0));
