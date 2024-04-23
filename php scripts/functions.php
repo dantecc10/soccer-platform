@@ -450,7 +450,7 @@ function fetch_matches($time)
     $data = $result->fetch_all(MYSQLI_ASSOC);
     $stmt->close();
 
-    return $data;
+    return [$data, $match_basic_data_fields];
 }
 
 function matches_output($matches)
@@ -500,8 +500,8 @@ function matches_output($matches)
                         </div>
                     </div>');
 
-    for ($i = 0; $i < sizeof($matches); $i++) {
-        $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0][0])], [0]);
+    for ($i = 0; $i < sizeof($matches[0]); $i++) {
+        $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0][$i])], $matches[1][0]);
         $dom_acumulator .= flag_replacer($temp_dom, 'FLAG', $matches[$i], [1, 2, 3, 4, 5, 6, 7, 8, 9]);
     }
     return $dom_acumulator;
