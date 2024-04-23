@@ -437,7 +437,7 @@ function create_match($info)
     $stmt->close();
 }
 
-function fetch_matches($id)
+function fetch_matches()
 {
     include_once "connection.php";
     $sql = "SELECT * FROM `matches` WHERE `id_match` = ?";
@@ -449,3 +449,34 @@ function fetch_matches($id)
     $stmt->close();
     return $data;
 }
+
+function match_start_schedule_formatter($fechaInicio) {
+    // Convertir la fecha y hora a un objeto DateTime
+    $datetime = new DateTime($fechaInicio);
+
+    // Días de la semana en español
+    $week_days = array('Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado');
+
+    // Obtener el día de la semana y el número del día
+    $day_name = $week_days[$datetime->format('w')];
+    $day_number = $datetime->format('d');
+
+    // Obtener el mes y el año
+    $month = $datetime->format('m');
+    $month_name = DateTime::createFromFormat('!m', $month)->format('F');
+    $year = $datetime->format('Y');
+
+    // Obtener la hora y el formato AM/PM
+    $time = $datetime->format('h:i');
+    $ampm = $datetime->format('a');
+
+    // Formatear el resultado
+    $result = ($day_name . ' | ' . $day_number . ' / ' . $month_name . ' / ' . $year . ' - ' . $time . ' ' . $ampm);
+
+    return $result;
+}
+
+// Ejemplo de uso
+$fechaInicio = '2024-04-14 15:00:00';
+echo match_start_schedule_formatter($fechaInicio) . ' | Polideportivo, Campo 2';
+?>
