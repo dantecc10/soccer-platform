@@ -556,3 +556,20 @@ function match_start_schedule_formatter($start_date)
     //$fechaInicio = '2024-04-14 15:00:00';
     return $result;
 }
+
+// Función para manejar de forma centralizada las operaciones CRUD que involucra una decisión arbitral
+function referee_action()
+{
+    include "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
+    include "soccer_queries.php";
+    // Goal: 0, Foul: 1, Card: 2
+    $sql = $match_basic_data_queries[$time];
+
+    $stmt = $connection->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $data = $result->fetch_all(MYSQLI_ASSOC);
+    $stmt->close();
+
+    return [$data, $match_basic_data_fields];
+}
