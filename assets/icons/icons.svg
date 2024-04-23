@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <!-- íconos -->
+    <symbol id="card" viewBox="viewBox-del-symbol">
+        <title>Card</title>
+        <!-- Código SVG que almacenará el symbol -->
+        <path xmlns="http://www.w3.org/2000/svg"
+            d="M33 6.5H122C136.636 6.5 148.5 18.3645 148.5 33V198C148.5 212.636 136.636 224.5 122 224.5H33C18.3645 224.5 6.5 212.636 6.5 198V33C6.5 18.3645 18.3645 6.5 33 6.5Z"
+            fill="url(#paint0_linear_2004_275)" />
+    </symbol>
+</svg>
