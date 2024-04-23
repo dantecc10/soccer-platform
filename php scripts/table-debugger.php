@@ -29,6 +29,6 @@ include_once "soccer_queries.php";
 
 //print_r(fetch_matches(0));
 
-//echo (matches_output(fetch_matches(0)));
+echo (matches_output(fetch_matches(0)));
 
-echo __DIR__;
+//echo __DIR__;
