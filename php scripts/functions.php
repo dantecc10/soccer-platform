@@ -430,7 +430,7 @@ function create_match($info)
     #'id_match', 'local_team_id_match', 'visitor_team_id_match', 'match_referee_id_match', 'start_schedule_match', 'finish_schedule_match', 'status_match', 'local_goals_match', 'visitor_goals_match', 'local_shots_match', 'visitor_shots_match', 'local_fouls_match', 'visitor_fouls_match', 'local_corners_macth', 'visitor_corners_match', 'local_yellow_cards_match', 'visitor_yellow_cards_match', 'local_red_cards_match', 'visitor_red_cards_match'
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("iiissis", $info[0], $info[1], $info[2], $info[3], $info[4], $info[5], $info[6]);
-    if($stmt->execute()){
+    if ($stmt->execute()) {
         # Success logic
         echo ("Successfully added match!");
     }
@@ -450,7 +450,8 @@ function fetch_matches()
     return $data;
 }
 
-function match_start_schedule_formatter($fechaInicio) {
+function match_start_schedule_formatter($fechaInicio)
+{
     // Convertir la fecha y hora a un objeto DateTime
     $datetime = new DateTime($fechaInicio);
 
@@ -471,12 +472,11 @@ function match_start_schedule_formatter($fechaInicio) {
     $ampm = $datetime->format('a');
 
     // Formatear el resultado
-    $result = ($day_name . ' | ' . $day_number . ' / ' . $month_name . ' / ' . $year . ' - ' . $time . ' ' . $ampm);
+    $result = ($day_name . ' | ' . $day_number . ' / ' . $month . ' / ' . $year . ' | ' . $time . ' ' . $ampm);
 
     return $result;
 }
 
 // Ejemplo de uso
 $fechaInicio = '2024-04-14 15:00:00';
-echo match_start_schedule_formatter($fechaInicio) . ' | Polideportivo, Campo 2';
-?>
+echo (match_start_schedule_formatter($fechaInicio) . ' | Polideportivo, Campo 2');
