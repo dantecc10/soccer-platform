@@ -5,7 +5,7 @@ include_once "functions.php";
 
 // Ejemplo de uso
 $id_equipo = 1; // ID del equipo
-$archivo = $_FILES['logo_team']; // Suponiendo que recibes el archivo mediante un formulario
+$archivo = $_FILES['logo_team']['name']; // Suponiendo que recibes el archivo mediante un formulario
 
 $resultado = save_team_logo($id_equipo, $archivo);
 echo $resultado;
