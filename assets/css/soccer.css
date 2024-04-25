@@ -89,3 +89,27 @@ li.nav-item a.nav-link.rem-adjustment {
   border: 1px solid var(--main-background-color) !important;
 }
 
+.match-stat {
+  border: 1px solid white;
+}
+
+.match-stat.goal {
+  background-color: green;
+}
+
+.match-stat.goal.auto-goal {
+  background-color: red;
+}
+
+.match-stat.foul {
+  background-color: gray;
+}
+
+.match-stat.foul.red-card svg {
+  color: red;
+}
+
+.match-stat.foul.yellow-card svg {
+  color: yellow;
+}
+
