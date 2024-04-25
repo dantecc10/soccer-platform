@@ -7,8 +7,7 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             
             $result = add_team($_POST['league_team'], $_POST['team_name'], $_POST['logo_team'], $_POST['couch_team'], $_POST['description_name']);
             if ($result != false) {
-                #$file = $_FILES["logo_team"]["name"];
-                #$destination_path = (__DIR__."/../assets/img/teams/team-logo-".$result);
+                save_team_logo($result, $_FILES['logo_team']);
 
                 header("Location: ../add-team-members.html");
             } else {
