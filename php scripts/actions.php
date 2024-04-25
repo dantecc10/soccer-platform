@@ -16,4 +16,6 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             // Error, redirigir al inicio
             break;
     }
+}else{
+    header("Location: ../actions.html");
 }
