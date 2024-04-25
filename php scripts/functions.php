@@ -584,7 +584,37 @@ function add_team($league, $team, $logo, $couch, $description)
     if ($stmt->affected_rows === 0) {
         return false;
     }
-    
+
     $stmt->close();
     return $id;
+}
+
+function save_team_logo($id, $img)
+{
+    // Ruta donde se guardarán las imágenes de los equipos
+    $path = '../assets/img/teams/';
+
+    // Obtener la extensión del archivo
+    $extension = pathinfo($img['name'], PATHINFO_EXTENSION);
+
+    // Generar el nombre único para el archivo
+    $file_name = ('team-logo-' . $id . '.' . $extension);
+
+    // Ruta final del archivo
+    $final_path = ($path . $file_name);
+
+    // Mover el archivo a la ruta final
+    if (move_uploaded_file($img['tmp_name'], $final_path)) {
+        // Archivo subido correctamente, ahora actualizamos la ruta en la base de datos
+        // Aquí debes ejecutar la consulta SQL para actualizar la ruta en la base de datos
+        // Ejemplo:
+        // $sql = "UPDATE equipos SET ruta_logo = '$ruta_final' WHERE id = $id_equipo";
+        // Ejecutar la consulta usando tu método preferido (PDO, mysqli, etc.)
+
+        // Respuesta de éxito
+        return "Imagen guardada correctamente como $file_name en la ruta $final_path.";
+    } else {
+        // Error al mover el archivo
+        return "Error al subir la imagen.";
+    }
 }
