@@ -113,3 +113,7 @@ li.nav-item a.nav-link.rem-adjustment {
   color: yellow;
 }
 
+.color-placeholder::placeholder {
+  color: var(--submain-color) !important;
+}
+

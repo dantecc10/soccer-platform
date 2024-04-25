@@ -7,12 +7,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>FAQ - SoCCer League Admin</title>
-    <meta property="og:title" content="DEPORTEX">
-    <meta property="og:image" content="https://soccer.castelancarpinteyro.com/assets/img/deportex/DeportEX Logo Minimalista BLACK GREEN EDITION VFX.png">
-    <meta name="description" content="Sistema de gestión de ligas de fútbol.">
+    <title>Inicio - DEPORTEX</title>
+    <meta property="og:image" content="https://soccer.castelancarpinteyro.com/assets/img/deportex/DeportEX Gold Edition VFX.png">
     <meta name="author" content="Dante Castelán Carpinteyro">
+    <meta name="description" content="Plataforma de gestión de ligas de fútbol, consulta de resultados, equipos y jugadores. Administración arbitral.">
     <meta property="og:type" content="website">
+    <meta property="og:title" content="DEPORTEX">
     <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=6baf041d5b489f75a71934a78277e96f">
     <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20WHITE%20EDITION.png?h=6baf041d5b489f75a71934a78277e96f" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=6baf041d5b489f75a71934a78277e96f">
@@ -47,32 +47,51 @@
             </div>
         </div>
     </nav>
-    <main class="page faq-page">
-        <section class="clean-block clean-faq dark">
+    <main class="page landing-page" style="background-color: var(--third-background-color);">
+        <section id="top-players" class="clean-block clean-info dark main-bg-color submain-color">
             <div class="container">
-                <div class="block-heading">
-                    <h2 class="text-info">FAQ</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                <div class="block-heading mb-1">
+                    <h2 class="text-info mb-1 submain-color custom-font">Añadir equipo</h2>
+                    <p class="submain-color custom-font">Registra a un equipo para añadirlo a la clasificación. Los campos con un (*) son obligatorios. No coloques nada ofensivo.</p>
                 </div>
-                <div class="block-content">
-                    <div class="faq-item">
-                        <h4 class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                        <div class="answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <h4 class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                        <div class="answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <h4 class="question">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                        <div class="answer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
+                <div class="row align-items-center">
+                    <div class="col">
+                        <form id="add-team-form" class="custom-font" action="php scripts/actions.php?type=add-team" method="post">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col my-2">
+                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Selecciona la liga *</span><select class="form-select form-control submain-color main-bg-color custom-font" id="league-team" name="league-team" required="">
+                                                <optgroup label="This is a group">
+                                                    <option value="12" selected="">This is item 1</option>
+                                                    <option value="13">This is item 2</option>
+                                                    <option value="14">This is item 3</option>
+                                                </optgroup>
+                                            </select></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col my-2">
+                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Nombre del equipo *</span><input class="form-control submain-color main-bg-color color-placeholder custom-font" type="text" id="team-name" placeholder="Escribe cómo se va a llamar el equipo" required="" name="team-name"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col my-2">
+                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Logo del equipo *</span><input class="form-control submain-color main-bg-color color-placeholder custom-font" type="file" id="logo-team" required="" name="logo-team" accept=".png, .jpg, .jpeg"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col my-2">
+                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Director Técnico</span><input class="form-control submain-color main-bg-color color-placeholder custom-font" type="text" id="couch-team" placeholder="Puedes especificar un entrenador" name="couch-team"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col my-2 text-center"><span>Descripción</span><textarea class="form-control submain-bg-color main-color"></textarea></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col my-2 text-center"><button class="btn submain-bg-color main-color rounded-4 col-8 col-sm-auto" type="submit">Registrar equipo</button></div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
