@@ -605,7 +605,9 @@ function save_team_logo($id, $img)
 
     // Mover el archivo a la ruta final
     if (move_uploaded_file($img['tmp_name'], $final_path)) {
-        include_once "connection.php";
+        include_once "credentials.php";
+        $data = generatePasskey('sql');
+        $connection = new mysqli('localhost', $data[0], $data[1], $data[2]);
         $img_sql = ("https://soccer.castelancarpinteyro.com/assets/img/teams/" . $file_name);
         $sql = "UPDATE `teams` SET `icon_team` = '$img_sql' WHERE `id_team` = $id";
         if ($connection->query($sql)) {
