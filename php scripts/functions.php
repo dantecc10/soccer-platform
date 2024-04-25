@@ -578,7 +578,7 @@ function add_team($league, $team, $logo, $couch, $description)
     include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
     $sql = "INSERT INTO `teams` VALUES('', ?, ?, NULL, NULL, NULL, NULL, NULL, NULL, ?, ?);";
     $stmt = $connection->prepare($sql);
-    $stmt->bind_param("sssss", $team, $logo, $couch, $description);
+    $stmt->bind_param("ssss", $team, $logo, $couch, $description);
     $stmt->execute();
     $id = $connection->insert_id;
     if ($stmt->affected_rows === 0) {
