@@ -592,7 +592,7 @@ function add_team($league, $team, $logo, $couch, $description)
 function save_team_logo($id, $img)
 {
     // Ruta donde se guardarán las imágenes de los equipos
-    $path = '../../assets/img/teams/';
+    $path = '/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/assets/img/teams/';
 
     // Obtener la extensión del archivo
     $extension = pathinfo($img['name'], PATHINFO_EXTENSION);
