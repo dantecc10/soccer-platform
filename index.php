@@ -67,7 +67,7 @@
                     <div class="col">
                         <?php
                         include_once "php scripts/functions.php";
-                        generate_league_table();
+                        echo (generate_league_table());
                         ?>
                     </div>
                 </div>
