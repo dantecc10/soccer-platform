@@ -560,7 +560,7 @@ function match_start_schedule_formatter($start_date)
 // Función para manejar de forma centralizada las operaciones CRUD que involucra una decisión arbitral
 function referee_action()
 {
-    include "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
+    include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
     include "soccer_queries.php";
     // Goal: 0, Foul: 1, Card: 2
     $sql = $match_basic_data_queries[$time];
@@ -572,4 +572,19 @@ function referee_action()
     $stmt->close();
 
     return [$data, $match_basic_data_fields];
+}
+function add_team($league, $team, $logo, $couch, $description)
+{
+    include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
+    $sql = "INSERT INTO `teams` VALUES('', ?, ?, NULL, NULL, NULL, NULL, NULL, NULL, ?, ?);";
+    $stmt = $connection->prepare($sql);
+    $stmt->bind_param("sssss", $team, $logo, $couch, $description);
+    $stmt->execute();
+    $id = $connection->insert_id;
+    if ($stmt->affected_rows === 0) {
+        return false;
+    }
+    
+    $stmt->close();
+    return $id;
 }
