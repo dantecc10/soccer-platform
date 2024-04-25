@@ -7,12 +7,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Pricing - SoCCer League Admin</title>
-    <meta property="og:title" content="DEPORTEX">
-    <meta property="og:image" content="https://soccer.castelancarpinteyro.com/assets/img/deportex/DeportEX Logo Minimalista BLACK GREEN EDITION VFX.png">
-    <meta name="description" content="Sistema de gestión de ligas de fútbol.">
+    <title>Añadir equipo</title>
+    <meta property="og:image" content="https://soccer.castelancarpinteyro.com/assets/img/deportex/DeportEX Gold Edition VFX.png">
     <meta name="author" content="Dante Castelán Carpinteyro">
+    <meta name="description" content="Plataforma de gestión de ligas de fútbol, consulta de resultados, equipos y jugadores. Administración arbitral.">
     <meta property="og:type" content="website">
+    <meta property="og:title" content="DEPORTEX">
     <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=6baf041d5b489f75a71934a78277e96f">
     <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20WHITE%20EDITION.png?h=6baf041d5b489f75a71934a78277e96f" media="(prefers-color-scheme: dark)">
     <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=6baf041d5b489f75a71934a78277e96f">
@@ -47,16 +47,55 @@
             </div>
         </div>
     </nav>
-    <main class="page pricing-table-page">
-        <section class="clean-block clean-pricing dark main-color submain-bg-color">
+    <main class="page landing-page" style="background-color: var(--third-background-color);">
+        <section id="top-players" class="clean-block clean-info dark main-bg-color submain-color">
             <div class="container">
-                <div class="block-heading">
-                    <h2 class="text-info main-color custom-font">Partidos</h2>
-                    <p class="custom-font">Consulta la información de los encuentros entre equipos</p>
+                <div class="block-heading mb-1">
+                    <h2 class="text-info mb-1 submain-color custom-font">Registra a los jugadores</h2>
+                    <p class="submain-color custom-font">Añade la información de cada jugador. No coloques datos ofensivos. Los campos marcados con un (*) son obligatorios.</p>
                 </div>
-                <div class="row justify-content-center">
+                <div class="row align-items-center">
                     <div class="col">
-                        <nav></nav>
+                        <form id="add-players-form" class="custom-font" action="php scripts/actions.php?type=add-players" method="post" enctype="multipart/form-data">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col my-2 text-center">
+                                        <div class="table-responsive submain-bg-color">
+                                            <table class="table submain-bg-color text-center">
+                                                <thead class="submain-bg-color">
+                                                    <tr class="submain-bg-color small">
+                                                        <th class="submain-bg-color col-3 col-md-2">Nombre *</th>
+                                                        <th class="submain-bg-color col-3 col-md-2">Apellidos *</th>
+                                                        <th class="submain-bg-color col-3 col-md-2">Apodo</th>
+                                                        <th class="submain-bg-color col-1">Dorsal</th>
+                                                        <th class="submain-bg-color col-2">Foto</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="submain-bg-color custom-font">
+                                                    <tr class="player-row">
+                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color" type="text" name=""></td>
+                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color" type="text" name=""></td>
+                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color" type="text" name=""></td>
+                                                        <td class="submain-bg-color" type="number" name=""><input class="form-control main-bg-color submain-color" type="text" name=""></td>
+                                                        <td class="submain-bg-color"><button class="btn form-control main-bg-color submain-color" type="button" onclick="javascript:upload_image(this);" style="background-color: gray !important;">Cargar archivo</button><input class="form-control d-none" type="file" id="player_photo" name="player_photo" accept="img/*" required="" onchange="javascript:paint_upload_button(this);"></td>
+                                                    </tr>
+                                                    <tr class="player-row">
+                                                        <td class="submain-bg-color"></td>
+                                                        <td class="submain-bg-color"></td>
+                                                        <td class="submain-bg-color"></td>
+                                                        <td class="submain-bg-color"></td>
+                                                        <td class="submain-bg-color">Cell 5</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col my-2 text-center"><button class="btn submain-bg-color main-color rounded-4 col-8 col-sm-auto" type="submit">Registrar equipo</button></div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

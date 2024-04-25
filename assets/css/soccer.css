@@ -117,3 +117,8 @@ li.nav-item a.nav-link.rem-adjustment {
   color: var(--submain-color) !important;
 }
 
+.loaded-img-button {
+  background-color: green;
+  color: #adee00;
+}
+
