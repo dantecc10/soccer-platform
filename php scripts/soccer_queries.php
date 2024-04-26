@@ -146,4 +146,3 @@ $league_table_fields = [
     'goals_difference',
     'points'
 ];
-
