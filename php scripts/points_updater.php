@@ -27,7 +27,11 @@ function update_points()
     for ($i = 0; sizeof($id_teams); $i++) {
         $stmt = $connection->prepare($sql);
         $stmt->bind_param("i", $id_teams[$i]);
-        $stmt->execute();
+        if($stmt->execute()){
+            echo "Puntos actualizados correctamente [$i]";
+        }else{
+            echo "Error al actualizar los puntos [$i]: " . $stmt->error;
+        }
         $stmt->close();
     }
 
