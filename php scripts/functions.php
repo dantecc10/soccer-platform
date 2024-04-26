@@ -635,7 +635,7 @@ function massive_players_upload($team_id)
         $n = intval($_POST['players-quantity']);
     }
     for ($i = 0; $i < $n; $i++) {
-        $sql = "INSERT INTO `players` ('', ?, ?, ?, ?, ?, 0, 0, 0, 0, 0, ?);";
+        $sql = "INSERT INTO `players` VALUES('', ?, ?, ?, ?, ?, 0, 0, 0, 0, 0, ?);";
         $name = $_POST['player-name-' . $i];
         $last_name = $_POST['player-last-names-' . $i];
         $nickname = $_POST['player-nickname-' . $i];
