@@ -16,6 +16,8 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
         case 'load-players':
             if (massive_players_upload($_POST['team-id'])) {
                 echo ("Carga exitosa");
+            }else{
+                echo ("Error");
             }
             break;
         default:
