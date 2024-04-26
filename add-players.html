@@ -66,15 +66,15 @@
                                                     <tr class="submain-bg-color small">
                                                         <th class="submain-bg-color col-3 col-md-2 text-nowrap" style="min-width: 100px !important;">Nombre *</th>
                                                         <th class="submain-bg-color col-3 col-md-2 text-nowrap" style="min-width: 100px !important;">Apellidos *</th>
-                                                        <th class="submain-bg-color col-2">Foto</th>
+                                                        <th class="submain-bg-color col-2">Foto *</th>
                                                         <th class="submain-bg-color col-3 col-md-2" style="min-width: 80px !important;">Apodo</th>
                                                         <th class="submain-bg-color col-1" style="min-width: 60px !important;">Dorsal</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody class="submain-bg-color custom-font">
+                                                <tbody id="form-table-body" class="submain-bg-color custom-font">
                                                     <tr class="player-row">
-                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" name=""></td>
-                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" name=""></td>
+                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" name="" required=""></td>
+                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" name="" required=""></td>
                                                         <td class="submain-bg-color"><button class="btn form-control submain-color text-nowrap" type="button" onclick="javascript:upload_image(this);" style="background-color: gray;">Cargar archivo</button><input class="form-control d-none player-field" type="file" id="player_photo" name="player_photo" accept="img/*" required="" onchange="javascript:paint_upload_button(this);"></td>
                                                         <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" name=""></td>
                                                         <td class="submain-bg-color" type="number" name=""><input class="form-control main-bg-color submain-color player-field" type="text" name=""></td>
@@ -82,6 +82,15 @@
                                                 </tbody>
                                             </table>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col my-2 text-center">
+                                        <div class="btn-group col-12 col-md-8 col-xl-6" role="group"><button class="btn btn-primary btn-success col-6" id="add-button" type="button" onclick="javascript:add_player_row_form();"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-plus-square-fill">
+                                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0"></path>
+                                                </svg>&nbsp;Añadir fila</button><button class="btn btn-primary btn-danger col-6" id="delete-button" type="button" onclick="javascript:remove_player_row_form();"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-trash-fill">
+                                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"></path>
+                                                </svg>&nbsp;Eliminar fila</button></div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -139,7 +148,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/vanilla-zoom.js?h=6a37ea9c996b05f763161c73127d66bc"></script>
     <script src="assets/js/theme.js?h=a083aeb15550c5e1266c666e8a5846d9"></script>
-    <script src="assets/js/soccer.js?h=1d4a385c9c8cb3d14de546837cf64a26"></script>
+    <script src="assets/js/soccer.js?h=763f664ed91c869760a76274c023f8da"></script>
 </body>
 
 </html>
