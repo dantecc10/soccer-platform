@@ -630,9 +630,11 @@ function massive_players_upload($team_id)
     $connection = new mysqli('localhost', $data[0], $data[1], $data[2]);
     $sql = "INSERT INTO `players` ('', ?, ?, ?, ?, ?, 0, 0, 0, 0, 0, ?);";
     if (isset($_POST['team-id'])) {
-        $n = intval($_POST['player-name']);
+        $team_id = $_POST['team_id'];
+        $n = intval($_POST['players-quantity']);
     } else if (isset($_SESSION['team_id'])) {
-        $n = intval($_SESSION['team_id']);
+        $team_id = $_SESSION['team_id'];
+        $n = intval($_POST['players-quantity']);
     }
     for ($i = 0; $i < $n; $i++) {
         $name = $_POST['player-name-' . $i];
@@ -647,11 +649,12 @@ function massive_players_upload($team_id)
         $stmt->execute();
         if ($stmt->affected_rows === 0) {
             return false;
-        }else{
+        } else {
             $id = $connection->insert_id;
             save_player_icon($id, $_FILES['player-photo-' . $i]);
         }
     }
+    header("Location: ../teams.php");
 }
 
 function save_player_icon($id, $img)
