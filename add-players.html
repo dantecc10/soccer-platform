@@ -56,7 +56,7 @@
                 </div>
                 <div class="row align-items-center">
                     <div class="col">
-                        <form id="add-players-form" class="custom-font" action="php scripts/actions.php?type=add-players" method="post" enctype="multipart/form-data">
+                        <form id="add-players-form" class="custom-font" action="php scripts/actions.php?type=load-players" method="post" enctype="multipart/form-data">
                             <div class="col">
                                 <div class="row">
                                     <div class="col my-2 text-center">
@@ -73,11 +73,11 @@
                                                 </thead>
                                                 <tbody id="form-table-body" class="submain-bg-color custom-font">
                                                     <tr class="player-row">
-                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" name="" required=""></td>
-                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" name="" required=""></td>
-                                                        <td class="submain-bg-color"><button class="btn form-control submain-color text-nowrap" type="button" onclick="javascript:upload_image(this);" style="background-color: gray;">Cargar archivo</button><input class="form-control d-none player-field" type="file" id="player_photo" name="player_photo" accept="img/*" required="" onchange="javascript:paint_upload_button(this);"></td>
-                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" name=""></td>
-                                                        <td class="submain-bg-color" type="number" name=""><input class="form-control main-bg-color submain-color player-field" type="text" name=""></td>
+                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" id="player-name-0" name="player-name-0" required=""></td>
+                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" id="player-last-names-0" name="player-last-names-0" required=""></td>
+                                                        <td class="submain-bg-color"><button class="btn form-control submain-color text-nowrap" type="button" onclick="javascript:upload_image(this);" style="background-color: gray;">Cargar archivo</button><input class="form-control d-none player-field" type="file" id="player-photo-0" name="player-photo-0" accept="img/*" required="" onchange="javascript:paint_upload_button(this);"></td>
+                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" id="player-nickname-0" name="player-nickname-0"></td>
+                                                        <td class="submain-bg-color" type="number" name=""><input class="form-control main-bg-color submain-color player-field" type="text" id="player-number-0" name="player-number-0"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
