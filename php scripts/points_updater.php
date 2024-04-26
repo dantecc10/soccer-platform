@@ -22,6 +22,15 @@ function update_points()
     } else {
         echo "Error al ejecutar la consulta: " . $connection->error;
     }
+
+    $sql = "UPDATE SET `points_team` = ((`wins_team` * 3) + `draws_team`) WHERE (`id_team` = ?);";
+    for ($i = 0; sizeof($id_teams); $i++) {
+        $stmt = $connection->prepare($sql);
+        $stmt->bind_param("i", $id_teams[$i]);
+        $stmt->execute();
+        $stmt->close();
+    }
+
     $connection->close();
 }
 update_points();
