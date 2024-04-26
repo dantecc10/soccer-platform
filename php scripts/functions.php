@@ -676,7 +676,7 @@ function save_player_icon($id, $img)
         $data = generatePasskey('sql');
         $connection = new mysqli('localhost', $data[0], $data[1], $data[2]);
         $img_sql = ("https://soccer.castelancarpinteyro.com/assets/img/teams/players" . $file_name);
-        $sql = "UPDATE `players` SET `img_player` = '$img_sql' WHERE `id_team` = $id";
+        $sql = "UPDATE `players` SET `img_player` = '$img_sql' WHERE `id_player` = $id";
         if ($connection->query($sql)) {
             // Respuesta de éxito
             return ("Imagen guardada correctamente como $file_name en la ruta $final_path.");
