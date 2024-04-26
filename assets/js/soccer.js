@@ -36,6 +36,7 @@ function add_player_row_form() {
     if (document.querySelectorAll(".player-row").length > 1) {
         document.getElementById("delete-button").removeAttribute("disabled");
     }
+    set_hidden_input_value();
 }
 function remove_player_row_form() {
     var players = document.querySelectorAll(".player-row").length;
@@ -45,4 +46,10 @@ function remove_player_row_form() {
     } else {
         document.getElementById("delete-button").setAttribute("disabled", "true");
     }
+    set_hidden_input_value();
+}
+
+function set_hidden_input_value() {
+    var quantity = document.querySelectorAll(".player-row").length;
+    document.getElementById("players-quantity").value = quantity;
 }
