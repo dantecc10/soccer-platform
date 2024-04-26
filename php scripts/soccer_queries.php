@@ -146,3 +146,7 @@ $league_table_fields = [
     'goals_difference',
     'points'
 ];
+
+$query = $match_basic_data_queries[0];
+
+echo (preg_replace('/WHERE (.+?) (ORDER BY|$)/', 'WHERE '.$nuevas_condiciones.' $2', $query));
