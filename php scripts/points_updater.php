@@ -24,12 +24,12 @@ function update_points()
     }
 
     $sql = "UPDATE `teams` SET `points_team` = ((`wins_team` * 3) + `draws_team`) WHERE (`id_team` = ?);";
-    for ($i = 0; sizeof($id_teams); $i++) {
+    for ($i = 0; $i < sizeof($id_teams); $i++) {
         $stmt = $connection->prepare($sql);
         $stmt->bind_param("i", $id_teams[$i]);
-        if($stmt->execute()){
+        if ($stmt->execute()) {
             echo "Puntos actualizados correctamente [$i]";
-        }else{
+        } else {
             echo "Error al actualizar los puntos [$i]: " . $stmt->error;
         }
         $stmt->close();
