@@ -108,6 +108,18 @@ $match_basic_data_queries = [
     JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
     WHERE (m.status_match = 0) ORDER BY m.start_schedule_match DESC LIMIT 5;"
 ];
+$team_detail_query = "SELECT `teams`.*, `played_games`, `position` FROM (
+         SELECT `id_team`, ((3 * `wins_team`) + `draws_team`) AS `points`, 
+             (`goals_for_team` - `goals_against_team`) AS `goal_difference`,
+               (`wins_team` + `losses_team` + `draws_team`) AS `played_games`,
+             ROW_NUMBER() OVER (ORDER BY ((3 * `wins_team`) + `draws_team`) DESC, (`goals_for_team` - `goals_against_team`) DESC) AS `position`
+         FROM `teams`) AS `place` JOIN `teams` ON `teams`.`id_team` = `place`.`id_team` WHERE `teams`.`id_team` = 7;";
+
+$team_position = "SELECT `position` FROM (
+                    SELECT `id_team`, `name_team`, ((3 * `wins_team`) + `draws_team`) AS `points`, 
+                    (`goals_for_team` - `goals_against_team`) AS `goal_difference`,
+           		    ROW_NUMBER() OVER (ORDER BY ((3 * `wins_team`) + `draws_team`) DESC, (`goals_for_team` - `goals_against_team`) DESC) AS `position`
+                FROM `teams`) AS `place` WHERE `id_team` = 7";
 
 $match_basic_data_fields = [
     'start_schedule_match',
