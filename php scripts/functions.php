@@ -629,18 +629,18 @@ function massive_players_upload($team_id)
     $val = true;
     $data = generatePasskey('sql');
     $connection = new mysqli('localhost', $data[0], $data[1], $data[2]);
-    $sql = "INSERT INTO `players` ('', ?, ?, ?, ?, ?, 0, 0, 0, 0, 0, ?);";
     if (isset($_POST['team-id'])) {
         $n = intval($_POST['players-quantity']);
     } else if (isset($_SESSION['team_id'])) {
         $n = intval($_POST['players-quantity']);
     }
     for ($i = 0; $i < $n; $i++) {
+        $sql = "INSERT INTO `players` ('', ?, ?, ?, ?, ?, 0, 0, 0, 0, 0, ?);";
         $name = $_POST['player-name-' . $i];
         $last_name = $_POST['player-last-names-' . $i];
         $nickname = $_POST['player-nickname-' . $i];
+        $number = (($_POST['player-number-' . $i] = '') ? 0 : $_POST['player-number-' . $i]);
         $image = $_FILES['player-photo-' . $i]['name'];
-        $number = $_POST['player-number-' . $i];
         //$position = $_POST['player-position-' . $i];
 
         $stmt = $connection->prepare($sql);
