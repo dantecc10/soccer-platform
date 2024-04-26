@@ -639,7 +639,7 @@ function massive_players_upload($team_id)
         $name = $_POST['player-name-' . $i];
         $last_name = $_POST['player-last-names-' . $i];
         $nickname = $_POST['player-nickname-' . $i];
-        $number = (($_POST['player-number-' . $i] = '') ? 0 : intval($_POST['player-number-' . $i]));
+        $number = (($_POST['player-number-' . $i] == '') ? 0 : intval($_POST['player-number-' . $i]));
         $image = $_FILES['player-photo-' . $i]['name'];
         //$position = $_POST['player-position-' . $i];
 
