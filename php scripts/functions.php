@@ -659,7 +659,7 @@ function massive_players_upload($team_id)
 function save_player_icon($id, $img)
 {
     // Ruta donde se guardarán las imágenes de los equipos
-    $path = '/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/assets/img/teams/players';
+    $path = '/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/assets/img/teams/players/';
 
     // Obtener la extensión del archivo
     $extension = pathinfo($img['name'], PATHINFO_EXTENSION);
@@ -675,7 +675,7 @@ function save_player_icon($id, $img)
         include_once "credentials.php";
         $data = generatePasskey('sql');
         $connection = new mysqli('localhost', $data[0], $data[1], $data[2]);
-        $img_sql = ("https://soccer.castelancarpinteyro.com/assets/img/teams/players" . $file_name);
+        $img_sql = ("https://soccer.castelancarpinteyro.com/assets/img/teams/players/" . $file_name);
         $sql = "UPDATE `players` SET `img_player` = '$img_sql' WHERE `id_player` = $id";
         if ($connection->query($sql)) {
             // Respuesta de éxito
