@@ -13,11 +13,15 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
                 header("Location: ../add-team.php?error=true");
             }
             break;
-
+        case 'load-players':
+            if (massive_players_upload($_POST['team-id'])) {
+                echo ("Carga exitosa");
+            }
+            break;
         default:
             // Error, redirigir al inicio
             break;
     }
-}else{
+} else {
     header("Location: ../actions.html?error=true");
 }
