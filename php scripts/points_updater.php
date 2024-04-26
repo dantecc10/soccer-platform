@@ -17,8 +17,8 @@ function update_points()
         while ($row = $result->fetch_assoc()) {
             $id_teams[] = (int)$row['id_team'];
         }
-        echo "Equipos: ";
-        print_r($id_teams);
+        //echo "Equipos: ";
+        //print_r($id_teams);
     } else {
         echo "Error al ejecutar la consulta: " . $connection->error;
     }
@@ -44,7 +44,7 @@ function update_points()
     }
 }
 if (update_points()) {
-    echo "Puntos actualizados correctamente";
+    //echo "Puntos actualizados correctamente";
 } else {
     echo "Error al actualizar los puntos";
 }
