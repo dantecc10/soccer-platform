@@ -147,6 +147,3 @@ $league_table_fields = [
     'points'
 ];
 
-$query = $match_basic_data_queries[0];
-$nuevas_condiciones = ("(nada = nada)");
-echo (preg_replace('/WHERE (.+?) (ORDER BY|$)/', 'WHERE '.$nuevas_condiciones.' $2', $query));

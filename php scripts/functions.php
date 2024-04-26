@@ -671,3 +671,9 @@ function save_player_icon($id, $img)
         return "Error al subir la imagen.";
     }
 }
+
+function conditionate($original_query, $new_conditions)
+{
+    // Creo que sólo sirve para WHERE's con ORDER BY's
+    return (preg_replace('/WHERE (.+?) (ORDER BY|$)/', 'WHERE ' . $new_conditions . ' $2', $original_query));
+}
