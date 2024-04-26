@@ -122,3 +122,8 @@ li.nav-item a.nav-link.rem-adjustment {
   color: #adee00 !important;
 }
 
+.player-card {
+  border: 5px dashed var(--main-background-color) !important;
+  background-color: #aeee0034 !important;
+}
+
