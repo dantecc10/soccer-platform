@@ -28,13 +28,23 @@ function update_points()
         $stmt = $connection->prepare($sql);
         $stmt->bind_param("i", $id_teams[$i]);
         if ($stmt->execute()) {
-            echo "Puntos actualizados correctamente [$i]";
+            //echo "Puntos actualizados correctamente [$i]"; # Success
         } else {
-            echo "Error al actualizar los puntos [$i]: " . $stmt->error;
+            //echo "Error al actualizar los puntos [$i]: " . $stmt->error; # Error
+            $error = true;
         }
         $stmt->close();
     }
 
     $connection->close();
+    if (isset($error)) {
+        return false;
+    } else {
+        return true;
+    }
 }
-update_points();
+if (update_points()) {
+    echo "Puntos actualizados correctamente";
+} else {
+    echo "Error al actualizar los puntos";
+}
