@@ -623,6 +623,66 @@ function save_team_logo($id, $img)
         return "Error al subir la imagen.";
     }
 }
-function update_img_src($id, $new_path)
+function massive_players_upload($team_id)
 {
+    include_once "credentials.php";
+    $data = generatePasskey('sql');
+    $connection = new mysqli('localhost', $data[0], $data[1], $data[2]);
+    $sql = "INSERT INTO `players` ('', ?, ?, ?, ?, ?, 0, 0, 0, 0, 0, ?);";
+    if (isset($_POST['team-id'])) {
+        $n = intval($_POST['player-name']);
+    } else if (isset($_SESSION['team_id'])) {
+        $n = intval($_SESSION['team_id']);
+    }
+    for ($i = 0; $i < $n; $i++) {
+        $name = $_POST['player-name-' . $i];
+        $last_name = $_POST['player-last-names-' . $i];
+        $nickname = $_POST['player-nickname-' . $i];
+        $image = $_FILES['player-photo-' . $i]['name'];
+        $number = $_POST['player-number-' . $i];
+        //$position = $_POST['player-position-' . $i];
+
+        $stmt = $connection->prepare($sql);
+        $stmt->bind_param("sssiis", $name, $last_name, $nickname, $number, $team_id, $image);
+        $stmt->execute();
+        if ($stmt->affected_rows === 0) {
+            return false;
+        }else{
+            $id = $connection->insert_id;
+            save_player_icon($id, $_FILES['player-photo-' . $i]);
+        }
+    }
+}
+
+function save_player_icon($id, $img)
+{
+    // Ruta donde se guardarán las imágenes de los equipos
+    $path = '/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/assets/img/teams/players';
+
+    // Obtener la extensión del archivo
+    $extension = pathinfo($img['name'], PATHINFO_EXTENSION);
+
+    // Generar el nombre único para el archivo
+    $file_name = ('player-img-' . $id . '.' . $extension);
+
+    // Ruta final del archivo
+    $final_path = ($path . $file_name);
+
+    // Mover el archivo a la ruta final
+    if (move_uploaded_file($img['tmp_name'], $final_path)) {
+        include_once "credentials.php";
+        $data = generatePasskey('sql');
+        $connection = new mysqli('localhost', $data[0], $data[1], $data[2]);
+        $img_sql = ("https://soccer.castelancarpinteyro.com/assets/img/teams/players" . $file_name);
+        $sql = "UPDATE `players` SET `img_player` = '$img_sql' WHERE `id_team` = $id";
+        if ($connection->query($sql)) {
+            // Respuesta de éxito
+            return ("Imagen guardada correctamente como $file_name en la ruta $final_path.");
+        } else {
+            return false;
+        }
+    } else {
+        // Error al mover el archivo
+        return "Error al subir la imagen.";
+    }
 }
