@@ -118,7 +118,7 @@ li.nav-item a.nav-link.rem-adjustment {
 }
 
 .loaded-img-button {
-  background-color: green;
-  color: #adee00;
+  background-color: green !important;
+  color: #adee00 !important;
 }
 
