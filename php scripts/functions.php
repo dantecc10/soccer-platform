@@ -385,10 +385,7 @@ function fetch_top_players()
 }
 function fetch_fields($table, $fields, $id, $custom_query)
 {
-    #$connection = new mysqli("localhost", "cuinos_fc", "CuinosFC24!!", "cuinos_fc");
-    if (!include_once "connection.php") {
-        include_once "php scripts/connection.php";
-    }
+    include "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
     //session_start();
     //(($_SESSION['email'] == "demo_user@system.com") or ($_SESSION['user'] == "demo_user")) ? $connection = new mysqli("localhost", "comercial_demo", $data[1], ($table . "_demo")):(false);
     if ($custom_query != "" && $custom_query != null) {
