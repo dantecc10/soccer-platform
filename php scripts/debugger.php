@@ -5,3 +5,4 @@ include_once "functions.php";
 
 // Ejemplo de uso
 fetch_top_players();
+echo "Hola";
