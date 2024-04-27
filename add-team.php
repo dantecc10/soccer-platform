@@ -47,7 +47,7 @@
         </div>
     </nav>
     <main class="page landing-page" style="background-color: var(--third-background-color);">
-        <section id="top-players" class="clean-block clean-info dark main-bg-color submain-color">
+        <section id="add-players" class="clean-block clean-info dark main-bg-color submain-color">
             <div class="container">
                 <div class="block-heading mb-1">
                     <h2 class="text-info mb-1 submain-color custom-font">Añadir equipo</h2>
