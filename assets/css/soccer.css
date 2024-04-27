@@ -125,5 +125,8 @@ li.nav-item a.nav-link.rem-adjustment {
 .player-card {
   border: 5px dashed var(--main-background-color) !important;
   background-color: #aeee0034 !important;
+  background: url("../../assets/img/samples/logo-bayern.png?h=689f785b0d375e5269cde4eff9a00b5c") no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
