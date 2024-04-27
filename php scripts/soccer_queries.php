@@ -35,6 +35,7 @@ $player_fields = [
     'last_names_player',
     'nickname_player',
     'dorsal_player',
+    'position_player',
     'player_team_id',
     'goals_player',
     'assists_player',
