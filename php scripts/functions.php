@@ -337,7 +337,7 @@ function generate_league_table()
                     $dom .= ('<td class="align-middle submain-bg-color main-color px-0" style="background-color: var(--third-color) !important;">' . ($i + 1) . '°</td>');
                     $dom .= (' <td class="align-middle submain-bg-color" style="background-color: var(--third-color) !important;">
                                 <div class="row">
-                                    <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=' . $data[$i][($j + 1)] . '" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="' . $data[$i][$j] . '" style="max-height: 40px;width: auto;"></a></div>
+                                    <div class="col col-12 col-md-3 py-1 px-0" style="max-height: 50px !important;"><a href="detail.php?team=' . $data[$i][($j)] . '" style="/*max-height: inherit;*/"><img class="bs-icon-sm icon rounded-4" src="' . $data[$i][$j] . '" style="max-height: 40px;width: auto;"></a></div>
                                     <div class="col d-flex align-items-center col-12 col-md-9 px-1 ps-0"><span class="d-flex align-middle justify-content-center col-12 main-color">' . $data[$i][($j + 1)] . '</span></div>
                                 </div>
                             </td>');
