@@ -368,7 +368,7 @@ function fetch_top_players()
     $sql = $top_players_query;
     $data = fetch_fields('players', $top_players_fields, '', $sql);
     for ($i = 0; $i < sizeof($data); $i++) {
-        $loop_dom = flag_replacer($top_player_inner_dom, "FLAG", $data[$i], [1, 2, 11, 9, 11, 10, 6, 7, 9]);
+        $loop_dom = flag_replacer($top_player_inner_dom, "FLAG", $data[$i], [1, 2, 11, 9, 11, 10, 6, 7, 8]);
         if ($i > 0) {
             $loop_dom = str_replace("active", "", $loop_dom);
         }
