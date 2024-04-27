@@ -54,3 +54,39 @@ function set_hidden_input_value() {
     document.getElementById("players-quantity").value = quantity;
 }
 set_hidden_input_value();
+
+function checkbox_analyze(element) {
+    checkboxes = document.querySelectorAll(".card-checkbox");
+    for (let index = 0; index < checkboxes.length; index++) {
+        if (element != checkboxes[index]) {
+            checkboxes[index].checked = false;
+        }
+    }
+}
+function checkbox_clicker(element) {
+    element.querySelector("input").click();
+}
+
+$(document).ready(function () {
+    $('#foul-form').submit(function (event) {
+        event.preventDefault(); // Evita el envío predeterminado del formulario
+
+        // Obtén los datos del formulario
+        var formData = $(this).serialize();
+
+        // Envía los datos mediante AJAX
+        $.ajax({
+            type: 'POST',
+            url: 'php scripts/actions.php?type=foul', // Ruta de tu script PHP
+            data: formData,
+            success: function (response) {
+                // Maneja la respuesta del servidor aquí
+                console.log(response);
+            },
+            error: function (xhr, status, error) {
+                // Maneja los errores aquí
+                console.error(xhr.responseText);
+            }
+        });
+    });
+});

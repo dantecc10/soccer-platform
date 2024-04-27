@@ -134,3 +134,13 @@ li.nav-item a.nav-link.rem-adjustment {
   border: 3px solid var(--main-background-color) !important;
 }
 
+.main-border.top-border {
+  border: none !important;
+  border-top: 3px solid var(--main-background-color) !important;
+}
+
+.main-border.bottom-border {
+  border: none !important;
+  border-bottom: 3px solid var(--main-background-color) !important;
+}
+
