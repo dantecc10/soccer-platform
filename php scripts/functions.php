@@ -637,7 +637,7 @@ function massive_players_upload($team_id)
         $n = intval($_POST['players-quantity']);
     }
     for ($i = 0; $i < $n; $i++) {
-        $sql = "INSERT INTO `players` VALUES('', ?, ?, ?, ?, ?, 0, 0, 0, 0, 0, ?);";
+        $sql = "INSERT INTO `players` VALUES('', ?, ?, ?, ?, ?, ?, 0, 0, 0, 0, 0, ?);";
         $name = $_POST['player-name-' . $i];
         $last_name = $_POST['player-last-names-' . $i];
         $nickname = $_POST['player-nickname-' . $i];
@@ -646,7 +646,7 @@ function massive_players_upload($team_id)
         //$position = $_POST['player-position-' . $i];
 
         $stmt = $connection->prepare($sql);
-        $stmt->bind_param("sssiis", $name, $last_name, $nickname, $number, $team_id, $image);
+        $stmt->bind_param("sssisis", $name, $last_name, $nickname, $number, $position, $team_id, $image);
         $stmt->execute();
         if ($stmt->affected_rows === 0) {
             $val = false;
