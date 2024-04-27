@@ -165,7 +165,7 @@ $league_table_fields = [
     'goals_difference',
     'points'
 ];
-
+$c = "'";
 $top_player_inner_dom = ('
 <div class="carousel-item active">
     <div class="row" style="max-height: 40rem;">
@@ -176,7 +176,7 @@ $top_player_inner_dom = ('
                 </div>
             </div>
             <div class="row" style="max-height: 20rem;">
-                <div class="col text-center p-0" style="background: url("FLAG") center / contain no-repeat;filter: drop-shadow(0 10px 1rem rgba(0, 0, 0, 0.5));max-height: inherit;"><img src="FLAG" style="max-height: inherit;filter: drop-shadow(-10px 10px rgba(0, 0, 0, 0.5));max-width: inherit;"></div>
+                <div class="col text-center p-0" style="background: url(' . $c . 'FLAG' . $c . ') center / contain no-repeat;filter: drop-shadow(0 10px 1rem rgba(0, 0, 0, 0.5));max-height: inherit;"><img src="FLAG" style="max-height: inherit;filter: drop-shadow(-10px 10px rgba(0, 0, 0, 0.5));max-width: inherit;"></div>
             </div>
         </div>
         <div class="col align-middle align-self-center mt-3 mt-sm-0" style="max-height: inherit;">
