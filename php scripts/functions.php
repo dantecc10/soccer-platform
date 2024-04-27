@@ -374,7 +374,7 @@ function fetch_top_players()
         }
         $top_players_dom .= $loop_dom;
     }
-    return $top_players_dom;
+    echo $top_players_dom;
 }
 function fetch_fields($table, $fields, $id, $custom_query)
 {
