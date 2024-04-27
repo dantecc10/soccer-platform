@@ -304,10 +304,14 @@
                                 </div>
                             </div>
                             <div>
-                                <!-- Start: Previous --><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><!-- End: Previous -->
-                                <!-- Start: Next --><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a><!-- End: Next -->
+                                <a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><!-- End: Previous -->
+                                <a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a><!-- End: Next -->
                             </div>
-                            <div class="carousel-indicators"><button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1"></button> <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2"></button></div>
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></button>
+                                <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#carousel-1" data-bs-slide-to="2"></button>
+                            </div>
                         </div>
                     </div>
                 </div>

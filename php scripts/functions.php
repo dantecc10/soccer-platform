@@ -361,6 +361,21 @@ function generate_league_table()
     return $dom;
 }
 
+function fetch_top_players()
+{
+    include "soccer_queries.php";
+    $top_players_dom = "";
+    $sql = $top_players_query;
+    $data = fetch_fields('players', $top_players_fields, '', $sql);
+    for ($i = 0; $i < sizeof($data); $i++) {
+        $loop_dom = flag_replacer($top_player_inner_dom, "FLAG", $data[$i], []);
+        if ($i > 0) {
+            $loop_dom = str_replace("active", "", $loop_dom);
+        }
+        $top_players_dom .= $loop_dom;
+    }
+    return $top_players_dom;
+}
 function fetch_fields($table, $fields, $id, $custom_query)
 {
     #$connection = new mysqli("localhost", "cuinos_fc", "CuinosFC24!!", "cuinos_fc");
