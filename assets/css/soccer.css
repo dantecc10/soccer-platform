@@ -130,3 +130,7 @@ li.nav-item a.nav-link.rem-adjustment {
   background-position: center;
 }
 
+.main-border {
+  border: 3px solid var(--main-background-color) !important;
+}
+
