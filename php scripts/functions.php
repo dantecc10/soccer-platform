@@ -715,7 +715,7 @@ function fetch_player_cards($id)
     include_once "soccer_queries.php";
     include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
     $c = "'";
-    $fields = ['id_player', 'name_player', 'nickname_player', 'last_names_player', 'dorsal_player', 'img_player', 'team_icon'];
+    $fields = ['id_player', 'name_player', 'nickname_player', 'last_names_player', 'dorsal_player', 'img_player', 'icon_team'];
     $card_player_dom = ('
     <div class="card col-12 col-md-3 m-2 rounded-5" style="min-width: 30% !important;border: 5px dashed var(--main-background-color) !important;background-color: #aeee0034 !important;background: url(' . $c . 'FLAG' . $c . ') no-repeat;background-size: contain;background-position: center;"><img class="card-img-top w-100 d-block pt-1" src="FLAG" />
     <div class="card-body col-12 rounded-4 py-0">
@@ -737,7 +737,7 @@ function fetch_player_cards($id)
 
     $cards = fetch_fields('players', $fields, '', $sql);
     for ($i = 0; $i < sizeof($cards); $i++) {
-        $cards_dom .= flag_replacer($card_player_dom, 'FLAG', $cards[$i], [6, 5, 1, 4, 2, ]);
+        $cards_dom .= flag_replacer($card_player_dom, 'FLAG', $cards[$i], [6, 5, 1, 4, 2,]);
     }
     return $cards_dom;
 }
