@@ -741,7 +741,7 @@ function fetch_player_cards($id)
     }
     $cards = fetch_fields('teams', $fields, '', $sql);
     for ($i = 0; $i < sizeof($cards); $i++) {
-        $cards_dom .= flag_replacer($card_player_dom, 'FLAG', $cards[$i], [0, 1, 2, 3, 4, 5, 6]);
+        $cards_dom .= flag_replacer($card_player_dom, 'FLAG', $cards[$i], [6, 5, 1, 4, 2, ]);
     }
     return $cards_dom;
 }
