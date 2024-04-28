@@ -737,7 +737,7 @@ function fetch_player_cards($id)
 
     $cards = fetch_fields('players', $fields, '', $sql);
     for ($i = 0; $i < sizeof($cards); $i++) {
-        $cards_dom .= flag_replacer($card_player_dom, 'FLAG', $cards[$i], [6, 5, 1, 4, 2,]);
+        $cards_dom .= flag_replacer($card_player_dom, 'FLAG', $cards[$i], [6, 5, 1, 4, 2, 3]);
     }
     return $cards_dom;
 }
