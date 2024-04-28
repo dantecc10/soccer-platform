@@ -713,7 +713,6 @@ function fetch_team_cards()
 function fetch_player_cards($id)
 {
     include_once "soccer_queries.php";
-    include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
     $c = "'";
     $fields = ['id_player', 'name_player', 'nickname_player', 'last_names_player', 'dorsal_player', 'img_player', 'icon_team'];
     $card_player_dom = ('
@@ -740,4 +739,42 @@ function fetch_player_cards($id)
         $cards_dom .= flag_replacer($card_player_dom, 'FLAG', $cards[$i], [6, 5, 1, 4, 2, 3]);
     }
     return $cards_dom;
+}
+
+function team_data($id)
+{
+    include_once "soccer_queries.php";
+    $structure = ('
+    <div class="row py-3 submain-bg-color main-color rounded-5">
+        <div class="col col-12 col-md-4 col-lg-6 align-self-center">
+            <div class="row" style="height: 100%;">
+                <div class="col text-center" style="max-height: inherit;"><img class="col-10 col-md-11 col-lg-8 col-xxl-7" src="FLAG" /></div>
+            </div>
+        </div>
+        <div class="col col-12 col-md-8 col-lg-6 align-self-center">
+            <div class="row">
+                <div class="col text-center text-lg-start"><span class="fs-2">Equipo</span><span class="fs-4 text-secondary smaller"> FLAG° en la liga</span></div>
+            </div>
+            <div class="row text-center text-lg-start">
+                <div class="col">
+                    <h1 class="fs-1 fw-bolder" style="font-size: 4rem !important;color: white !important;">FLAG</h1>
+                </div>
+            </div>
+            <div class="row text-center text-lg-start">
+                <div class="col"><span class="fs-3">DT: FLAG</span></div>
+            </div>
+            <div class="row px-3">
+                <div class="col main-bg-color submain-color rounded-4">
+                    <p class="fs-5">FLAG</p>
+                </div>
+            </div>
+        </div>
+    </div>');
+    $sql = ("SELECT `teams`.*, `position` FROM (
+        SELECT `id_team`, ROW_NUMBER() OVER (ORDER BY ((3 * `wins_team`) + `draws_team`) DESC, (`goals_for_team` - `goals_against_team`) DESC) AS `position`
+        FROM `teams`) AS `place` JOIN `teams` ON `teams`.`id_team` = `place`.`id_team` WHERE `teams`.`id_team` = $id;");
+
+    $data = fetch_fields('teams', $team_fields, '', $sql);
+
+    return flag_replacer($structure, 'FLAG', $data[0], [10, 11, 1, 2, 9]);
 }
