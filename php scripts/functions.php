@@ -708,4 +708,5 @@ function fetch_team_cards()
     for ($i = 0; $i < sizeof($cards); $i++) {
         $cards_dom .= flag_replacer($card_unit_dom, 'FLAG', $cards[$i], [0, 1, 2, 3, 4]);
     }
+    return $cards_dom;
 }
