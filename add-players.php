@@ -105,7 +105,7 @@
                                 </div>
                                 <div class="row visually-hidden">
                                     <div class="col my-2 text-center"><input class="form-control submain-color main-bg-color" type="number" id="players-quantity" name="players-quantity" onload="javascript:set_hidden_input_value();"></div>
-                                    <div class="col my-2 text-center"><input class="form-control submain-color main-bg-color" type="number" id="team-id" name="team-id" onload="" value="25"></div>
+                                    <div class="col my-2 text-center"><input class="form-control submain-color main-bg-color" type="number" id="team-id" name="team-id" value="<?php echo ($_GET['team_id']); ?>"></div>
                                 </div>
                                 <div class="row">
                                     <div class="col my-2 text-center"><button class="btn submain-bg-color main-color rounded-4 col-8 col-sm-auto" type="submit">Registrar equipo</button></div>

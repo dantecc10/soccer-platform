@@ -60,10 +60,8 @@
                                 <div class="row">
                                     <div class="col my-2">
                                         <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Selecciona la liga *</span><select class="form-select form-control submain-color main-bg-color custom-font" id="league-team" name="league-team" required="">
-                                                <optgroup label="This is a group">
-                                                    <option value="12" selected="">This is item 1</option>
-                                                    <option value="13">This is item 2</option>
-                                                    <option value="14">This is item 3</option>
+                                                <optgroup label="Ligas">
+                                                    <option value="1" selected="">Liga 1</option>
                                                 </optgroup>
                                             </select></div>
                                     </div>
