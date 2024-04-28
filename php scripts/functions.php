@@ -713,6 +713,7 @@ function fetch_team_cards()
 function fetch_player_cards($id)
 {
     include_once "soccer_queries.php";
+    include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
     $c = "'";
     $fields = ['id_player', 'name_player', 'nickname_player', 'last_names_player', 'dorsal_player', 'img_player', 'team_icon'];
     $card_player_dom = ('
@@ -728,13 +729,19 @@ function fetch_player_cards($id)
     </div>
 </div>
     ');
+
+
     $cards_dom = "";
     $sql = ('SELECT p`.`id_player`, `p`.`name_player`, `p`.`nickname_player`, `p`.`last_names_player`, `p`.`dorsal_player`, `p`.`img_player`,
-    t.icon_team AS team_icon, `p`.`player_team_id` FROM players p LEFT JOIN teams t ON p.player_team_id = t.id_team WHERE (`player_team_id` = X);');
-    $sql = str_replace("X", $id, $sql);
+    t.icon_team AS team_icon, `p`.`player_team_id` FROM players p LEFT JOIN teams t ON p.player_team_id = t.id_team WHERE (`player_team_id` = ' . $id . ');');
+
+    if ($result = $connection->query($sql)) {
+        $cards = $result->fetch_all(MYSQLI_ASSOC);
+        $result->close();
+    }
     $cards = fetch_fields('teams', $fields, '', $sql);
     for ($i = 0; $i < sizeof($cards); $i++) {
-        $cards_dom .= flag_replacer($card_player_dom, 'FLAG', $cards[$i], [6, 5, 1, 4, 2, 3]);
+        $cards_dom .= flag_replacer($card_player_dom, 'FLAG', $cards[$i], [0, 1, 2, 3, 4, 5, 6]);
     }
     return $cards_dom;
 }
