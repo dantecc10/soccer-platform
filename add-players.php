@@ -1,3 +1,8 @@
+<?php
+if (!isset($_GET['team-id'])) {
+    header("Location: teams.php");
+}
+?>
 <!DOCTYPE html>
 <html data-bs-theme="dark" lang="es-mx">
 

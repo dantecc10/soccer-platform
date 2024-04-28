@@ -13,7 +13,10 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             }
             break;
         case 'load-players':
-            echo (massive_players_upload($_POST['team-id'])) ? ("Carga exitosa") : ("Error");
+            (massive_players_upload($_POST['team-id'])) ? header("Location: ../team-detail.php?id=" . ($_POST['team-id'])) : $error = ("Error");
+            if (isset($error)) {
+                header("Location: ../add-players.php?error=true");
+            }
             break;
         case 'foul':
             $data = array();
