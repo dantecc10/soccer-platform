@@ -92,3 +92,8 @@ function team_detail(id) {
 
     window.location.href = url;
 }
+function add_players(id) {
+    var url = ("https://soccer.castelancarpinteyro.com/add-players.php?team-id=" + id);
+
+    window.location.href = url;
+}
