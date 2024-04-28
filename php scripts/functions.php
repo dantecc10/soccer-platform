@@ -399,7 +399,7 @@ function fetch_fields($table, $fields, $id, $custom_query)
         }
     }
 
-    $result = mysqli_query($connection, $query) or die("Error en la consulta a la base de datos");
+    //$result = mysqli_query($connection, $query) or die("Error en la consulta a la base de datos");
     $data = array();
 
     // Comprobar si las filas son mayores que 0
