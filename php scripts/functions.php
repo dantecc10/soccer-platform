@@ -698,11 +698,14 @@ function conditionate($original_query, $new_conditions)
     return (preg_replace('/WHERE (.+?) (ORDER BY|$)/', 'WHERE ' . $new_conditions . ' $2', $original_query));
 }
 
-function fetch_team_cards(){
+function fetch_team_cards()
+{
     include_once "soccer_queries.php";
-    $fields = ['id_team'];
-    // inserta los elementos que ya están en $league_table_fields
-    $fields = array_merge($fields, $league_table_fields);
-
+    $fields = ['id_team', 'icon_team', 'position', 'coach_team', 'name_team'];
+    $cards_dom = "";
     $sql = $team_cards_query;
+    $cards = fetch_fields('teams', $fields, '', $sql);
+    for ($i = 0; $i < sizeof($cards); $i++) {
+        $cards_dom .= flag_replacer($card_unit_dom, 'FLAG', $cards[$i], [0, 1, 2, 3, 4]);
+    }
 }
