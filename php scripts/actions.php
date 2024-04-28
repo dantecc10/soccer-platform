@@ -9,7 +9,7 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
                 save_team_logo($result, $_FILES['logo-team']);
                 header("Location: ../add-players.php");
             } else {
-                header("Location: ../add-team.php?error=true");
+                header("Location: ../add-teams.php?error=true");
             }
             break;
         case 'load-players':
