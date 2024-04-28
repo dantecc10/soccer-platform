@@ -710,3 +710,29 @@ function fetch_team_cards()
     }
     return $cards_dom;
 }
+function fetch_player_cards($id)
+{
+    include_once "soccer_queries.php";
+    $c = "'";
+    $fields = ['id_player', 'name_player', 'nickname_player', 'last_names_player', 'dorsal_player', 'img_player', 'team_icon'];
+    $card_player_dom = ('
+    <div class="card col-12 col-md-3 m-2 rounded-5" style="min-width: 30% !important;border: 5px dashed var(--main-background-color) !important;background-color: #aeee0034 !important;background: url(' . $c . 'FLAG' . $c . ') no-repeat;background-size: contain;background-position: center;"><img class="card-img-top w-100 d-block pt-1" src="FLAG" />
+    <div class="card-body rounded-4 py-0">
+        <div class="row p-3 align-self-center main-bg-color submain-color rounded-5" style="border: 3px solid var(--third-background-color);">
+            <div class="col">
+                <h4 class="mb-0 fs-3 p-0">FLAG<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill submain-bg-color main-color main-border">#FLAG</span></h4>
+                <h4 class="fw-lighter m-0 p-0" style="font-size: smaller;">FLAG</h4>
+                <h4 class="fs-1 last-names-container fw-bolder m-0">FLAG</h4>
+            </div>
+        </div>
+    </div>
+</div>
+    ');
+    $cards_dom = "";
+    $sql = str_replace("X", $id, $team_cards_query);
+    $cards = fetch_fields('teams', $fields, '', $sql);
+    for ($i = 0; $i < sizeof($cards); $i++) {
+        $cards_dom .= flag_replacer($card_player_dom, 'FLAG', $cards[$i], [6, 5, 1, 4, 2, 3]);
+    }
+    return $cards_dom;
+}
