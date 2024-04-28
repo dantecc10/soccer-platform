@@ -250,7 +250,7 @@ $team_cards_query = 'SELECT `teams`.*, `position` FROM (SELECT `id_team`,
 $card_unit_dom = ('
 <div class="card col-12 col-md-3 m-2 rounded-5 team-card text-center align-items-center align-self-center" style="min-width: 30% !important;background: none !important;" onclick="javascript:team_detail(FLAG);">
     <img class="card-img-top w-100 d-block p-1 w-auto" src="FLAG" style="max-height: auto;max-width: 85% !important;" />
-    <div class="card-body rounded-4 py-0">
+    <div class="card-body col-12 rounded-4 py-0">
         <div class="row p-3 align-self-center main-bg-color submain-color rounded-5" style="border: 3px solid var(--third-background-color);">
             <div class="col px-1">
                 <h6 class="mb-0 p-0 fs-3 text-muted submain-bg-color rounded-5">FLAG° en la liga</h6>
