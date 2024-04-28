@@ -164,7 +164,8 @@ $league_table_fields = [
     'goals_for_team',
     'goals_against_team',
     'goals_difference',
-    'points'
+    'points',
+    'id_team'
 ];
 $c = "'";
 $top_player_inner_dom = ('
