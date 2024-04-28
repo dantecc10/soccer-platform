@@ -729,7 +729,10 @@ function fetch_player_cards($id)
 </div>
     ');
     $cards_dom = "";
-    $sql = str_replace("X", $id, $team_cards_query);
+    $sql = ('SELECT 
+    `p`.`id_player`, `p`.`name_player`, `p`.`nickname_player`, `p`.`last_names_player`, `p`.`dorsal_player`, `p`.`img_player`,
+    t.icon_team AS team_icon, `p`.`player_team_id` FROM players p LEFT JOIN teams t ON p.player_team_id = t.id_team WHERE (`player_team_id` = 3);');
+    $sql = str_replace("X", $id, $sql);
     $cards = fetch_fields('teams', $fields, '', $sql);
     for ($i = 0; $i < sizeof($cards); $i++) {
         $cards_dom .= flag_replacer($card_player_dom, 'FLAG', $cards[$i], [6, 5, 1, 4, 2, 3]);
