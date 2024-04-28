@@ -52,7 +52,7 @@
             <div class="container">
                 <?php
                 include "php scripts/functions.php";
-                echo (team_data($_SESSION['id']));
+                echo (team_data($_GET['id']));
                 ?>
             </div>
         </section>
