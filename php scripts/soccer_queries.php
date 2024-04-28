@@ -245,7 +245,7 @@ $top_player_inner_dom = ('
 
 $team_cards_query = 'SELECT `teams`.*, `position` FROM (SELECT `id_team`,
         ROW_NUMBER() OVER (ORDER BY ((3 * `wins_team`) + `draws_team`) DESC, (`goals_for_team` - `goals_against_team`) DESC) AS `position`
-    FROM `teams`) AS `place` JOIN `teams` ON `teams`.`id_team` = `place`.`id_team` WHERE (`player_team_id` = X);';
+    FROM `teams`) AS `place` JOIN `teams` ON `teams`.`id_team` = `place`.`id_team`';
 
 $card_unit_dom = ('
 <div class="card col-12 col-md-3 m-2 rounded-5 team-card text-center align-items-center align-self-center" style="min-width: 30% !important;background: none !important;" onclick="javascript:team_detail(FLAG);">
