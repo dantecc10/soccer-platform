@@ -773,6 +773,8 @@ function team_data($id)
     $sql = ("SELECT `teams`.*, `position` FROM (
         SELECT `id_team`, ROW_NUMBER() OVER (ORDER BY ((3 * `wins_team`) + `draws_team`) DESC, (`goals_for_team` - `goals_against_team`) DESC) AS `position`
         FROM `teams`) AS `place` JOIN `teams` ON `teams`.`id_team` = `place`.`id_team` WHERE `teams`.`id_team` = $id;");
+    $team_fields = $teams_fields;
+    $team_fields[] = 'position';
 
     $data = fetch_fields('teams', $team_fields, '', $sql);
 
