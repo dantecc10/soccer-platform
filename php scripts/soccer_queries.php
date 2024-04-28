@@ -83,7 +83,7 @@ $league_query = "SELECT `icon_team`, `name_team`,
             (`wins_team` + `draws_team` + `losses_team`) AS `played_games`,
             `wins_team`, `draws_team`, `losses_team`, `goals_for_team`, `goals_against_team`,
             (`goals_for_team` - `goals_against_team`) AS `goals_difference`,
-            ((3 * `wins_team`) + `draws_team`) AS `points`
+            ((3 * `wins_team`) + `draws_team`) AS `points`, `id_team`
             FROM `teams` ORDER BY `points` DESC, `goals_difference` DESC;";
 
 $match_basic_data_queries = [
