@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Añadir jugadores - DEPORTEX</title>
     <meta property="og:image" content="https://soccer.castelancarpinteyro.com/assets/img/deportex/DeportEX Gold Edition VFX.png">
@@ -47,7 +47,7 @@
         </div>
     </nav>
     <main class="page landing-page" style="background-color: var(--third-background-color);">
-        <section id="top-players" class="clean-block clean-info dark main-bg-color submain-color">
+        <section id="add-players" class="clean-block clean-info dark main-bg-color submain-color">
             <div class="container">
                 <div class="block-heading mb-1">
                     <h2 class="text-info mb-1 submain-color custom-font">Registra a los jugadores</h2>
@@ -67,7 +67,8 @@
                                                         <th class="submain-bg-color col-3 col-md-2 text-nowrap" style="min-width: 100px !important;">Apellidos *</th>
                                                         <th class="submain-bg-color col-2">Foto *</th>
                                                         <th class="submain-bg-color col-3 col-md-2" style="min-width: 80px !important;">Apodo</th>
-                                                        <th class="submain-bg-color col-1" style="min-width: 60px !important;">Dorsal</th>
+                                                        <th class="submain-bg-color col-auto" style="min-width: 60px !important;">Dorsal *</th>
+                                                        <th class="submain-bg-color" style="min-width: 70px !important;">Posición *</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="form-table-body" class="submain-bg-color custom-font">
@@ -76,7 +77,17 @@
                                                         <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" id="player-last-names-0" name="player-last-names-0" required=""></td>
                                                         <td class="submain-bg-color"><button class="btn form-control submain-color text-nowrap" type="button" onclick="javascript:upload_image(this);" style="background-color: gray;">Cargar archivo</button><input class="form-control d-none player-field" type="file" id="player-photo-0" name="player-photo-0" accept="img/*" required="" onchange="javascript:paint_upload_button(this);"></td>
                                                         <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" id="player-nickname-0" name="player-nickname-0"></td>
-                                                        <td class="submain-bg-color" type="number" name=""><input class="form-control main-bg-color submain-color player-field" type="text" id="player-number-0" name="player-number-0"></td>
+                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="number" id="player-number-0" name="player-number-0" required=""></td>
+                                                        <td class="submain-bg-color"><select class="form-select main-bg-color submain-color player-field" id="player-position-0" name="player-position-0" requierd="">
+                                                                <optgroup label="Posiciones">
+                                                                    <option value="Portero">Portero</option>
+                                                                    <option value="Defensa">Defensa</option>
+                                                                    <option value="Lateral">Lateral</option>
+                                                                    <option value="Mediocampista">Mediocampista</option>
+                                                                    <option value="Delantero">Delantero</option>
+                                                                    <option value="Extremo">Extremo</option>
+                                                                </optgroup>
+                                                            </select></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -151,7 +162,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/theme.js?h=a083aeb15550c5e1266c666e8a5846d9"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="assets/js/soccer.js?h=fe04a40863e2e98ecf0b60b724df9cc9"></script>
+    <script src="assets/js/soccer.js?h=7098f43c227bf47e86ba3f1deddc6a78"></script>
 </body>
 
 </html>
