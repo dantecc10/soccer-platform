@@ -93,7 +93,8 @@
                         <div class="row submain-bg-color py-2 m-2 rounded-4 text-center justify-content-between">
                             <div class="col">
                                 <div class="card-group justify-content-between">
-                                    <?php echo (fetch_team_cards()); ?>
+                                    <?php include_once "php scripts/functions.php";
+                                    echo (fetch_team_cards()); ?>
                                 </div>
                             </div>
                         </div>
