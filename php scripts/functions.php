@@ -697,3 +697,12 @@ function conditionate($original_query, $new_conditions)
     // Creo que sólo sirve para WHERE's con ORDER BY's
     return (preg_replace('/WHERE (.+?) (ORDER BY|$)/', 'WHERE ' . $new_conditions . ' $2', $original_query));
 }
+
+function fetch_team_cards(){
+    include_once "soccer_queries.php";
+    $fields = ['id_team'];
+    // inserta los elementos que ya están en $league_table_fields
+    $fields = array_merge($fields, $league_table_fields);
+
+    $sql = $team_cards_query;
+}
