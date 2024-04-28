@@ -86,3 +86,9 @@ $(document).ready(function () {
         });
     });
 });
+
+function team_detail(id) {
+    var url = ("https://soccer.castelancarpinteyro.com/team-detail.php?id=" + id);
+
+    window.location.href = url;
+}
