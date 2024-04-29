@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require_once "connection.php";
     $username = $_POST["email"];
     $password = $_POST["password"];
-    $sql = "SELECT * FROM `administrators` WHERE `email_user` = ?";
+    $sql = "SELECT * FROM `users` WHERE `email_user` = ?";
 
     if ($stmt = $connection->prepare($sql)) {
         $stmt->bind_param("s", $email);
@@ -17,11 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if (password_verify($password, $hashed_password)) {
                         session_start();
                         $_SESSION["logged_in"] = true;
-                        $_SESSION["id_admin"] = $id_user;
-                        $_SESSION["name_admin"] = $name_user;
-                        $_SESSION["last_names_admin"] = $last_names_user;
-                        $_SESSION["email_admin"] = $email_user;
-                        $_SESSION["role_admin"] = $role_user;
+                        $_SESSION["id_user"] = $id_user;
+                        $_SESSION["name_user"] = $name_user;
+                        $_SESSION["last_names_user"] = $last_names_user;
+                        $_SESSION["email_user"] = $email_user;
+                        $_SESSION["role_user"] = $role_user;
 
                         header("location: ../index.php");
                     } else {
