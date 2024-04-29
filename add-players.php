@@ -71,9 +71,9 @@ if (!isset($_GET['team-id'])) {
                                                         <th class="submain-bg-color col-3 col-md-2 text-nowrap" style="min-width: 100px !important;">Nombre *</th>
                                                         <th class="submain-bg-color col-3 col-md-2 text-nowrap" style="min-width: 100px !important;">Apellidos *</th>
                                                         <th class="submain-bg-color col-2">Foto *</th>
-                                                        <th class="submain-bg-color col-3 col-md-2" style="min-width: 80px !important;">Apodo</th>
                                                         <th class="submain-bg-color col-auto" style="min-width: 60px !important;">Dorsal *</th>
                                                         <th class="submain-bg-color" style="min-width: 70px !important;">Posición *</th>
+                                                        <th class="submain-bg-color col-3 col-md-2" style="min-width: 80px !important;">Apodo</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="form-table-body" class="submain-bg-color custom-font">
@@ -81,7 +81,7 @@ if (!isset($_GET['team-id'])) {
                                                         <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" id="player-name-0" name="player-name-0" required=""></td>
                                                         <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" id="player-last-names-0" name="player-last-names-0" required=""></td>
                                                         <td class="submain-bg-color"><button class="btn form-control submain-color text-nowrap" type="button" onclick="javascript:upload_image(this);" style="background-color: gray;">Cargar archivo</button><input class="form-control d-none player-field" type="file" id="player-photo-0" name="player-photo-0" accept="img/*" required="" onchange="javascript:paint_upload_button(this);"></td>
-                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" id="player-nickname-0" name="player-nickname-0"></td>
+
                                                         <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="number" id="player-number-0" name="player-number-0" required=""></td>
                                                         <td class="submain-bg-color"><select class="form-select main-bg-color submain-color player-field" id="player-position-0" name="player-position-0" requierd="">
                                                                 <optgroup label="Posiciones">
@@ -93,6 +93,7 @@ if (!isset($_GET['team-id'])) {
                                                                     <option value="Extremo">Extremo</option>
                                                                 </optgroup>
                                                             </select></td>
+                                                        <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" id="player-nickname-0" name="player-nickname-0"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
