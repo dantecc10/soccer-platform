@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html data-bs-theme="dark" lang="es-mx">
 <?php
 include_once "php scripts/functions.php";
+session_start();
 ?>
+<!DOCTYPE html>
+<html data-bs-theme="dark" lang="es-mx">
 
 <head>
     <meta charset="utf-8">
