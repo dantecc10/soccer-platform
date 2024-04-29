@@ -713,7 +713,7 @@ function logged_in()
 {
     session_start();
     if (isset($_SESSION['logged_in'])) {
-        return (isset($_SESSION['id_admin'])) ? true : false;
+        return (isset($_SESSION['id_user'])) ? true : false;
     } else {
         return false;
     }
