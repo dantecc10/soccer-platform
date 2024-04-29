@@ -1,6 +1,3 @@
-<?php
-include "php scripts/soccer_queries.php";
-?>
 <!DOCTYPE html>
 <html data-bs-theme="dark" lang="es-mx">
 
@@ -869,6 +866,9 @@ include "php scripts/soccer_queries.php";
             </div>
         </section>
         <section id="players" class="custom-font mt-4 py-4 main-bg-color">
+            <?php
+            include "php scripts/soccer_queries.php";
+            ?>
             <div class="container py-1">
                 <div class="row py-4 main-color submain-bg-color rounded-5" style="border: 5px solid var(--submain-background-color);">
                     <div class="col align-self-center text-center py-3">
@@ -879,7 +879,7 @@ include "php scripts/soccer_queries.php";
                         </div>
                         <div class="row px-3">
                             <div class="col main-bg-color submain-color rounded-4 align-self-center">
-                                <p class="fs-5 my-2">Mira quiénes conforman el plantel de&nbsp;<span class="submain-bg-color main-color p-2 rounded-4"><?php echo (fetch_fields("teams", $teams_fields, $_GET['id'], ("SELECT * FROM `teams` WHERE (`id_team` = " . $_GET['id'] . ")")))[0]; ?></span></p>
+                                <p class="fs-5 my-2">Mira quiénes conforman el plantel de&nbsp;<span class="submain-bg-color main-color p-2 rounded-4"><?php echo (fetch_fields("teams", $teams_fields, $_GET['id'], ("SELECT * FROM `teams` WHERE (`id_team` = " . $_GET['id'] . ")")))[1]; ?></span></p>
                             </div>
                         </div>
                         <div class="row my-2">
