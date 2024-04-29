@@ -880,7 +880,7 @@
                             </div>
                         </div>
                         <div class="row my-2">
-                            <div class="col"><a class="btn submain-color main-bg-color rounded-4" href="add-players.php?team-id=<?php $_GET['id']; ?>">Añadir jugadores</a></div>
+                            <div class="col"><a class="btn submain-color main-bg-color rounded-4" href="add-players.php?team-id=<?php echo ($_GET['id']); ?>">Añadir jugadores</a></div>
                         </div>
                         <div class="row submain-bg-color py-2 m-2 rounded-4 text-center justify-content-between">
                             <div class="col">
