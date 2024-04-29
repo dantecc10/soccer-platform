@@ -1,3 +1,9 @@
+<?php
+session_start();
+include "php scripts/functions.php";
+include "php scripts/soccer_queries.php";
+$team_info = fetch_fields('teams', $teams_fields, $_GET['id'], "");
+?>
 <!DOCTYPE html>
 <html data-bs-theme="dark" lang="es-mx">
 
@@ -51,7 +57,6 @@
         <section id="team-detail" class="custom-font mt-4 pt-4">
             <div class="container">
                 <?php
-                include "php scripts/functions.php";
                 echo (team_data($_GET['id']));
                 ?>
             </div>
@@ -887,6 +892,9 @@
                                     ?>
                                 </div>
                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><a class="btn submain-color main-bg-color rounded-4" href="add-players.php?team-id?=<?php echo ($team_info[0]); ?>">Añadir jugadores</a></div>
                         </div>
                     </div>
                 </div>
