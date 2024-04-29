@@ -660,6 +660,9 @@ function fetch_player_cards($id)
     t.icon_team AS icon_team, `p`.`player_team_id` FROM players p LEFT JOIN teams t ON p.player_team_id = t.id_team WHERE (`player_team_id` = $id);");
 
     $cards = fetch_fields('players', $fields, '', $sql);
+    if ($cards == null) {
+        return null;
+    }
     for ($i = 0; $i < sizeof($cards); $i++) {
         $cards_dom .= flag_replacer($card_player_dom, 'FLAG', $cards[$i], [6, 5, 1, 4, 2, 3]);
     }
