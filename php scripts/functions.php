@@ -708,3 +708,13 @@ function team_data($id)
 
     return flag_replacer($structure, 'FLAG', $data[0], [10, 11, 1, 2, 9]);
 }
+
+function logged_in()
+{
+    session_start();
+    if (isset($_SESSION['logged_in'])) {
+        return (isset($_SESSION['id_admin'])) ? true : false;
+    } else {
+        return false;
+    }
+}

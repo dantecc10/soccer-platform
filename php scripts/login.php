@@ -16,12 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($stmt->fetch()) {
                     if (password_verify($password, $hashed_password)) {
                         session_start();
-                        $_SESSION["loggedin"] = true;
-                        $_SESSION["id"] = $id_user;
-                        $_SESSION["name"] = $name_user;
-                        $_SESSION["last_names"] = $last_names_user;
-                        $_SESSION["email"] = $email_user;
-                        $_SESSION["role"] = $role_user;
+                        $_SESSION["logged_in"] = true;
+                        $_SESSION["id_admin"] = $id_user;
+                        $_SESSION["name_admin"] = $name_user;
+                        $_SESSION["last_names_admin"] = $last_names_user;
+                        $_SESSION["email_admin"] = $email_user;
+                        $_SESSION["role_admin"] = $role_user;
 
                         header("location: ../index.php");
                     } else {
