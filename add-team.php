@@ -85,6 +85,26 @@
                                     <div class="col my-2 text-center"><span>Descripción</span><textarea class="form-control submain-bg-color main-color" id="description_team" name="description_team"></textarea></div>
                                 </div>
                                 <div class="row">
+                                    <div class="col my-2">
+                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Correo electrónico *</span><input class="form-control submain-color main-bg-color color-placeholder custom-font" type="text" id="email-user" placeholder="Correo para la cuenta de administrador" name="email-user" required=""></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col my-2">
+                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Nombre *</span><input class="form-control submain-color main-bg-color color-placeholder custom-font" type="text" id="name-user" placeholder="Nombre del administrador" name="name-user" required=""></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col my-2">
+                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Apellidos</span><input class="form-control submain-color main-bg-color color-placeholder custom-font" type="text" id="last-names-user" placeholder="Apellidos del administrador" name="last-names-user"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col my-2">
+                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Contraseña *</span><input class="form-control submain-color main-bg-color color-placeholder custom-font" type="password" id="password-user" placeholder="Clave para ingresar a la plataforma" name="password-user" required=""></div>
+                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="col my-2 text-center"><button class="btn submain-bg-color main-color rounded-4 col-8 col-sm-auto" type="submit">Registrar equipo</button></div>
                                 </div>
                             </div>
