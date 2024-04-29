@@ -876,7 +876,7 @@
                         </div>
                         <div class="row px-3">
                             <div class="col main-bg-color submain-color rounded-4 align-self-center">
-                                <p class="fs-5 my-2">Mira quiénes conforman el plantel de&nbsp;<span class="submain-bg-color main-color p-2 rounded-4">FC Bayern München</span></p>
+                                <p class="fs-5 my-2">Mira quiénes conforman el plantel de&nbsp;<span class="submain-bg-color main-color p-2 rounded-4"><?php echo (fetch_fields("teams", $teams_fields, $_GET['id'], ("SELECT * FROM `teams` WHERE (`id_team` = " . $_GET['id'] . ")")))[0]; ?></span></p>
                             </div>
                         </div>
                         <div class="row my-2">
