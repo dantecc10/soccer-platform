@@ -879,7 +879,7 @@
                                 <p class="fs-5 my-2">Mira quiénes conforman el plantel de&nbsp;<span class="submain-bg-color main-color p-2 rounded-4">FC Bayern München</span></p>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row my-2">
                             <div class="col"><a class="btn submain-color main-bg-color rounded-4" href="add-players.php?team-id=<?php $_GET['id']; ?>">Añadir jugadores</a></div>
                         </div>
                         <div class="row submain-bg-color py-2 m-2 rounded-4 text-center justify-content-between">
