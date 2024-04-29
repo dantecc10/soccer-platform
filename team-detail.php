@@ -889,7 +889,7 @@
                             <div class="col">
                                 <div class="card-group justify-content-between">
                                     <?php
-                                    error_reporting(0);
+                                    //error_reporting(0);
                                     echo (fetch_player_cards($_GET['id']));
                                     ?>
                                 </div>
