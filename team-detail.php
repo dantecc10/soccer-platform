@@ -1,3 +1,6 @@
+<?php
+include "php scripts/soccer_queries.php";
+?>
 <!DOCTYPE html>
 <html data-bs-theme="dark" lang="es-mx">
 
