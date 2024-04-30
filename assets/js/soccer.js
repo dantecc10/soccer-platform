@@ -14,7 +14,7 @@ function upload_image(element) {
     element.closest('td').querySelectorAll("input")[0].click();
 }
 function paint_upload_button(element) {
-    if (this.value != '') {
+    if (element.value != '') {
         element.closest('td').querySelectorAll("button")[0].classList.add("loaded-img-button");
         element.closest('td').querySelectorAll("button")[0].textContent = "✅ Archivo cargado";
     } else {
