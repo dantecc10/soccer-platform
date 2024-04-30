@@ -47,11 +47,12 @@
         </div>
     </nav>
     <main class="page landing-page" style="background-color: var(--third-background-color);">
-        <section id="top-players" class="clean-block clean-info dark main-bg-color submain-color">
+        <section id="main" class="clean-block clean-info dark main-color submain-bg-color">
             <div class="container">
                 <div class="block-heading mb-1">
-                    <h2 class="text-info mb-1 submain-color custom-font">Añadir equipo</h2>
-                    <p class="submain-color custom-font">Registra a un equipo para añadirlo a la clasificación. Los campos con un (*) son obligatorios. No coloques nada ofensivo.</p>
+                    <h3 class="text-info main-color custom-font m-0">Agendar un nuevo</h3>
+                    <h1 class="text-info mb-1 main-color custom-font">Partido</h1>
+                    <p class="main-color custom-font">Añade un partido al calendario. Llena la información y asigna ahora o después un árbitro. Los campos con un (*) son obligatorios.</p>
                 </div>
                 <div class="row align-items-center">
                     <div class="col">
@@ -59,7 +60,7 @@
                             <div class="col">
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Selecciona la liga *</span><select class="form-select form-control submain-color main-bg-color custom-font" id="league-match" name="league-match" required="">
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center">Selecciona la liga *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="league-match" name="league-match" required="">
                                                 <optgroup label="This is a group">
                                                     <option value="12" selected="">This is item 1</option>
                                                     <option value="13">This is item 2</option>
@@ -70,12 +71,12 @@
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Jornada *</span><input class="form-control submain-color main-bg-color color-placeholder custom-font" type="number" id="matchday-match" placeholder="Indica en número la jornada" name="matchday-match" step="1" min="1"></div>
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center">Jornada *</span><input class="form-control color-placeholder main-color submain-bg-color custom-font text-center main-border" type="number" id="matchday-match" placeholder="Indica la jornada" name="matchday-match" step="1" min="1"></div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Equipo local *</span><select class="form-select form-control submain-color main-bg-color custom-font" id="local-team" name="local-team" required="">
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center">Equipo local *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="local-team" name="local-team" required="">
                                                 <optgroup label="This is a group">
                                                     <option value="12" selected="">This is item 1</option>
                                                     <option value="13">This is item 2</option>
@@ -86,7 +87,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Equipo Visitante *</span><select class="form-select form-control submain-color main-bg-color custom-font" id="visitor-team-1" name="visitor-team" required="">
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center">Equipo Visitante *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="visitor-team-1" name="visitor-team" required="">
                                                 <optgroup label="This is a group">
                                                     <option value="12" selected="">This is item 1</option>
                                                     <option value="13">This is item 2</option>
@@ -97,17 +98,17 @@
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Fecha *</span><input class="form-control submain-color main-bg-color color-placeholder custom-font" type="date" id="date-match" name="date-match" required="" placeholder="Ingresa la fecha"></div>
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center">Fecha *</span><input class="form-control color-placeholder main-color submain-bg-color custom-font text-center main-border" type="date" id="date-match" name="date-match" required="" placeholder="Ingresa la fecha"></div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Hora *</span><input class="form-control submain-color main-bg-color color-placeholder custom-font" type="time" id="time-match" name="time-match" required="" placeholder="Ingresa la hora"></div>
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center">Hora *</span><input class="form-control color-placeholder main-color submain-bg-color custom-font text-center main-border" type="time" id="time-match" name="time-match" required="" placeholder="Ingresa la hora"></div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Árbitro</span><select class="form-select form-control submain-color main-bg-color custom-font" id="referee-match" name="referee-match" required="">
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center">Árbitro</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="referee-match" name="referee-match" required="">
                                                 <optgroup label="This is a group">
                                                     <option value="12" selected="">This is item 1</option>
                                                     <option value="13">This is item 2</option>
@@ -118,11 +119,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text submain-bg-color main-color col-12 col-sm-auto">Lugar</span><input class="form-control submain-color main-bg-color color-placeholder custom-font" type="text" id="field-match" placeholder="Complejo, cancha, y/o campo" name="field-match"></div>
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center">Lugar</span><input class="form-control color-placeholder main-color submain-bg-color custom-font text-center main-border" type="text" id="field-match" placeholder="Complejo, cancha, y/o campo" name="field-match"></div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col my-2 text-center"><span>Descripción</span><textarea class="form-control submain-bg-color main-color" id="description_team" name="description_team"></textarea></div>
                                 </div>
                                 <div class="row">
                                     <div class="col my-2 text-center"><button class="btn submain-bg-color main-color rounded-4 col-8 col-sm-auto" type="submit">Registrar equipo</button></div>
