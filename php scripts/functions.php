@@ -583,7 +583,7 @@ function massive_players_upload($team_id)
         if ($stmt->affected_rows == 1) {
             $id = $connection->insert_id;
             $_SESSION['img_exec'] = true;
-            save_player_icon($id, $_FILES['player-photo-' . $i]);
+            $_SESSION['error'] =  (save_player_icon($id, $_FILES['player-photo-' . $i])) ? "Imagen guardada correctamente." : "Error al guardar la imagen.";
         } else {
             $val = false;
         }
@@ -614,13 +614,13 @@ function save_player_icon($id, $img)
         $sql = "UPDATE `players` SET `img_player` = '$img_sql' WHERE `id_player` = $id";
         if ($connection->query($sql)) {
             // Respuesta de éxito
-            return ("Imagen guardada correctamente como $file_name en la ruta $final_path.");
+            return true;
         } else {
             return false;
         }
     } else {
         // Error al mover el archivo
-        return "Error al subir la imagen.";
+        return false;
     }
 }
 
