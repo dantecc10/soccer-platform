@@ -8660,3 +8660,11 @@ may have crashed in this repository earlier:
 remove the file manually to continue.
 
 
+----------
+
+Tue Apr 30 2024 15:42:49 GMT-0600 (hora estándar central)
+
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/dantecc10/soccer-platform.git'
+
+
