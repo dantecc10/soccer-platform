@@ -83,7 +83,6 @@ session_start();
                                                         <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" id="player-name-0" name="player-name-0" required=""></td>
                                                         <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="text" id="player-last-names-0" name="player-last-names-0" required=""></td>
                                                         <td class="submain-bg-color"><button class="btn form-control submain-color text-nowrap" type="button" onclick="javascript:upload_image(this);" style="background-color: gray;">Cargar archivo</button><input class="form-control d-none player-field" type="file" id="player-photo-0" name="player-photo-0" accept="img/*" required="" onchange="javascript:paint_upload_button(this);"></td>
-
                                                         <td class="submain-bg-color"><input class="form-control main-bg-color submain-color player-field" type="number" id="player-number-0" name="player-number-0" required=""></td>
                                                         <td class="submain-bg-color"><select class="form-select main-bg-color submain-color player-field" id="player-position-0" name="player-position-0" requierd="">
                                                                 <optgroup label="Posiciones">
