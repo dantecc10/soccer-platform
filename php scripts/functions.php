@@ -567,6 +567,7 @@ function massive_players_upload($team_id)
         $n = intval($_POST['players-quantity']);
     }
     for ($i = 0; $i < $n; $i++) {
+        session_start();
         $sql = "INSERT INTO `players` VALUES('', ?, ?, ?, ?, ?, ?, 0, 0, 0, 0, 0, ?);";
         $name = $_POST['player-name-' . $i];
         $last_name = $_POST['player-last-names-' . $i];
@@ -581,6 +582,7 @@ function massive_players_upload($team_id)
         $stmt->execute();
         if ($stmt->affected_rows == 1) {
             $id = $connection->insert_id;
+            $_SESSION['img_exec'] = true;
             save_player_icon($id, $_FILES['player-photo-' . $i]);
         } else {
             $val = false;

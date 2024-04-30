@@ -11,3 +11,7 @@ if (logged_in()) {
 } else {
     echo "You are not logged in";
 }
+
+if (isset($_SESSION['img_exec'])) {
+    echo ($_SESSION['img_exec'] == true) ? "Image uploaded" : "Image not uploaded";
+}
