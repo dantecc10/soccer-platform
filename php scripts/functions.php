@@ -583,7 +583,7 @@ function massive_players_upload($team_id)
         if ($stmt->affected_rows == 1) {
             $id = $connection->insert_id;
             $_SESSION['img_exec'] = true;
-            $_SESSION['error'] =  (save_player_icon($id, $_FILES['player-photo-' . $i])) ? "Imagen guardada correctamente." : "Error al guardar la imagen.";
+            $_SESSION['error'] =  (save_player_icon($id, $_FILES['player-photo-' . $i], $connection)) ? "Imagen guardada correctamente." : "Error al guardar la imagen.";
         } else {
             $val = false;
         }
@@ -591,7 +591,7 @@ function massive_players_upload($team_id)
     return $val;
 }
 
-function save_player_icon($id, $img)
+function save_player_icon($id, $img, $connection)
 {
     // Ruta donde se guardarán las imágenes de los equipos
     $path = '/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/assets/img/teams/players/';
@@ -607,7 +607,6 @@ function save_player_icon($id, $img)
 
     // Mover el archivo a la ruta final
     if (move_uploaded_file($img['tmp_name'], $final_path)) {
-        include_once "connection.php";
         $img_sql = ("https://soccer.castelancarpinteyro.com/assets/img/teams/players/" . $file_name);
         $sql = "UPDATE `players` SET `img_player` = '$img_sql' WHERE `id_player` = $id";
         if ($connection->query($sql)) {
