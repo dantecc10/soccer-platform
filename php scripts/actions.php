@@ -8,8 +8,8 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             if ($result != false) {
                 save_team_logo($result, $_FILES['logo-team']);
                 $_SESSION['logged_in'] = true;
-                $_SESSION['id_user'] = 5;
-                $_SESSION['name_user'] = "Dante";
+                $_SESSION['id_user'] = $result;
+                $_SESSION['name_user'] = $_POST['name-user'];
                 header("Location: ../add-players.php");
             } else {
                 header("Location: ../add-teams.php?error=true");
