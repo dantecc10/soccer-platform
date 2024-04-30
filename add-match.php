@@ -70,7 +70,7 @@ if (!isset($_SESSION['id_user']) && !isset($_SESSION['logged_in'])) {
                                 ?>
                                 <div class="row fs-5">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Selecciona la liga *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border fs-5" id="league-match" name="league-match" required="">
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Selecciona la liga *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border fs-5" id="league-match" name="league-match" required>
                                                 <optgroup label="Ligas disponibles">
                                                     <option selected="">Selecciona una liga</option>
                                                     <option value="1">Liga de Chignahuapan</option>
@@ -80,12 +80,12 @@ if (!isset($_SESSION['id_user']) && !isset($_SESSION['logged_in'])) {
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Jornada *</span><input class="form-control color-placeholder main-color submain-bg-color custom-font text-center main-border fs-5" type="number" id="matchday-match" placeholder="Indica la jornada" name="matchday-match" step="1" min="1"></div>
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Jornada *</span><input class="form-control color-placeholder main-color submain-bg-color custom-font text-center main-border fs-5" type="number" id="matchday-match" placeholder="Indica la jornada" name="matchday-match" required step="1" min="1"></div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Equipo local *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border fs-5" id="local-team" name="local-team" required="">
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Equipo local *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border fs-5" id="local-team" name="local-team" required>
                                                 <optgroup label="Equipos">
                                                     <option selected="">Selecciona un equipo</option>
                                                     <?php
@@ -99,7 +99,7 @@ if (!isset($_SESSION['id_user']) && !isset($_SESSION['logged_in'])) {
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Equipo Visitante *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border fs-5" id="visitor-team-1" name="visitor-team" required="">
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Equipo Visitante *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border fs-5" id="visitor-team-1" name="visitor-team" required>
                                                 <optgroup label="Equipos">
                                                     <option selected="">Selecciona un equipo</option>
                                                     <?php
@@ -113,17 +113,17 @@ if (!isset($_SESSION['id_user']) && !isset($_SESSION['logged_in'])) {
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Fecha *</span><input class="form-control color-placeholder main-color submain-bg-color custom-font text-center main-border fs-5" type="date" id="date-match" name="date-match" required="" placeholder="Ingresa la fecha"></div>
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Fecha *</span><input class="form-control color-placeholder main-color submain-bg-color custom-font text-center main-border fs-5" type="date" id="date-match" name="date-match" required placeholder="Ingresa la fecha"></div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Hora *</span><input class="form-control color-placeholder main-color submain-bg-color custom-font text-center main-border fs-5" type="time" id="time-match" name="time-match" required="" placeholder="Ingresa la hora"></div>
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Hora *</span><input class="form-control color-placeholder main-color submain-bg-color custom-font text-center main-border fs-5" type="time" id="time-match" name="time-match" required placeholder="Ingresa la hora"></div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col my-2">
-                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Árbitro</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border fs-5" id="referee-match" name="referee-match" required="">
+                                        <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Árbitro</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border fs-5" id="referee-match" name="referee-match" required>
                                                 <?php
                                                 $referees = fetch_fields("referees", ['id_referee', 'name_referee', 'last_names_referee'], null, null);
                                                 ?>
