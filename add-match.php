@@ -124,10 +124,16 @@ if (!isset($_SESSION['id_user']) && !isset($_SESSION['logged_in'])) {
                                 <div class="row">
                                     <div class="col my-2">
                                         <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Árbitro</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border fs-5" id="referee-match" name="referee-match" required="">
-                                                <optgroup label="This is a group">
-                                                    <option value="12" selected="">This is item 1</option>
-                                                    <option value="13">This is item 2</option>
-                                                    <option value="14">This is item 3</option>
+                                                <?php
+                                                $referees = fetch_fields("referees", ['id_referee', 'name_referee', 'last_names_referee'], null, null);
+                                                ?>
+                                                <optgroup label="Lista de árbitros">
+                                                    <option value="" selected="">Selecciona un árbitro</option>
+                                                    <?php
+                                                    for ($i = 0; $i < sizeof($referees); $i++) {
+                                                        echo "<option value='" . $referees[$i][0] . "'>" . $referees[$i][1] . "</option>";
+                                                    }
+                                                    ?>
                                                 </optgroup>
                                             </select></div>
                                     </div>
