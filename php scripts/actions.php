@@ -23,7 +23,7 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             break;
 
         case 'add-match':
-            $result = add_match($_POST['team-local'], $_POST['team-visitor'], $_POST['referee-match'], $_POST['date-match'], $_POST['time-match'], $_POST['field-match'], $_POST['matchday-match']);
+            $result = add_match($_POST['local-team'], $_POST['team-visitor'], $_POST['referee-match'], $_POST['date-match'], $_POST['time-match'], $_POST['field-match'], $_POST['matchday-match']);
             if ($result) {
                 header("Location: ../#matches");
             } else {
