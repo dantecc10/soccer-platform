@@ -1,3 +1,7 @@
+<?php
+include_once "php scripts/functions.php";
+session_start();
+?>
 <!DOCTYPE html>
 <html data-bs-theme="dark" lang="es-mx">
 
@@ -41,7 +45,7 @@
                                 <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
                                 <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
                                 <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path>
-                            </svg>&nbsp;Entrar</a></li>
+                            </svg>&nbsp;<?php echo ((logged_in()) ? $_SESSION['name_user'] : "Entrar"); ?></a></li>
                 </ul>
             </div>
         </div>
