@@ -729,6 +729,7 @@ function add_match($local, $visitor, $referee, $date, $time, $field, $matchday)
 {
     include_once "connection.php";
     $datetime = $date . ' ' . $time;
+    $referee = ($referee != "") ? intval($referee) : NULL;
     $sql = "INSERT INTO `matches` VALUES('', ?, ?, ?, ?, NULL, 0, ?, ?, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);";
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("iiissi", $local, $visitor, $referee, $datetime, $field, $matchday);
