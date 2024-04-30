@@ -579,11 +579,11 @@ function massive_players_upload($team_id)
         $stmt = $connection->prepare($sql);
         $stmt->bind_param("sssisis", $name, $last_name, $nickname, $number, $position, $team_id, $image);
         $stmt->execute();
-        if ($stmt->affected_rows === 0) {
-            $val = false;
-        } else {
+        if ($stmt->affected_rows == 1) {
             $id = $connection->insert_id;
             save_player_icon($id, $_FILES['player-photo-' . $i]);
+        } else {
+            $val = false;
         }
     }
     return $val;
