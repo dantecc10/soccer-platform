@@ -73,12 +73,7 @@ if (!isset($_SESSION['id_user']) && !isset($_SESSION['logged_in'])) {
                                         <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Selecciona la liga *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border fs-5" id="league-match" name="league-match" required="">
                                                 <optgroup label="Ligas disponibles">
                                                     <option value="" selected="">Selecciona</option>
-                                                    <!--<option value="1">Liga de Chignahuapan</option>-->
-                                                    <?php
-                                                    for ($i = 0; $i < sizeof($teams); $i++) {
-                                                        echo "<option value='" . $teams[$i][0] . "'>" . $teams[$i][1] . "</option>";
-                                                    }
-                                                    ?>
+                                                    <option value="1">Liga de Chignahuapan</option>
                                                 </optgroup>
                                             </select></div>
                                     </div>
@@ -93,8 +88,11 @@ if (!isset($_SESSION['id_user']) && !isset($_SESSION['logged_in'])) {
                                         <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-sm-auto col-md-3 justify-content-center fw-bolder fs-5">Equipo local *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border fs-5" id="local-team" name="local-team" required="">
                                                 <optgroup label="Equipos">
                                                     <option value="" selected="">Selecciona un equipo</option>
-                                                    <option value="13">This is item 2</option>
-                                                    <option value="14">This is item 3</option>
+                                                    <?php
+                                                    for ($i = 0; $i < sizeof($teams); $i++) {
+                                                        echo "<option value='" . $teams[$i][0] . "'>" . $teams[$i][1] . "</option>";
+                                                    }
+                                                    ?>
                                                 </optgroup>
                                             </select></div>
                                     </div>
