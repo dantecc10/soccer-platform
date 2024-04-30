@@ -14,4 +14,5 @@ if (logged_in()) {
 
 if (isset($_SESSION['img_exec'])) {
     echo ($_SESSION['img_exec'] == true) ? "Image uploaded" : "Image not uploaded";
+    echo ($_SESSION['error']);
 }
