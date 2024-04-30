@@ -29,6 +29,6 @@ debug_data_printer(sql_debug_fetcher('matches', $matches_fields, ""));
 
 //print_r(fetch_matches(0));
 
-echo (matches_output(fetch_matches(0)));
+//echo (matches_output(fetch_matches(0)));
 
 //echo __DIR__;
