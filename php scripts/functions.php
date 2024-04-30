@@ -723,3 +723,19 @@ function logged_in()
         return false;
     }
 }
+//add_match($_POST['team-local'], $_POST['team-visitor'], $_POST['referee-match'], $_POST['date-match'],
+//$_POST['time-match'], $_POST['field-match'], $_POST['matchday-match']);
+function add_match($local, $visitor, $referee, $date, $time, $field, $matchday)
+{
+    include_once "connection.php";
+    $datetime = $date . ' ' . $time;
+    $sql = "INSERT INTO `matches` VALUES('', ?, ?, ?, ?, NULL, 0, ?, ?, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);";
+    $stmt = $connection->prepare($sql);
+    $stmt->bind_param("iiissi", $local, $visitor, $referee, $datetime, $field, $matchday);
+    $stmt->execute();
+    if ($stmt->affected_rows === 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
