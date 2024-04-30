@@ -1,6 +1,9 @@
 <?php
 include_once "php scripts/functions.php";
 session_start();
+if (!isset($_SESSION['id_user']) && !isset($_SESSION['logged_in'])) {
+    header("Location: login.php");
+}
 ?>
 <!DOCTYPE html>
 <html data-bs-theme="dark" lang="es-mx">
