@@ -611,13 +611,11 @@ function save_player_icon($id, $img)
         $img_sql = ("https://soccer.castelancarpinteyro.com/assets/img/teams/players/" . $file_name);
         $sql = "UPDATE `players` SET `img_player` = '$img_sql' WHERE `id_player` = $id";
         if ($connection->query($sql)) {
-            // Respuesta de éxito
             return true;
         } else {
             return false;
         }
     } else {
-        // Error al mover el archivo
         return false;
     }
 }
