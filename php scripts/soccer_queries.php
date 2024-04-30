@@ -15,6 +15,7 @@ $matches_fields = [
     'finish_schedule_match',
     'status_match',
     'field_match',
+    'matchday_match',
     'local_goals_match',
     'visitor_goals_match',
     'local_shots_match',
