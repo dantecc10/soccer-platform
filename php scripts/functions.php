@@ -502,16 +502,21 @@ function referee_action()
 
     return [$data, $match_basic_data_fields];
 }
-function add_team($league, $team, $logo, $couch, $description)
+function add_team($league, $team, $logo, $couch, $description, $name_user, $last_names_user, $email_user, $password_user, $role_user)
 {
     include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
     $sql = "INSERT INTO `teams` VALUES('', ?, ?, NULL, NULL, NULL, NULL, NULL, NULL, ?, ?);";
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("ssss", $team, $couch, $description, $logo['name']);
     $stmt->execute();
-    $id = $connection->insert_id;
     if ($stmt->affected_rows === 0) {
         return false;
+    } else {
+        $id = $connection->insert_id;
+        $sql = "INSERT INTO `users` VALUES('', ?, ?, ?, ?, 0, ?);";
+        $stmt = $connection->prepare($sql);
+        $stmt->bind_param("ssssi", $name_user, $last_names_user, $email_user, $password_user, $id);
+        $stmt->execute();
     }
 
     $stmt->close();

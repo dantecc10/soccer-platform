@@ -4,7 +4,7 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
     include "functions.php";
     switch ($_GET['type']) {
         case 'add-team':
-            $result = add_team($_POST['league-team'], $_POST['team-name'], $_FILES['logo-team'], $_POST['couch-team'], $_POST['description_team']);
+            $result = add_team($_POST['league-team'], $_POST['team-name'], $_FILES['logo-team'], $_POST['couch-team'], $_POST['description_team'], $_POST['name-user'], $_POST['last-names-user'], $_POST['email-user'], $_POST['password-user'], 0);
             if ($result != false) {
                 save_team_logo($result, $_FILES['logo-team']);
                 header("Location: ../add-players.php");
