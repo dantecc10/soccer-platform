@@ -131,7 +131,7 @@ if (!isset($_SESSION['id_user']) && !isset($_SESSION['logged_in'])) {
                                                     <option value="" selected="">Selecciona un árbitro</option>
                                                     <?php
                                                     for ($i = 0; $i < sizeof($referees); $i++) {
-                                                        echo "<option value='" . $referees[$i][0] . "'>" . $referees[$i][1] . "</option>";
+                                                        echo "<option value='" . $referees[$i][0] . "'>" . $referees[$i][1] . " " . $referees[$i][2] . "</option>";
                                                     }
                                                     ?>
                                                 </optgroup>
