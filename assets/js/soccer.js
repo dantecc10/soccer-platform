@@ -97,3 +97,18 @@ function add_players(id) {
 
     window.location.href = url;
 }
+
+function check_selected_teams() {
+    const local_id = document.getElementById("local-team").value;
+    const visitor_id = document.getElementById("visitor-team").value;
+    return (local_id != visitor_id);
+}
+document.getElementById("add-match-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (check_selected_teams()) {
+        document.getElementById("add-match-form").submit();
+    } else {
+        alert("Los equipos seleccionados son los mismos, por favor selecciona equipos diferentes.");
+    }
+});
+
