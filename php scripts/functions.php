@@ -607,9 +607,7 @@ function save_player_icon($id, $img)
 
     // Mover el archivo a la ruta final
     if (move_uploaded_file($img['tmp_name'], $final_path)) {
-        include_once "credentials.php";
-        $data = generatePasskey('sql');
-        $connection = new mysqli('localhost', $data[0], $data[1], $data[2]);
+        include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
         $img_sql = ("https://soccer.castelancarpinteyro.com/assets/img/teams/players/" . $file_name);
         $sql = "UPDATE `players` SET `img_player` = '$img_sql' WHERE `id_player` = $id";
         if ($connection->query($sql)) {
