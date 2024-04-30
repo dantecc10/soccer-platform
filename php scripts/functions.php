@@ -580,8 +580,8 @@ function massive_players_upload($team_id)
         $stmt = $connection->prepare($sql);
         $stmt->bind_param("sssisis", $name, $last_name, $nickname, $number, $position, $team_id, $image);
         $stmt->execute();
-        if ($stmt->affected_rows == 1) {
-            $id = $connection->insert_id;
+        $id = $connection->insert_id;
+        if ($stmt->affected_rows > 0) {
             $_SESSION['img_exec'] = true;
             $_SESSION['error'] =  (save_player_icon($id, $_FILES['player-photo-' . $i], $connection)) ? "Imagen guardada correctamente." : "Error al guardar la imagen.";
         } else {
