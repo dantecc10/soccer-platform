@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($stmt->num_rows > 0) {
                 $stmt->bind_result($id_user, $name_user, $last_names_user, $email_user, $password_user, $role_user, $managed_team_id_user);
                 if ($stmt->fetch()) {
-                    if (password_verify($password, $hashed_password)) {
+                    if (password_verify($password, $password_user)) {
                         session_start();
                         $_SESSION["logged_in"] = true;
                         $_SESSION["id_user"] = $id_user;
