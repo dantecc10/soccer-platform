@@ -150,7 +150,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Sun Apr 28 2024 00:24:52 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -396,7 +396,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Sun Apr 28 2024 00:26:21 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -677,7 +677,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Sun Apr 28 2024 00:53:39 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -910,7 +910,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Sun Apr 28 2024 01:02:50 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/matches.html', LF will be replaced by CRLF the next time Git touches it
 
 
@@ -1180,7 +1180,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Sun Apr 28 2024 01:04:35 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -1359,7 +1359,7 @@ warning: in the working copy of 'exporting/faq.html', LF will be replaced by CRL
 warning: in the working copy of 'exporting/features.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/gallery.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -1575,7 +1575,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Sun Apr 28 2024 02:03:45 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/matches.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/payment-page.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/play-match.html', LF will be replaced by CRLF the next time Git touches it
@@ -1821,7 +1821,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Sun Apr 28 2024 02:07:01 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -2084,7 +2084,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Sun Apr 28 2024 03:20:18 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -2335,7 +2335,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Sun Apr 28 2024 14:52:55 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -2592,7 +2592,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Sun Apr 28 2024 23:37:43 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -2849,7 +2849,7 @@ warning: in the working copy of 'exporting/gallery.html', LF will be replaced by
 Mon Apr 29 2024 13:48:22 GMT-0600 (hora estándar central)
 
 warning: in the working copy of 'exporting/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -3059,7 +3059,7 @@ warning: in the working copy of 'exporting/faq.html', LF will be replaced by CRL
 warning: in the working copy of 'exporting/features.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/gallery.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -3262,7 +3262,7 @@ warning: in the working copy of 'exporting/faq.html', LF will be replaced by CRL
 warning: in the working copy of 'exporting/features.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/gallery.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -3486,7 +3486,7 @@ warning: in the working copy of 'exporting/faq.html', LF will be replaced by CRL
 warning: in the working copy of 'exporting/features.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/gallery.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/matches.html', LF will be replaced by CRLF the next time Git touches it
 
 
@@ -3685,7 +3685,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Mon Apr 29 2024 23:07:33 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -3884,7 +3884,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Mon Apr 29 2024 23:16:59 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -4119,7 +4119,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Mon Apr 29 2024 23:17:16 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -4318,7 +4318,7 @@ Mon Apr 29 2024 23:27:10 GMT-0600 (hora estándar central)
 
 warning: in the working copy of 'exporting/gallery.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/matches.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/payment-page.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/play-match.html', LF will be replaced by CRLF the next time Git touches it
@@ -4493,7 +4493,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Mon Apr 29 2024 23:29:39 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -4746,7 +4746,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Mon Apr 29 2024 23:30:03 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -4968,7 +4968,7 @@ warning: in the working copy of 'exporting/gallery.html', LF will be replaced by
 Mon Apr 29 2024 23:51:30 GMT-0600 (hora estándar central)
 
 warning: in the working copy of 'exporting/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/matches.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/payment-page.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/play-match.html', LF will be replaced by CRLF the next time Git touches it
@@ -5215,7 +5215,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Mon Apr 29 2024 23:52:43 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -5420,7 +5420,7 @@ Mon Apr 29 2024 23:54:19 GMT-0600 (hora estándar central)
 
 warning: in the working copy of 'exporting/gallery.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/matches.html', LF will be replaced by CRLF the next time Git touches it
 
 
@@ -5649,7 +5649,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Tue Apr 30 2024 00:00:15 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/matches.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/payment-page.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/play-match.html', LF will be replaced by CRLF the next time Git touches it
@@ -5902,7 +5902,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Tue Apr 30 2024 00:00:27 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -6149,7 +6149,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Tue Apr 30 2024 00:01:14 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -6401,7 +6401,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Tue Apr 30 2024 00:04:43 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -6654,7 +6654,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Tue Apr 30 2024 00:06:09 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -6877,7 +6877,7 @@ Tue Apr 30 2024 00:07:32 GMT-0600 (hora estándar central)
 
 warning: in the working copy of 'exporting/gallery.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/matches.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/payment-page.html', LF will be replaced by CRLF the next time Git touches it
 
@@ -7111,7 +7111,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Tue Apr 30 2024 00:07:57 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -7381,7 +7381,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Tue Apr 30 2024 00:08:58 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -7604,7 +7604,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Tue Apr 30 2024 00:09:55 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -7827,7 +7827,7 @@ warning: in the working copy of 'exporting/faq.html', LF will be replaced by CRL
 warning: in the working copy of 'exporting/features.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/gallery.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -8031,7 +8031,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Tue Apr 30 2024 00:49:23 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'exporting/matches.html', LF will be replaced by CRLF the next time Git touches it
 
 
@@ -8295,7 +8295,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Tue Apr 30 2024 09:48:21 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -8553,7 +8553,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Tue Apr 30 2024 15:42:48 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -8848,7 +8848,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Tue Apr 30 2024 15:45:44 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -9130,7 +9130,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Fri May 03 2024 02:57:12 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -9364,7 +9364,7 @@ warning: in the working copy of 'exporting/index.html', LF will be replaced by C
 
 Fri May 03 2024 02:59:05 GMT-0600 (hora estándar central)
 
-warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
 
 
 ----------
@@ -9461,6 +9461,163 @@ warning: in the working copy of 'sitemap.xml', LF will be replaced by CRLF the n
 ----------
 
 Fri May 03 2024 02:59:06 GMT-0600 (hora estándar central)
+
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/dantecc10/soccer-platform.git'
+
+
+----------
+
+Fri May 03 2024 02:59:47 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/bootstrap/css/bootstrap.min.css', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:47 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/css/soccer.css', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:47 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/img/deportex/campeonato.svg', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:47 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/img/deportex/equipos.svg', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:48 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/img/deportex/jugadores.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/img/deportex/partidos.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/img/equipos.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/img/jugadores.svg', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:48 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/img/star-empty.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/img/star-half-empty.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/img/star.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/js/theme.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'error.log', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:48 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/about-us.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/actions.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/add-match.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/add-players.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:48 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/add-team.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:48 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/blank.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:48 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/blog-post-list.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:48 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/blog-post.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/catalog-page.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/contact-us.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/faq.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/features.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/gallery.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:48 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/index.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:49 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'login.php', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:49 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/matches.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:49 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/payment-page.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:49 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/play-match.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/pricing.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/product-page-1.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/registration.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/service-page.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:49 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/shopping-cart.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:49 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/slider.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/team-detail.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/teams.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/testimonials.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'sitemap.xml', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Fri May 03 2024 02:59:50 GMT-0600 (hora estándar central)
 
 error: src refspec master does not match any
 error: failed to push some refs to 'https://github.com/dantecc10/soccer-platform.git'

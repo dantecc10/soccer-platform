@@ -7,24 +7,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Equipos - DEPORTEX</title>
+    <title>Login - SoCCer League Admin</title>
     <meta property="og:title" content="DEPORTEX">
-    <meta property="og:image" content="https://soccer.castelancarpinteyro.com/assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png">
+    <meta property="og:image" content="https://soccer.castelancarpinteyro.com/assets/img/deportex/DeportEX Logo Minimalista BLACK GREEN EDITION VFX.png">
+    <meta name="description" content="Sistema de gestión de ligas de fútbol.">
     <meta name="author" content="Dante Castelán Carpinteyro">
     <meta property="og:type" content="website">
-    <meta name="description" content="Plataforma de gestión de ligas de fútbol, consulta de resultados, equipos y jugadores. Administración arbitral.">
-    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png">
-    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20WHITE%20EDITION.png" media="(prefers-color-scheme: dark)">
-    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png">
-    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20WHITE%20EDITION.png" media="(prefers-color-scheme: dark)">
-    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png">
-    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=6baf041d5b489f75a71934a78277e96f">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20WHITE%20EDITION.png?h=6baf041d5b489f75a71934a78277e96f" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=6baf041d5b489f75a71934a78277e96f">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20WHITE%20EDITION.png?h=6baf041d5b489f75a71934a78277e96f" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=6baf041d5b489f75a71934a78277e96f">
+    <link rel="icon" type="image/png" sizes="2000x2000" href="assets/img/deportex/DeportEX%20Logo%20Minimalista%20BLACK%20GREEN%20EDITION%20VFX.png?h=6baf041d5b489f75a71934a78277e96f">
     <link rel="icon" type="image/png" sizes="2224x2002" href="assets/img/deportex/DEPORTEX%20BLACK%20VERSION.png?h=6baf041d5b489f75a71934a78277e96f">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=254a09188e530cb03e8e344c8d2feb3e">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap'">
-    <link rel="stylesheet" href="assets/css/soccer.css">
+    <link rel="stylesheet" href="assets/css/soccer.css?h=d5846df3391ee5880ceb80c6b2bc4c74">
 </head>
 
 <body>
@@ -46,60 +46,21 @@
             </div>
         </div>
     </nav>
-    <main class="page product-page main-bg-color submain-color">
-        <section id="team-detail" class="custom-font mt-4 pt-4">
+    <main class="page login-page">
+        <section class="clean-block clean-form dark submain-bg-color">
             <div class="container">
-                <div class="row py-3 submain-bg-color main-color rounded-5">
-                    <div class="col col-12 col-md-4 col-lg-6 align-self-center">
-                        <div class="row px-3" style="height: 100%;">
-                            <div class="col text-center main-bg-color rounded-5" style="max-height: inherit;"><img class="col-10 col-md-11 col-lg-8 col-xxl-7" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/UEFA_Champions_League.svg/1200px-UEFA_Champions_League.svg.png"></div>
-                        </div>
-                    </div>
-                    <div class="col col-12 col-md-8 col-lg-6 align-self-center">
-                        <div class="row">
-                            <div class="col text-center text-lg-start"><span class="fs-2">Liga</span><span class="fs-4 text-secondary smaller">&nbsp;20 equipos</span></div>
-                        </div>
-                        <div class="row text-center text-lg-start">
-                            <div class="col">
-                                <h1 class="fs-1 fw-bolder" style="font-size: 4rem !important;color: white !important;">LIGA DE CAMPEONES</h1>
-                            </div>
-                        </div>
-                        <div class="row text-center text-lg-start">
-                            <div class="col"><span class="fs-3">Europa</span></div>
-                        </div>
-                        <div class="row px-3">
-                            <div class="col main-bg-color submain-color rounded-4">
-                                <p class="fs-5 text-center text-lg-start">Esta liga es una de las más competitivas en la región y reúne a jugadores de todas las edades.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="block-heading">
+                    <h2 class="text-info main-color custom-font">Iniciar sesión</h2>
+                    <p class="custom-font main-color">¡Bienvenido!</p>
                 </div>
-            </div>
-        </section>
-        <section id="teams" class="custom-font mt-4 py-4 main-bg-color">
-            <div class="container py-1">
-                <div class="row py-4 main-color submain-bg-color rounded-5" style="border: 5px solid var(--submain-background-color);">
-                    <div class="col align-self-center text-center py-3">
-                        <div class="row">
-                            <div class="col">
-                                <h3 class="fs-1 fw-bolder" style="font-size: 3rem !important;">Equipos</h3>
-                            </div>
-                        </div>
-                        <div class="row px-3">
-                            <div class="col main-bg-color submain-color rounded-4 align-self-center">
-                                <p class="fs-5 my-2">Conoce a los equipos que buscarán la gloria en la&nbsp;<span class="submain-bg-color main-color p-2 rounded-4 text-nowrap">Liga de campeones</span></p>
-                            </div>
-                        </div>
-                        <div class="row submain-bg-color py-2 m-2 rounded-4 text-center justify-content-between">
-                            <div class="col">
-                                <div class="card-group justify-content-between">
-                                    <?php include_once "php scripts/functions.php";
-                                    echo (fetch_team_cards()); ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <form id="login-form" class="text-center" style="border-color: var(--main-background-color);background-color: var(--third-color);" method="post" action="php scripts/login.php">
+                    <div class="mb-3 text-start"><label class="form-label main-color custom-font" for="email">Email</label><input class="form-control item custom-font" type="email" id="email" placeholder="Correo electrónico" name="email" required=""></div>
+                    <div class="mb-3 text-start"><label class="form-label main-color custom-font" for="password">Password</label><input class="form-control custom-font" type="password" id="password" placeholder="Escribe tu contraseña" name="password" required=""></div>
+                    <div class="mb-2 text-start">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label main-color custom-font" for="checkbox">Recordarme</label></div>
+                    </div><button class="btn btn-primary main-bg-color submain-color custom-font" type="submit" style="border-color: teal;">Iniciar sesión</button>
+                    <div class="mt-3 text-end mb-0"><span class="main-color custom-font small">¿No tienes una cuenta? Regístrate&nbsp;<a href="#">Aquí</a>.</span></div>
+                </form>
             </div>
         </section>
     </main><!-- Start: Footer Dark -->
@@ -146,9 +107,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
-    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/theme.js?h=a083aeb15550c5e1266c666e8a5846d9"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="assets/js/soccer.js"></script>
+    <script src="assets/js/soccer.js?h=b39f17d10b17bd875026cec1967ba069"></script>
 </body>
 
 </html>
