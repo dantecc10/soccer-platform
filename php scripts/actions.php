@@ -35,9 +35,8 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             $data['foul-team'] = $_POST['foul-team'];
             $data['foul-player'] = $_POST['foul-player'];
             $data['foul-type'] = $_POST['foul-type'];
+            $data['foul-card'] = $_POST['foul-card'];
             $data['foul-consequence'] = $_POST['foul-consequence'];
-            $data[''] = $_POST[''];
-            $data[''] = $_POST[''];
 
             break;
         default:
