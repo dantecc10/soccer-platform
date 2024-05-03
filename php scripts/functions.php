@@ -747,9 +747,11 @@ function add_foul($foul_info)
 {
     include_once "connection.php";
 
-    $sql = "INSERT INTO `matches` VALUES('', ?, ?, NULL, ?, NULL, 0, ?, ?, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);";
+    $details = ($foul_info[3] . "/" . $foul_info[4]);
+
+    $sql = "INSERT INTO `stats` VALUES('', 'foul', CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?);";
     $stmt = $connection->prepare($sql);
-    $stmt->bind_param("iissi", $local, $visitor, $datetime, $field, $matchday);
+    $stmt->bind_param("iiiis", $match, $player, $referee, $team, $details);
 
     $stmt->execute();
     if ($stmt->affected_rows === 0) {
