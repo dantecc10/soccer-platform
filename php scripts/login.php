@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             $stmt->store_result();
 
-            if ($stmt->num_rows == 1) {
+            if ($stmt->num_rows > 0) {
                 $stmt->bind_result($id_user, $name_user, $last_names_user, $email_user, $hashed_password, $role_user);
                 if ($stmt->fetch()) {
                     if (password_verify($password, $hashed_password)) {
@@ -40,5 +40,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $connection->close();
 } else {
-    //header("location: ../login.php");
+    header("location: ../login.php");
 }
