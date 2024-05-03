@@ -4,6 +4,9 @@ if (!isset($_GET['team-id'])) {
 }
 include_once "php scripts/functions.php";
 session_start();
+if (!logged_in()) {
+    header("Location: ../teams.php?error=notloggedin");
+}
 ?>
 <!DOCTYPE html>
 <html data-bs-theme="dark" lang="es-mx">
