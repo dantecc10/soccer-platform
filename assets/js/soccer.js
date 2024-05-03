@@ -140,3 +140,27 @@ document.getElementById("add-match-form").addEventListener("submit", function (e
     }
 });
 
+$(document).ready(function() {
+    $('#miFormulario').submit(function(event) {
+        // Evitar el envío del formulario por defecto
+        event.preventDefault();
+        
+        // Recopilar los datos del formulario
+        var formData = $(this).serialize();
+        
+        // Enviar la solicitud AJAX
+        $.ajax({
+            url: 'procesar_formulario.php', // URL del script PHP que procesa el formulario
+            type: 'POST', // Método HTTP POST
+            data: formData, // Datos del formulario
+            success: function(response) {
+                // Manejar la respuesta del servidor
+                console.log(response);
+            },
+            error: function(xhr, status, error) {
+                // Manejar errores de la solicitud AJAX
+                console.error(error);
+            }
+        });
+    });
+});

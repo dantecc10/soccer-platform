@@ -743,3 +743,18 @@ function add_match($local, $visitor, $referee, $date, $time, $field, $matchday)
         return true;
     }
 }
+function add_foul($foul_info)
+{
+    include_once "connection.php";
+
+    $sql = "INSERT INTO `matches` VALUES('', ?, ?, NULL, ?, NULL, 0, ?, ?, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);";
+    $stmt = $connection->prepare($sql);
+    $stmt->bind_param("iissi", $local, $visitor, $datetime, $field, $matchday);
+
+    $stmt->execute();
+    if ($stmt->affected_rows === 0) {
+        return false;
+    } else {
+        return true;
+    }
+}

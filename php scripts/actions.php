@@ -32,11 +32,12 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             break;
         case 'foul':
             $data = array();
-            $data['foul-team'] = $_POST['foul-team'];
-            $data['foul-player'] = $_POST['foul-player'];
-            $data['foul-type'] = $_POST['foul-type'];
-            $data['foul-card'] = $_POST['foul-card'];
-            $data['foul-consequence'] = $_POST['foul-consequence'];
+            $data[0] = $_POST['foul-team']; // ['foul-team']
+            $data[1] = $_POST['foul-player']; // ['foul-player']
+            $data[2] = $_POST['foul-type']; // ['foul-type']
+            $data[3] = $_POST['foul-card']; // ['foul-card']
+            $data[4] = $_POST['foul-consequence']; // ['foul-consequence']
+            add_foul($data);
 
             break;
         default:
