@@ -5,7 +5,11 @@ if (!isset($_GET['team-id'])) {
 include_once "php scripts/functions.php";
 session_start();
 if (!logged_in()) {
-    header("Location: ../teams.php?error=notloggedin");
+    header("Location: teams.php?error=notloggedin");
+} else {
+    if ($_SESSION["managed_team_id_user"] != $_GET['team-id']) {
+        header("Location: teams.php?error=notteammanager");
+    }
 }
 ?>
 <!DOCTYPE html>
