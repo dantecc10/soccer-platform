@@ -36,7 +36,7 @@ function add_player_row_form() {
         '               <input class="form-control main-bg-color submain-color player-field" type="text" name="player-name-' + players + '" id="player-name-' + players + '" required />' +
         '           </td >' +
         '           <td class="submain-bg-color">' +
-            '           <input class="form-control main-bg-color submain-color player-field" type="text" name="player-last-names-' + players + '" id="player-last-names-' + players + '" required />' +
+        '           <input class="form-control main-bg-color submain-color player-field" type="text" name="player-last-names-' + players + '" id="player-last-names-' + players + '" required />' +
         '           </td>' +
         '           <td class="submain-bg-color">' +
         '               <button class="btn form-control submain-color text-nowrap" type="button" style="background-color: gray;" onclick="javascript:upload_image(this);">Cargar archivo</button>' +
@@ -57,8 +57,8 @@ function add_player_row_form() {
         '                   </optgroup></select>' +
         '           </td>' +
         '           <td class="submain-bg-color">' +
-        '              <input class="form-control main-bg-color submain-color player-field" type="text" name="player-nickname-' + players + '" id="player-nickname-' + players + '" />'+
-        '           </td>'+
+        '              <input class="form-control main-bg-color submain-color player-field" type="text" name="player-nickname-' + players + '" id="player-nickname-' + players + '" />' +
+        '           </td>' +
         '       </tr > ');
     target.insertAdjacentHTML('beforeend', dom);
     if (document.querySelectorAll(".player-row").length > 1) {
@@ -140,25 +140,18 @@ document.getElementById("add-match-form").addEventListener("submit", function (e
     }
 });
 
-$(document).ready(function() {
-    $('#miFormulario').submit(function(event) {
-        // Evitar el envío del formulario por defecto
-        event.preventDefault();
-        
-        // Recopilar los datos del formulario
-        var formData = $(this).serialize();
-        
-        // Enviar la solicitud AJAX
+$(document).ready(function () {
+    $('#foul-sender').click(function (event) {
+        var formData = $('foul-form').serialize();
+
         $.ajax({
-            url: 'procesar_formulario.php', // URL del script PHP que procesa el formulario
-            type: 'POST', // Método HTTP POST
-            data: formData, // Datos del formulario
-            success: function(response) {
-                // Manejar la respuesta del servidor
+            url: 'https://castelancarpinteyro.com/php%20scripts/actions.php?type=foul',
+            type: 'POST',
+            data: formData,
+            success: function (response) {
                 console.log(response);
             },
-            error: function(xhr, status, error) {
-                // Manejar errores de la solicitud AJAX
+            error: function (xhr, status, error) {
                 console.error(error);
             }
         });
