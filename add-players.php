@@ -177,6 +177,9 @@ if (!logged_in()) {
     <script src="assets/js/theme.js?h=a083aeb15550c5e1266c666e8a5846d9"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="assets/js/soccer.js?h=7098f43c227bf47e86ba3f1deddc6a78"></script>
+    <script>
+        set_hidden_input_value();
+    </script>
 </body>
 
 </html>
