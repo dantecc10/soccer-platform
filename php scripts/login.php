@@ -40,5 +40,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $connection->close();
 } else {
-    header("location: ../login.php");
+    //header("location: ../login.php");
 }
