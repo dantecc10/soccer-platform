@@ -145,7 +145,7 @@ $(document).ready(function () {
         var formData = $('foul-form').serialize();
 
         $.ajax({
-            url: 'https://castelancarpinteyro.com/php%20scripts/actions.php?type=foul',
+            url: '../php%20scripts/actions.php?type=foul',
             type: 'POST',
             data: formData,
             success: function (response) {
