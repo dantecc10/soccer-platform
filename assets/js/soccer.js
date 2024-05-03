@@ -81,7 +81,7 @@ function set_hidden_input_value() {
     var quantity = document.querySelectorAll(".player-row").length;
     document.getElementById("players-quantity").value = quantity;
 }
-set_hidden_input_value();
+//set_hidden_input_value();
 
 function checkbox_analyze(element) {
     checkboxes = document.querySelectorAll(".card-checkbox");
