@@ -1,8 +1,10 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require_once "connection.php";
-    $username = $_POST["email"];
+
+    $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
     $password = $_POST["password"];
+
     $sql = "SELECT * FROM `users` WHERE `email_user` = ?";
 
     if ($stmt = $connection->prepare($sql)) {
