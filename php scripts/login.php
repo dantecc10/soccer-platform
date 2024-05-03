@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->store_result();
 
             if ($stmt->num_rows > 0) {
-                $stmt->bind_result($id_user, $name_user, $last_names_user, $email_user, $hashed_password, $role_user);
+                $stmt->bind_result($id_user, $name_user, $last_names_user, $email_user, $password_user, $role_user, $managed_team_id_user);
                 if ($stmt->fetch()) {
                     if (password_verify($password, $hashed_password)) {
                         session_start();
@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION["last_names_user"] = $last_names_user;
                         $_SESSION["email_user"] = $email_user;
                         $_SESSION["role_user"] = $role_user;
+                        $_SESSION["managed_team_id_user"] = $managed_team_id_user;
 
                         header("location: ../index.php");
                     } else {
