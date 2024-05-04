@@ -371,7 +371,7 @@ function fetch_matches($time, $id)
     include "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
     include "soccer_queries.php";
     // Previous = 0, Current = 1, Next = 2 -- $sql = $match_basic_data_queries[$time];
-    $sql = ($id == null || $id = "" || $id == 0) ? $match_basic_data_queries[$time] : $match_basic_data_queries[3]
+    $sql = ($id == null || $id = "" || $id == 0) ? $match_basic_data_queries[$time] : $match_basic_data_queries[3];
 
     $stmt = $connection->prepare($sql);
     $stmt->execute();
