@@ -16,7 +16,7 @@ session_start();
     ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Administrando partido - DEPORTEX</title>
+    <title>Administrando partido - <?php echo ($match_info[2]); ?> vs <?php echo ($match_info[7]); ?> - DEPORTEX</title>
     <meta property="og:title" content="DEPORTEX">
     <meta property="og:image" content="https://soccer.castelancarpinteyro.com/assets/img/deportex/DeportEX Logo Minimalista BLACK GREEN EDITION VFX.png">
     <meta name="description" content="Sistema de gestión de ligas de fútbol.">
