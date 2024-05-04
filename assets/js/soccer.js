@@ -171,6 +171,10 @@ function foul_ajax() {
             // La solicitud fue exitosa
             var response = (xhr.responseText);
             console.log(response);
+            if (response == "true") {
+                var myModal = new bootstrap.Modal(document.getElementById('modal-foul'));
+                myModal.hide();
+            }
         } else {
             // La solicitud falló
             console.error('Error: ' + xhr.status);
