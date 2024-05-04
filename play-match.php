@@ -11,6 +11,8 @@ session_start();
     $temp = $match_basic_data_fields;
     $temp[] = 'id_match';
     $temp[] = 'status_match';
+    $temp[] = 'local_team_id';
+    $temp[] = 'visitor_team_id';
 
     $match_info = fetch_fields('matches', $temp, null, str_replace("?", $_GET['id'], $match_basic_data_queries[3]))[0];
     ?>
@@ -609,10 +611,8 @@ session_start();
                                         <div class="col">
                                             <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Equipo infractor *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="foul-team" name="foul-team" required="" style="border-width: 1px;">
                                                     <optgroup label="Equipo que cometió la infracción">
-
-                                                        <option value="12" selected="">This is item 1</option>
-                                                        <option value="13">This is item 2</option>
-                                                        <option value="14">This is item 3</option>
+                                                        <option value=""><?php echo ($match_info[2]); ?></option>
+                                                        <option value=""><?php echo ($match_info[7]); ?></option>
                                                     </optgroup>
                                                 </select></div>
                                         </div>
