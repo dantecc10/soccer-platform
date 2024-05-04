@@ -48,6 +48,9 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             }
 
             $data[4] = $_POST['foul-consequence']; // ['foul-consequence']
+            $data[5] = $_POST['foul-match']; // ['foul-match']
+            $data[6] = $_POST['foul-time']; // ['foul-time']
+            $data[7] = $_POST['foul-referee']; // ['foul-referee']
             add_foul($data);
 
             break;
