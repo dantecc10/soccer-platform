@@ -631,10 +631,12 @@ session_start();
                                                     <optgroup label="Jugador que cometió la infracción">
                                                         <?php
                                                         for ($i = 0; $i < sizeof($local_players); $i++) {
-                                                            echo "<option value='" . $local_players[$i][0] . "'>" . $local_players[$i][4] . " - " . $local_players[$i][1] . " <i>'" . $local_players[$i][3] . "'</i> " . $local_players[$i][2] . "</option>";
+                                                            $nickname = ($local_players[$i][3] != null && $local_players[$i][3] != "") ? (" <i>'" . $local_players[$i][3] . "'</i> ") : " ";
+                                                            echo "<option value='" . $local_players[$i][0] . "'>" . $local_players[$i][4] . " - " . $local_players[$i][1] . $nickname . $local_players[$i][2] . "</option>";
                                                         }
                                                         for ($i = 0; $i < sizeof($visitor_players); $i++) {
-                                                            echo "<option value='" . $visitor_players[$i][0] . "'>" . $visitor_players[$i][4] . " - " . $visitor_players[$i][1] . " <i>'" . $visitor_players[$i][3] . "'</i> " . $visitor_players[$i][2] . "</option>";
+                                                            $nickname = ($visitor_players[$i][3] != null && $visitor_players[$i][3] != "") ? (" <i>'" . $visitor_players[$i][3] . "'</i> ") : " ";
+                                                            echo "<option value='" . $visitor_players[$i][0] . "'>" . $visitor_players[$i][4] . " - " . $visitor_players[$i][1] . $nickname . $visitor_players[$i][2] . "</option>";
                                                         }
                                                         ?>
                                                     </optgroup>
