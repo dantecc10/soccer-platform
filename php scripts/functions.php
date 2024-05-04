@@ -374,6 +374,9 @@ function fetch_matches($time, $id)
     $sql = ($id == null || $id = "" || $id == 0) ? $match_basic_data_queries[$time] : $match_basic_data_queries[3];
 
     $stmt = $connection->prepare($sql);
+    if ($sql = $match_basic_data_queries[3]) {
+        $stmt->bind_param("i", $id);
+    }
     $stmt->execute();
     $result = $stmt->get_result();
     $data = $result->fetch_all(MYSQLI_ASSOC);
@@ -762,7 +765,7 @@ function add_foul($foul_info)
     //if (!($stmt->execute())) {
     //    return false;
     //}
-    
+
 
     /* Añadir información de faltas y tipos de faltas al jugador */
     // Especificar amonestación
