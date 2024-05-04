@@ -516,7 +516,7 @@ function add_team($league, $team, $logo, $couch, $description, $name_user, $last
         return false;
     } else {
         $id = $connection->insert_id;
-        $sql = "INSERT INTO `users` VALUES('', ?, ?, ?, ?, 0, ?);";
+        $sql = "INSERT INTO `users` VALUES('', ?, ?, ?, ?, 0, ?, 1);";
         $stmt = $connection->prepare($sql);
         $stmt->bind_param("ssssi", $name_user, $last_names_user, $email_user, $password_user, $id);
         $stmt->execute();
