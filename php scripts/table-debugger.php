@@ -27,8 +27,7 @@ include_once "soccer_queries.php";
 
 //debug_data_printer(sql_debug_fetcher('matches', $match_basic_data_fields, $match_basic_data_queries[0]));
 $data = fetch_fields('matches', $match_basic_data_fields, null, str_replace("?", 22, $match_basic_data_queries[3]));
-debug_data_printer([$data]);
-
+print_r($data);
 //echo (matches_output(fetch_matches(0)));
 
 //echo __DIR__;

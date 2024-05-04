@@ -130,8 +130,15 @@ session_start();
                                 <div class="row rounded-top" style="background-color: var(--submain-background-color);">
                                     <div class="col"><span class="fs-4"><i class="la la-trophy"></i>&nbsp;EXAGON CHAMPIONS</span></div>
                                 </div>
+                                <?php
+                                $match_info = fetch_fields('matches', $match_basic_data_fields, null, str_replace("?", 22, $match_basic_data_queries[3]));
+                                ?>
                                 <div class="row rounded-4">
-                                    <div class="col"><span class="fs-4">2DO TIEMPO</span></div>
+                                    <div class="col"><span class="fs-4">
+                                        <?php
+                                        
+                                        ?>
+                                    </span></div>
                                 </div>
                                 <div class="row">
                                     <div class="col" style="height: 2rem !important;"><span class="px-4 py-1 mt-1 rounded-3" style="background-color: orangered;">EN VIVO</span></div>
