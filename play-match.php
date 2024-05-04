@@ -662,7 +662,7 @@ session_start();
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer col-12 align-self-center justify-content-center main-border top-border"><button class="btn submain-bg-color main-color main-border rounded-4 col-5" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn main-bg-color submain-color main-border rounded-4 col-5" id="foul-sender" type="button" onclick="javascript:foul_ajax(<?php echo ($_GET['id']); ?>, <?php echo ($_SESSION['id_user']); ?>);">Agregar falta</button></div>
+                <div class="modal-footer col-12 align-self-center justify-content-center main-border top-border"><button class="btn submain-bg-color main-color main-border rounded-4 col-5" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn main-bg-color submain-color main-border rounded-4 col-5" id="foul-sender" type="button" onclick="javascript:foul_ajax(match, referee);">Agregar falta</button></div>
             </div>
         </div>
     </div>
@@ -672,6 +672,10 @@ session_start();
     <script src="assets/js/theme.js?h=a083aeb15550c5e1266c666e8a5846d9"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="assets/js/soccer.js?h=2dc7e85950298bda04cc6ac9a2d1ed8f"></script>
+    <script>
+        const match = <?php echo ($_GET['id']); ?>;
+        const referee = <?php echo ($_SESSION['id_user']); ?>;
+    </script>
 </body>
 
 </html>
