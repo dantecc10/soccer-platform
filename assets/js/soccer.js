@@ -170,7 +170,7 @@ function foul_ajax() {
         if (xhr.status >= 200 && xhr.status < 300) {
             // La solicitud fue exitosa
             var response = (xhr.responseText);
-            console.log(response);
+            console.log("'" + response + "'");
             if (response == "true") {
                 var myModal = new bootstrap.Modal(document.getElementById('modal-foul'));
                 myModal.hide();
