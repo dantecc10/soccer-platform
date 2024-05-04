@@ -7,6 +7,13 @@ session_start();
 <html data-bs-theme="dark" lang="es-mx">
 
 <head>
+    <?php
+    $temp = $match_basic_data_fields;
+    $temp[] = 'id_match';
+    $temp[] = 'status_match';
+
+    $match_info = fetch_fields('matches', $temp, null, str_replace("?", $_GET['id'], $match_basic_data_queries[3]))[0];
+    ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Administrando partido - DEPORTEX</title>
@@ -130,13 +137,6 @@ session_start();
                                 <div class="row rounded-top" style="background-color: var(--submain-background-color);">
                                     <div class="col"><span class="fs-4"><i class="la la-trophy"></i>&nbsp;EXAGON CHAMPIONS</span></div>
                                 </div>
-                                <?php
-                                $temp = $match_basic_data_fields;
-                                $temp[] = 'id_match';
-                                $temp[] = 'status_match';
-
-                                $match_info = fetch_fields('matches', $temp, null, str_replace("?", $_GET['id'], $match_basic_data_queries[3]))[0];
-                                ?>
                                 <div class="row rounded-4">
                                     <div class="col"><span class="fs-4">
                                             <?php
