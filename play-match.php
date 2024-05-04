@@ -20,28 +20,6 @@ session_start();
 
     $local_players = fetch_fields('players', $player_fields, null, str_replace("?", str_replace("?", $match_info[12], $where), $sql));
     $visitor_players = fetch_fields('players', $player_fields, null, str_replace("?", str_replace("?", $match_info[13], $where), $sql));
-
-    $local_p_js = "";
-    $visitor_p_js = "";
-    for ($i = 0; $i < sizeof($local_players); $i++) {
-        $nickname = ($local_players[$i][3] != null && $local_players[$i][3] != "") ? (" <i>'" . $local_players[$i][3] . "'</i> ") : " ";
-        $local_p_js .= "<option class='player-option local' value='" . $local_players[$i][0] . "'>" . $local_players[$i][4] . " - " . $local_players[$i][1] . $nickname . $local_players[$i][2] . "</option>";
-    }
-    for ($i = 0; $i < sizeof($visitor_players); $i++) {
-        $nickname = ($visitor_players[$i][3] != null && $visitor_players[$i][3] != "") ? (" <i>'" . $visitor_players[$i][3] . "'</i> ") : " ";
-        $visitor_p_js .= "<option class='player-option visitor' value='" . $visitor_players[$i][0] . "'>" . $visitor_players[$i][4] . " - " . $visitor_players[$i][1] . $nickname . $visitor_players[$i][2] . "</option>";
-    }
-    ?>
-    <script lang="javascript">
-        const local_players = "<?php echo $local_p_js; ?>";
-        const local_players = "<?php echo $local_p_js; ?>";
-
-        function option_inserter(target_id, team) {
-            let target = document.getElementById(target_id);
-            var inserter = (team == 'home') ? local_players : visitor_players;
-            target.innerHTML = inserter;
-        }
-    </script>
     ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -82,6 +60,31 @@ session_start();
 </head>
 
 <body class="submain-bg-color">
+    <?php
+    $local_p_js = "";
+    $visitor_p_js = "";
+    for ($i = 0; $i < sizeof($local_players); $i++) {
+        $nickname = ($local_players[$i][3] != null && $local_players[$i][3] != "") ? (" <i>'" . $local_players[$i][3] . "'</i> ") : " ";
+        $local_p_js .= "<option class='player-option local' value='" . $local_players[$i][0] . "'>" . $local_players[$i][4] . " - " . $local_players[$i][1] . $nickname . $local_players[$i][2] . "</option>";
+    }
+    for ($i = 0; $i < sizeof($visitor_players); $i++) {
+        $nickname = ($visitor_players[$i][3] != null && $visitor_players[$i][3] != "") ? (" <i>'" . $visitor_players[$i][3] . "'</i> ") : " ";
+        $visitor_p_js .= "<option class='player-option visitor' value='" . $visitor_players[$i][0] . "'>" . $visitor_players[$i][4] . " - " . $visitor_players[$i][1] . $nickname . $visitor_players[$i][2] . "</option>";
+    }
+    ?>
+    <script lang="javascript">
+        const local_players = "<?php echo $local_p_js; ?>";
+        const local_players = "<?php echo $local_p_js; ?>";
+
+        function option_inserter(target_id, team) {
+            let target = document.getElementById(target_id);
+            var inserter = (team == 'home') ? local_players : visitor_players;
+            target.innerHTML = inserter;
+        }
+    </script>
+    
+    ?>
+
     <nav class="navbar navbar-expand-lg fixed-top bg-white clean-navbar main-bg-color navbar-light">
         <div class="container"><a class="navbar-brand logo" href="index.php"><img class="bs-icon-sm" src="assets/img/deportex/Dep_Dark.png?h=6baf041d5b489f75a71934a78277e96f" style="max-height: 45px !important;"></a><button data-bs-toggle="collapse" class="navbar-toggler submain-bg-color" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
