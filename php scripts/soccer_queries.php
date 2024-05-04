@@ -108,7 +108,14 @@ $match_basic_data_queries = [
        r.name_referee, r.last_names_referee
     FROM matches m
     JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
-    WHERE (m.status_match = 0) ORDER BY m.start_schedule_match DESC LIMIT 5;"
+    WHERE (m.status_match = 0) ORDER BY m.start_schedule_match DESC LIMIT 5;",
+    "SELECT m.start_schedule_match, m.field_match,
+       t1.name_team AS local_name_team, t1.icon_team AS local_icon_team, m.local_goals_match,
+       m.visitor_goals_match, t2.icon_team AS visitor_icon_team, t2.name_team AS visitor_name_team,
+       r.name_referee, r.last_names_referee
+    FROM matches m
+    JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
+    WHERE (m.id_match = ?);"
 ];
 $team_detail_query = "SELECT `teams`.*, `played_games`, `position` FROM (
          SELECT `id_team`, ((3 * `wins_team`) + `draws_team`) AS `points`, 
