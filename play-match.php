@@ -561,6 +561,9 @@ session_start();
         </div>
     </div>
     <div class="modal fade" role="dialog" tabindex="-1" id="modal-foul">
+        <?php
+        $match_data = fetch_fields("matches", $matches_fields, null, null);
+        ?>
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content modal-dialog-centered submain-bg-color custom-font rounded-5 main-border">
                 <div class="modal-header col-12 text-center justify-content-center p-2 main-border bottom-border">
@@ -577,7 +580,8 @@ session_start();
                                     <div class="row mb-1">
                                         <div class="col">
                                             <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Equipo infractor *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="foul-team" name="foul-team" required="" style="border-width: 1px;">
-                                                    <optgroup label="This is a group">
+                                                    <optgroup label="Equipo que cometió la infracción">
+
                                                         <option value="12" selected="">This is item 1</option>
                                                         <option value="13">This is item 2</option>
                                                         <option value="14">This is item 3</option>

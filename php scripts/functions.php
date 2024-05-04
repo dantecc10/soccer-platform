@@ -756,13 +756,13 @@ function add_foul($foul_info)
 
 
     // Cargar la falta a las estadísticas
-    $sql = "INSERT INTO `stats` VALUES('', 'foul', CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?);";
-    $stmt = $connection->prepare($sql);
-    $stmt->bind_param("iiiis", $match, $player, $referee, $team, $details);
-    if (!($stmt->execute())) {
-        return false;
-    }
-
+    //$sql = "INSERT INTO `stats` VALUES('', 'foul', CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?);";
+    //$stmt = $connection->prepare($sql);
+    //$stmt->bind_param("iiiis", $match, $player, $referee, $team, $details);
+    //if (!($stmt->execute())) {
+    //    return false;
+    //}
+    
 
     /* Añadir información de faltas y tipos de faltas al jugador */
     // Especificar amonestación
