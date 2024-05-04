@@ -13,8 +13,13 @@ session_start();
     $temp[] = 'status_match';
     $temp[] = 'local_team_id';
     $temp[] = 'visitor_team_id';
+    $where = ("WHERE (player_team_id = ?)");
+    $sql = "SELECT * FROM  `players` ?";
 
     $match_info = fetch_fields('matches', $temp, null, str_replace("?", $_GET['id'], $match_basic_data_queries[3]))[0];
+
+    $local_players = fetch_fields('players', $player_fields, null, str_replace("?", str_replace("?", $match_info[12], $where), $sql));
+    $local_players = fetch_fields('players', $player_fields, null, str_replace("?", str_replace("?", $match_info[13], $where), $sql));
     ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
