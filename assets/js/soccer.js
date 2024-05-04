@@ -159,9 +159,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-function foul_ajax() {
+function foul_ajax(match, referee) {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', '../php%20scripts/actions.php?type=foul', true);
+    xhr.open('POST', 'php%20scripts/actions.php?type=foul', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onload = function () {
@@ -183,5 +183,5 @@ function foul_ajax() {
 
     var formData = $('#foul-form').serialize();
 
-    xhr.send(formData);
+    xhr.send(formData + "&match-id=" + match + "&referee-id=" + referee);
 }
