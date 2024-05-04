@@ -172,8 +172,7 @@ function foul_ajax() {
             var response = (xhr.responseText);
             console.log("'" + response + "'");
             if (response == "true") {
-                var myModal = new bootstrap.Modal(document.getElementById('modal-foul'));
-                myModal.hide();
+                $('#exampleModal').modal('hide');
             }
         } else {
             // La solicitud falló
