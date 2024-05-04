@@ -139,10 +139,26 @@ session_start();
                                 ?>
                                 <div class="row rounded-4">
                                     <div class="col"><span class="fs-4">
-                                        <?php
-
-                                        ?>
-                                    </span></div>
+                                            <?php
+                                            switch ($match_info[11]) {
+                                                case 0:
+                                                    echo "Programado";
+                                                    break;
+                                                case 1:
+                                                    echo "1er tiempo";
+                                                    break;
+                                                case 2:
+                                                    echo "Descanso";
+                                                    break;
+                                                case 3:
+                                                    echo "2do tiempo";
+                                                    break;
+                                                default:
+                                                    echo "Finalizado";
+                                                    break;
+                                            }
+                                            ?>
+                                        </span></div>
                                 </div>
                                 <div class="row">
                                     <div class="col" style="height: 2rem !important;"><span class="px-4 py-1 mt-1 rounded-3" style="background-color: orangered;">EN VIVO</span></div>
@@ -150,17 +166,17 @@ session_start();
                                 <div class="row py-2">
                                     <div class="col align-self-center">
                                         <div class="row">
-                                            <div class="col align-self-center px-0 d-lg-none" style="font-size: 1.2rem;text-align: center;"><span class="fs-2">FC Bayern München</span></div>
+                                            <div class="col align-self-center px-0 d-lg-none" style="font-size: 1.2rem;text-align: center;"><span class="fs-2"><?php echo ($match_info[2]); ?></span></div>
                                             <div class="col col-12 col-lg-6 col-xl-7">
                                                 <div class="row">
                                                     <div class="col px-0" style="max-height: 5rem;">
                                                         <div style="max-height: inherit;">
-                                                            <div class="p-0 text-lg-end pe-lg-3" style="max-height: inherit;"><img src="assets/img/samples/logo-bayern.png?h=689f785b0d375e5269cde4eff9a00b5c" style="max-height: inherit;"></div>
+                                                            <div class="p-0 text-lg-end pe-lg-3" style="max-height: inherit;"><img src="<?php echo ($match_info[3]); ?>" style="max-height: inherit;"></div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col align-self-center px-0 d-none d-lg-block" style="font-size: 1.2rem;text-align: center;"><span class="fs-2">MÁSTERS FC</span></div>
+                                            <div class="col align-self-center px-0 d-none d-lg-block" style="font-size: 1.2rem;text-align: center;"><span class="fs-2"><?php echo ($match_info[7]); ?></span></div>
                                         </div>
                                     </div>
                                     <div class="col align-self-center col-3 col-sm-2 col-lg-1">
@@ -170,22 +186,22 @@ session_start();
                                     </div>
                                     <div class="col align-self-center">
                                         <div class="row">
-                                            <div class="col align-self-center px-0" style="font-size: 1.2rem;text-align: center;"><span class="fs-2">MÁSTERS FC</span></div>
+                                            <div class="col align-self-center px-0" style="font-size: 1.2rem;text-align: center;"><span class="fs-2"><?php echo ($match_info[7]); ?></span></div>
                                             <div class="col col-12 col-lg-6 col-xl-7">
                                                 <div class="row">
                                                     <div class="col px-0" style="max-height: 5rem;">
                                                         <div style="max-height: inherit;">
-                                                            <div class="p-0 p-0 text-lg-start ps-lg-3" style="max-height: inherit;"><img src="assets/img/samples/masters-fc.png?h=b2ccd38b407a40501e86cf611779775b" style="max-height: inherit;"></div>
+                                                            <div class="p-0 p-0 text-lg-start ps-lg-3" style="max-height: inherit;"><img src="<?php echo ($match_info[6]); ?>" style="max-height: inherit;"></div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col align-self-center px-0 d-none" style="font-size: 1.2rem;text-align: center;"><span>MÁSTERS FC</span></div>
+                                            <div class="col align-self-center px-0 d-none" style="font-size: 1.2rem;text-align: center;"><span><?php echo ($match_info[7]); ?></span></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col"><span style="height: .3rem !important;">Sábado 14 / 04 / 2024&nbsp; |&nbsp; 03:00 p. m.&nbsp; |&nbsp; Polideportivo, Campo 2</span></div>
+                                    <div class="col"><span style="height: .3rem !important;">Sábado 14 / 04 / 2024&nbsp; |&nbsp; 03:00 p. m.&nbsp; |&nbsp; <?php echo ($match_info[1]); ?></span></div>
                                 </div>
                                 <div class="row">
                                     <div class="col px-0">
