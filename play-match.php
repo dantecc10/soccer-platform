@@ -203,7 +203,7 @@ session_start();
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col"><span style="height: .3rem !important;">Sábado 14 / 04 / 2024&nbsp; |&nbsp; 03:00 p. m.&nbsp; |&nbsp; <?php echo ($match_info[1]); ?></span></div>
+                                    <div class="col"><span style="height: .3rem !important;"><?php echo (match_start_schedule_formatter($match_info[0])); ?> |&nbsp; <?php echo ($match_info[1]); ?></span></div>
                                 </div>
                                 <div class="row">
                                     <div class="col px-0">
