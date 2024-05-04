@@ -140,7 +140,8 @@ document.getElementById("add-match-form").addEventListener("submit", function (e
     }
 });
 
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
+    // Tu código problemático aquí
     $('#foul-sender').click(function (event) {
         var formData = $('#foul-form').serialize();
 
