@@ -13105,3 +13105,37 @@ error: src refspec master does not match any
 error: failed to push some refs to 'https://github.com/dantecc10/soccer-platform.git'
 
 
+----------
+
+Sat May 04 2024 01:11:23 GMT-0600 (hora estándar central)
+
+fatal: Unable to create 'D:/Repos/soccer-platform/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+
+----------
+
+Sat May 04 2024 01:11:23 GMT-0600 (hora estándar central)
+
+fatal: Unable to create 'D:/Repos/soccer-platform/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+
+----------
+
+Sat May 04 2024 01:11:23 GMT-0600 (hora estándar central)
+
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/dantecc10/soccer-platform.git'
+
+
