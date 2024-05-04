@@ -74,7 +74,7 @@ session_start();
     ?>
     <script lang="javascript">
         const local_players = "<?php echo $local_p_js; ?>";
-        const local_players = "<?php echo $local_p_js; ?>";
+        const visitor_players = "<?php echo $visitor_p_js; ?>";
 
         function option_inserter(target_id, team) {
             let target = document.getElementById(target_id);
