@@ -158,3 +158,33 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+function foul_ajax() {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('POST', '../php%20scripts/actions.php?type=foul', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    // Maneja el evento load (éxito)
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            // La solicitud fue exitosa
+            var response = (xhr.responseText);
+            console.log(response);
+        } else {
+            // La solicitud falló
+            console.error('Error: ' + xhr.status);
+        }
+    };
+
+    // Maneja el evento error
+    xhr.onerror = function () {
+        console.error('Error de red');
+    };
+
+    // Define los datos a enviar
+    var formData = $('#foul-form').serialize();
+
+    // Envía la solicitud
+    xhr.send(formData);
+}
