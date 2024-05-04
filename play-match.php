@@ -631,10 +631,10 @@ session_start();
                                                     <optgroup label="Jugador que cometió la infracción">
                                                         <?php
                                                         for ($i = 0; $i < sizeof($local_players); $i++) {
-                                                            echo "<option value='" . $local_players[$i][0] . "'>" . $local_players[$i][1] . $local_players[$i][2] . "</option>";
+                                                            echo "<option value='" . $local_players[$i][0] . "'>" . $local_players[$i][4] . " - " . $local_players[$i][1] . " " . $local_players[$i][3] . " " . $local_players[$i][2] . "</option>";
                                                         }
                                                         for ($i = 0; $i < sizeof($visitor_players); $i++) {
-                                                            echo "<option value='" . $visitor_players[$i][0] . "'>" . $visitor_players[$i][1] . $visitor_players[$i][2] . "</option>";
+                                                            echo "<option value='" . $visitor_players[$i][0] . "'>" . $visitor_players[$i][4] . " - " . $visitor_players[$i][1] . " " . $visitor_players[$i][3] . " " . $visitor_players[$i][2] . "</option>";
                                                         }
                                                         ?>
                                                     </optgroup>
