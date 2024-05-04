@@ -19,7 +19,7 @@ session_start();
     $match_info = fetch_fields('matches', $temp, null, str_replace("?", $_GET['id'], $match_basic_data_queries[3]))[0];
 
     $local_players = fetch_fields('players', $player_fields, null, str_replace("?", str_replace("?", $match_info[12], $where), $sql));
-    $local_players = fetch_fields('players', $player_fields, null, str_replace("?", str_replace("?", $match_info[13], $where), $sql));
+    $visitor_players = fetch_fields('players', $player_fields, null, str_replace("?", str_replace("?", $match_info[13], $where), $sql));
     ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -99,6 +99,10 @@ session_start();
                         </div>
                     </div>
                 </div>
+                <?php
+                print_r($local_players);
+                print_r($visitor_players);
+                ?>
             </div>
         </section>
         <section id="add-events" class="main-color submain-bg-color my-3">
