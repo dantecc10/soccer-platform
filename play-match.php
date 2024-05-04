@@ -82,12 +82,12 @@ session_start();
                     <div class="col text-center col-md-10 col-lg-9 col-xl-8">
                         <div class="row mb-1">
                             <div class="col">
-                                <div class="input-group main-border rounded-4"><span class="input-group-text col-5 rounded-4 submain-bg-color text-center justify-content-center" style="text-align: center !important; border: none;">Equipo local</span><input class="form-control team-labelers rounded-2 main-bg-color submain-color text-center m-0 disabled" type="text" disabled="" value="FC Bayern München" style="border: none;"></div>
+                                <div class="input-group main-border rounded-4"><span class="input-group-text col-5 rounded-4 submain-bg-color text-center justify-content-center" style="text-align: center !important; border: none;">Equipo local</span><input class="form-control team-labelers rounded-2 main-bg-color submain-color text-center m-0 disabled" type="text" disabled="" value="<?php echo ($match_info[2]); ?>" style="border: none;"></div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <div class="input-group main-border rounded-4"><span class="input-group-text col-5 rounded-4 submain-bg-color text-center justify-content-center" style="text-align: center !important; border: none;">Equipo visitante</span><input class="form-control team-labelers rounded-2 main-bg-color submain-color text-center m-0 disabled" type="text" value="Masters FC" style="border: none;"></div>
+                                <div class="input-group main-border rounded-4"><span class="input-group-text col-5 rounded-4 submain-bg-color text-center justify-content-center" style="text-align: center !important; border: none;">Equipo visitante</span><input class="form-control team-labelers rounded-2 main-bg-color submain-color text-center m-0 disabled" type="text" value="<?php echo ($match_info[7]); ?>" style="border: none;"></div>
                             </div>
                         </div>
                     </div>
