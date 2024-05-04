@@ -176,7 +176,7 @@ session_start();
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col align-self-center px-0 d-none d-lg-block" style="font-size: 1.2rem;text-align: center;"><span class="fs-2"><?php echo ($match_info[3]); ?></span></div>
+                                            <div class="col align-self-center px-0 d-none d-lg-block" style="font-size: 1.2rem;text-align: center;"><span class="fs-2"><?php echo ($match_info[2]); ?></span></div>
                                         </div>
                                     </div>
                                     <div class="col align-self-center col-3 col-sm-2 col-lg-1">
