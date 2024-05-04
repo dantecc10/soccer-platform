@@ -26,8 +26,11 @@ include_once "soccer_queries.php";
 //debug_data_printer(sql_debug_fetcher('matches', $match_basic_data_fields, $match_basic_data_query));
 
 //debug_data_printer(sql_debug_fetcher('matches', $match_basic_data_fields, $match_basic_data_queries[0]));
+$sql = $match_basic_data_queries[3];
+$sql = substr_replace($sql, '?', "22", strpos($sql, "?"));
 
-print_r(fetch_matches(0, 22)[0]['local_name_team']);
+$data = fetch_fields('matches', $match_basic_data_fields, null, $sql);
+print_r($data);
 
 //echo (matches_output(fetch_matches(0)));
 
