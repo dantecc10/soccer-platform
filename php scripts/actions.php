@@ -35,7 +35,6 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             $data[0] = $_POST['foul-team']; // ['foul-team']
             $data[1] = $_POST['foul-player']; // ['foul-player']
             $data[2] = $_POST['foul-type']; // ['foul-type']
-
             //$data[3] = $_POST['foul-card']; // ['foul-card']
             if (isset($_POST['foul-no-card'])) {
                 $data[3] = 0;
@@ -46,10 +45,9 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
                     $data[3] = (isset($_POST['foul-double-yellow-card'])) ? 2 : 3;
                 }
             }
-
             $data[4] = $_POST['foul-consequence']; // ['foul-consequence']
             $data[5] = $_POST['foul-match']; // ['foul-match']
-            $data[6] = $_POST['foul-time']; // ['foul-time']
+            $data[6] = (isset($_POST['foul-time'])) ? ($_POST['foul-time']) : 0; // ['foul-time']
             $data[7] = $_POST['foul-referee']; // ['foul-referee']
             add_foul($data);
 

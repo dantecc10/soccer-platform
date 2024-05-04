@@ -747,7 +747,13 @@ function add_foul($foul_info)
 {
     include_once "connection.php";
 
-    $details = ($foul_info[3] . "/" . $foul_info[4]);
+    $team = $foul_info[0];
+    $player = $foul_info[1];
+    $details = ($foul_info[2] . "/" . $foul_info[3] . "/" . $foul_info[4]);
+    $match = $foul_info[5];
+    $time = $foul_info[6];
+    $referee = $foul_info[7];
+
 
     // Cargar la falta a las estadísticas
     $sql = "INSERT INTO `stats` VALUES('', 'foul', CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?);";
