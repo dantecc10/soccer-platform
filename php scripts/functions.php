@@ -759,7 +759,7 @@ function add_foul($foul_info)
     $sql = "INSERT INTO `stats` VALUES('', 'foul', CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?);";
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("iiiis", $match, $player, $referee, $team, $details);
-    if (!$stmt->execute()) {
+    if (!($stmt->execute())) {
         return false;
     }
 
