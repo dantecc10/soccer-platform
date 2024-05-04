@@ -1,5 +1,6 @@
 <?php
 include_once "php scripts/functions.php";
+include_once "php scripts/soccer_queries.php";
 session_start();
 ?>
 <!DOCTYPE html>
