@@ -11863,3 +11863,255 @@ error: src refspec master does not match any
 error: failed to push some refs to 'https://github.com/dantecc10/soccer-platform.git'
 
 
+----------
+
+Sat May 04 2024 00:21:58 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/bootstrap/css/bootstrap.min.css', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:58 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/css/soccer.css', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:58 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/img/deportex/campeonato.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/img/deportex/equipos.svg', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/img/deportex/jugadores.svg', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/img/deportex/partidos.svg', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/img/equipos.svg', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/img/jugadores.svg', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/img/star-empty.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/img/star-half-empty.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/img/star.svg', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'assets/js/theme.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/about-us.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/actions.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/add-match.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/add-players.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/add-team.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/blank.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/blog-post-list.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/blog-post.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/catalog-page.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/contact-us.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/faq.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/features.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/gallery.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/index.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:21:59 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/login.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:22:00 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/matches.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/payment-page.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:22:00 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/play-match.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'exporting/pricing.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:22:00 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/product-page-1.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:22:00 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/registration.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:22:00 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/service-page.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:22:00 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/shopping-cart.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:22:00 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/slider.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:22:00 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/team-detail.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:22:00 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/teams.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:22:00 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'exporting/testimonials.html', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:22:00 GMT-0600 (hora estándar central)
+
+warning: in the working copy of 'sitemap.xml', LF will be replaced by CRLF the next time Git touches it
+
+
+----------
+
+Sat May 04 2024 00:22:01 GMT-0600 (hora estándar central)
+
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/dantecc10/soccer-platform.git'
+
+
