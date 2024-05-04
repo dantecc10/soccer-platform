@@ -131,12 +131,16 @@ session_start();
                                     <div class="col"><span class="fs-4"><i class="la la-trophy"></i>&nbsp;EXAGON CHAMPIONS</span></div>
                                 </div>
                                 <?php
-                                $match_info = fetch_fields('matches', $match_basic_data_fields, null, str_replace("?", 22, $match_basic_data_queries[3]));
+                                $temp = $match_basic_data_fields;
+                                $temp[] = 'id_match';
+                                $temp[] = 'status_match';
+
+                                $match_info = fetch_fields('matches', $temp, null, str_replace("?", 22, $match_basic_data_queries[3]));
                                 ?>
                                 <div class="row rounded-4">
                                     <div class="col"><span class="fs-4">
                                         <?php
-                                        
+
                                         ?>
                                     </span></div>
                                 </div>
