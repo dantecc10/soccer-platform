@@ -142,7 +142,7 @@ document.getElementById("add-match-form").addEventListener("submit", function (e
 
 $(document).ready(function () {
     $('#foul-sender').click(function (event) {
-        var formData = $('foul-form').serialize();
+        var formData = $('#foul-form').serialize();
 
         $.ajax({
             url: '../php%20scripts/actions.php?type=foul',
