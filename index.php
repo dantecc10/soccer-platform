@@ -38,6 +38,15 @@ session_start();
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap'">
     <link rel="stylesheet" href="assets/css/soccer.css?h=bb91f2a49d4604bb3b7d68f7f2729e35">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css?h=e737f76df021b46fa7180f48799a5d20">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LTBB1G44GJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LTBB1G44GJ');
+</script>
 </head>
 
 <body>

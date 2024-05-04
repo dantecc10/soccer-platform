@@ -32,6 +32,15 @@ if (!isset($_SESSION['id_user']) && !isset($_SESSION['logged_in'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap'">
     <link rel="stylesheet" href="assets/css/soccer.css?h=d5846df3391ee5880ceb80c6b2bc4c74">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LTBB1G44GJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LTBB1G44GJ');
+</script>
 </head>
 
 <body>
