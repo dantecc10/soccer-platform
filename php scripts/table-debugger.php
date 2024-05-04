@@ -26,12 +26,9 @@ include_once "soccer_queries.php";
 //debug_data_printer(sql_debug_fetcher('matches', $match_basic_data_fields, $match_basic_data_query));
 
 //debug_data_printer(sql_debug_fetcher('matches', $match_basic_data_fields, $match_basic_data_queries[0]));
-$match_id = 22; // Puedes cambiar este número según sea necesario
+$id = 22;
 $sql = $match_basic_data_queries[3];
-$position = strpos($sql, "?", $match_id); // Encuentra la primera ocurrencia de '?' después de la posición especificada
-if ($position !== false) {
-    $sql = substr_replace($sql, $match_id, $position); // Reemplaza el primer '?' encontrado después de la posición especificada
-}
+$sql = str_replace("?", $id, $sql);
 
 $data = fetch_fields('matches', $match_basic_data_fields, null, $sql);
 print_r($data);
