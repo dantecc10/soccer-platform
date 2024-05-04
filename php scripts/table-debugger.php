@@ -30,7 +30,7 @@ $match_id = 22; // Puedes cambiar este número según sea necesario
 $sql = $match_basic_data_queries[3];
 $position = strpos($sql, "?", $match_id); // Encuentra la primera ocurrencia de '?' después de la posición especificada
 if ($position !== false) {
-    $sql = substr_replace($sql, '?', $position, 1); // Reemplaza el primer '?' encontrado después de la posición especificada
+    $sql = substr_replace($sql, '?', $position); // Reemplaza el primer '?' encontrado después de la posición especificada
 }
 
 $data = fetch_fields('matches', $match_basic_data_fields, null, $sql);
