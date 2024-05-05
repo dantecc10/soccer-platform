@@ -17,6 +17,9 @@ session_start();
     $sql = "SELECT * FROM  `players` ?";
 
     $match_info = fetch_fields('matches', $temp, null, str_replace("?", $_GET['id'], $match_basic_data_queries[3]))[0];
+    if ($match_info != null) {
+        header("Location: index.php");
+    }
 
     $local_players = fetch_fields('players', $player_fields, null, str_replace("?", str_replace("?", $match_info[12], $where), $sql));
     $visitor_players = fetch_fields('players', $player_fields, null, str_replace("?", str_replace("?", $match_info[13], $where), $sql));
