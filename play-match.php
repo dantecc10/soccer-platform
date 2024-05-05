@@ -582,8 +582,8 @@ session_start();
                                         <div class="col">
                                             <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Equipo goleador *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="goal-team" name="goal-team" required="" style="border-width: 1px;">
                                                     <optgroup label="Equipo anotador">
-                                                        <option value="<?php echo ($match_info[12]); ?>"><?php echo ($match_info[2]); ?></option>
-                                                        <option value="<?php echo ($match_info[13]); ?>"><?php echo ($match_info[7]); ?></option>
+                                                        <option value="<?php echo ($match_info[12]); ?>" onclick="javascript:option_inserter('goal-scorer-optgroup','home');"><?php echo ($match_info[2]); ?></option>
+                                                        <option value="<?php echo ($match_info[13]); ?>" onclick="javascript:option_inserter('goal-scorer-optgroup','visitor');"><?php echo ($match_info[7]); ?></option>
                                                     </optgroup>
                                                 </select></div>
                                         </div>
@@ -596,10 +596,7 @@ session_start();
                                     <div class="row my-1">
                                         <div class="col">
                                             <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">ANOTADOR *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="goal-player" name="goal-player" required="" style="border-width: 1px;">
-                                                    <optgroup label="This is a group">
-                                                        <option value="12" selected="">This is item 1</option>
-                                                        <option value="13">This is item 2</option>
-                                                        <option value="14">This is item 3</option>
+                                                    <optgroup id="goal-scorer-optgroup" label="Anotador">
                                                     </optgroup>
                                                 </select></div>
                                         </div>
