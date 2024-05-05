@@ -78,6 +78,12 @@ session_start();
     <script lang="javascript">
         const local_players = "<?php echo $local_p_js; ?>";
         const visitor_players = "<?php echo $visitor_p_js; ?>";
+        const local_id = "<?php echo $match_info[12]; ?>";
+        const visitor_id = "<?php echo $match_info[13]; ?>";
+
+        function selected_insert(element, target) {
+            (element.value == local_id) ? option_inserter(target, 'home'): option_inserter(target, 'visitor');
+        }
 
         function option_inserter(target_id, team) {
             let target = document.getElementById(target_id);
@@ -640,10 +646,10 @@ session_start();
                                 <form id="foul-form" class="modal-form" name="foul-form" method="post">
                                     <div class="row mb-1">
                                         <div class="col">
-                                            <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Equipo infractor *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="foul-team" name="foul-team" required="" style="border-width: 1px;">
+                                            <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Equipo infractor *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="foul-team" name="foul-team" required="" style="border-width: 1px;" onclick="javascript:selected_insert(this, 'foul-player-optgroup');">
                                                     <optgroup label="Equipo que cometió la infracción">
-                                                        <option value="<?php echo ($match_info[12]); ?>" onclick="javascript:option_inserter('foul-player-optgroup','home');"><?php echo ($match_info[2]); ?></option>
-                                                        <option value="<?php echo ($match_info[13]); ?>" onclick="javascript:option_inserter('foul-player-optgroup','visitor');"><?php echo ($match_info[7]); ?></option>
+                                                        <option value="<?php echo ($match_info[12]); ?>"><?php echo ($match_info[2]); ?></option>
+                                                        <option value="<?php echo ($match_info[13]); ?>"><?php echo ($match_info[7]); ?></option>
                                                     </optgroup>
                                                 </select></div>
                                         </div>
