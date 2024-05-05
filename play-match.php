@@ -586,10 +586,10 @@ session_start();
                                 <form id="goal-form" class="modal-form" name="goal-form">
                                     <div class="row mb-1">
                                         <div class="col">
-                                            <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Equipo goleador *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="goal-team" name="goal-team" required="" style="border-width: 1px;">
+                                            <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Equipo goleador *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="goal-team" name="goal-team" required="" style="border-width: 1px;"  onclick="javascript:selected_insert(this, 'goal-scorer-optgroup');">
                                                     <optgroup label="Equipo anotador">
-                                                        <option value="<?php echo ($match_info[12]); ?>" onclick="javascript:option_inserter('goal-scorer-optgroup','home');"><?php echo ($match_info[2]); ?></option>
-                                                        <option value="<?php echo ($match_info[13]); ?>" onclick="javascript:option_inserter('goal-scorer-optgroup','visitor');"><?php echo ($match_info[7]); ?></option>
+                                                        <option value="<?php echo ($match_info[12]); ?>"><?php echo ($match_info[2]); ?></option>
+                                                        <option value="<?php echo ($match_info[13]); ?>"><?php echo ($match_info[7]); ?></option>
                                                     </optgroup>
                                                 </select></div>
                                         </div>
