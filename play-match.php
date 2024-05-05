@@ -17,7 +17,7 @@ session_start();
     $sql = "SELECT * FROM  `players` ?";
 
     $match_info = fetch_fields('matches', $temp, null, str_replace("?", $_GET['id'], $match_basic_data_queries[3]))[0];
-    if ($match_info != null) {
+    if ($match_info === null) {
         header("Location: index.php");
     }
 
