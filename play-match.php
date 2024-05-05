@@ -642,8 +642,8 @@ session_start();
                                         <div class="col">
                                             <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Equipo infractor *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="foul-team" name="foul-team" required="" style="border-width: 1px;">
                                                     <optgroup label="Equipo que cometió la infracción">
-                                                        <option value="<?php echo ($match_info[12]); ?>"><?php echo ($match_info[2]); ?></option>
-                                                        <option value="<?php echo ($match_info[13]); ?>"><?php echo ($match_info[7]); ?></option>
+                                                        <option value="<?php echo ($match_info[12]); ?>" onclick="javascript:option_inserter('foul-player-optgroup','home');"><?php echo ($match_info[2]); ?></option>
+                                                        <option value="<?php echo ($match_info[13]); ?>" onclick="javascript:option_inserter('foul-player-optgroup','visitor');"><?php echo ($match_info[7]); ?></option>
                                                     </optgroup>
                                                 </select></div>
                                         </div>
@@ -651,32 +651,7 @@ session_start();
                                     <div class="row my-1">
                                         <div class="col">
                                             <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Jugador infractor *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="foul-player" name="foul-player" required="" style="border-width: 1px;">
-                                                    <optgroup id="foul-player-options" label="Jugador que cometió la infracción">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                                    <optgroup id="foul-player-optgroup" label="Jugador que cometió la infracción">
 
                                                     </optgroup>
                                                 </select></div>
