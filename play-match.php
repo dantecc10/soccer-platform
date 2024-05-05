@@ -18,7 +18,7 @@ session_start();
 
     $match_info = fetch_fields('matches', $temp, null, str_replace("?", $_GET['id'], $match_basic_data_queries[3]))[0];
     if ($match_info === null) {
-        header("Location: index.php");
+        header("Location: index.php?error=match_not_found");
     }
 
     $local_players = fetch_fields('players', $player_fields, null, str_replace("?", str_replace("?", $match_info[12], $where), $sql));
