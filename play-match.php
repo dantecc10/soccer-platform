@@ -586,7 +586,7 @@ session_start();
                                 <form id="goal-form" class="modal-form" name="goal-form">
                                     <div class="row mb-1">
                                         <div class="col">
-                                            <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Equipo goleador *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="goal-team" name="goal-team" required="" style="border-width: 1px;"  onclick="javascript:selected_insert(this, 'goal-scorer-optgroup');">
+                                            <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Equipo goleador *</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="goal-team" name="goal-team" required="" style="border-width: 1px;" onclick="javascript:selected_insert(this, 'goal-scorer-optgroup');">
                                                     <optgroup label="Equipo anotador">
                                                         <option value="<?php echo ($match_info[12]); ?>"><?php echo ($match_info[2]); ?></option>
                                                         <option value="<?php echo ($match_info[13]); ?>"><?php echo ($match_info[7]); ?></option>
@@ -666,10 +666,15 @@ session_start();
                                     <div class="row my-1">
                                         <div class="col">
                                             <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Tipo de falta</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="foul-type" name="foul-type" style="border-width: 1px;">
-                                                    <optgroup label="This is a group">
-                                                        <option value="12" selected="">This is item 1</option>
-                                                        <option value="13">This is item 2</option>
-                                                        <option value="14">This is item 3</option>
+                                                    <optgroup label="Elige la causa de la falta">
+                                                        <option value="1">Juego peligroso</option>
+                                                        <option value="2">Entrada ilegal</option>
+                                                        <option value="3">Mano</option>
+                                                        <option value="4">Falta por detrás</option>
+                                                        <option value="5">Agresión</option>
+                                                        <option value="6">Obstrucción</option>
+                                                        <option value="7">Falta táctica</option>
+                                                        <option value="0" selected>Otra</option>
                                                     </optgroup>
                                                 </select></div>
                                         </div>
@@ -716,10 +721,11 @@ session_start();
                                     <div class="row my-1">
                                         <div class="col">
                                             <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">Consecuencia</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="foul-consequence" name="foul-consequence" required="" style="border-width: 1px;">
-                                                    <optgroup label="This is a group">
-                                                        <option value="12" selected="">This is item 1</option>
-                                                        <option value="13">This is item 2</option>
-                                                        <option value="14">This is item 3</option>
+                                                    <optgroup label="¿En qué resultará la falta?">
+                                                        <option value="0" selected="">Advertencia</option>
+                                                        <option value="1">Ley de la Ventaja</option>
+                                                        <option value="2">Tiro libre</option>
+                                                        <option value="3">Penal / Shot</option>
                                                     </optgroup>
                                                 </select></div>
                                         </div>
