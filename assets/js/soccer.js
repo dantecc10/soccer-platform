@@ -196,8 +196,8 @@ function goal_ajax(match, referee) {
             // La solicitud fue exitosa
             var response = (xhr.responseText);
             console.log("'" + response + "'");
-            if (response == "true") {
-                $('#modal-foul').modal('hide');
+            if (response == "true") { 
+                $('#modal-goal').modal('hide');
             }
         } else {
             console.error('Error: ' + xhr.status);
