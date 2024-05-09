@@ -60,10 +60,6 @@ session_start();
 
         gtag('config', 'G-LTBB1G44GJ');
     </script>
-    <script>
-        const match = <?php echo ($_GET['id']); ?>;
-        const referee = <?php echo ($_SESSION['id_user']); ?>;
-    </script>
 </head>
 
 <body class="submain-bg-color">
@@ -80,6 +76,8 @@ session_start();
     }
     ?>
     <script lang="javascript">
+        const match = <?php echo ($_GET['id']); ?>;
+        const referee = <?php echo ($_SESSION['id_user']); ?>;
         const local_players = "<?php echo $local_p_js; ?>";
         const visitor_players = "<?php echo $visitor_p_js; ?>";
         const local_id = "<?php echo $match_info[12]; ?>";
