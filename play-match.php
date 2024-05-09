@@ -60,6 +60,10 @@ session_start();
 
         gtag('config', 'G-LTBB1G44GJ');
     </script>
+    <script>
+        const match = <?php echo ($_GET['id']); ?>;
+        const referee = <?php echo ($_SESSION['id_user']); ?>;
+    </script>
 </head>
 
 <body class="submain-bg-color">
@@ -745,10 +749,6 @@ session_start();
     <script src="assets/js/theme.js?h=a083aeb15550c5e1266c666e8a5846d9"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="assets/js/soccer.js?h=2dc7e85950298bda04cc6ac9a2d1ed8f"></script>
-    <script>
-        const match = <?php echo ($_GET['id']); ?>;
-        const referee = <?php echo ($_SESSION['id_user']); ?>;
-    </script>
 </body>
 
 </html>
