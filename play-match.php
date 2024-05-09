@@ -92,6 +92,18 @@ session_start();
         }
         const match = "<?php echo ($_GET['id']); ?>";
         const referee = "<?php echo ($_SESSION['id_user']); ?>";
+
+        function against_goal() {
+            const own_goal = (document.getElementById('goal-against').checked) ? true : false;
+            if (own_goal) {
+                const target = document.getElementById("goal-team").value;
+                if (target == local_id) {
+                    option_inserter('goal-scorer', 'visitor');
+                } else{
+                    option_inserter('goal-scorer', 'home');
+                }
+            }
+        }
     </script>
 
     <nav class="navbar navbar-expand-lg fixed-top bg-white clean-navbar main-bg-color navbar-light">
