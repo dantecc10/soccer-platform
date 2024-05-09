@@ -99,7 +99,7 @@ session_start();
                 const target = document.getElementById("goal-team").value;
                 if (target == local_id) {
                     option_inserter('goal-scorer', 'visitor');
-                } else{
+                } else {
                     option_inserter('goal-scorer', 'home');
                 }
             }
@@ -610,7 +610,7 @@ session_start();
                                     </div>
                                     <div class="row my-1 justify-content-center">
                                         <div class="col col-4 main-bg-color submain-color rounded-4">
-                                            <div class="form-check justify-content-center"><input class="form-check-input me-0" type="checkbox" id="goal-against" name="goal-against"><label class="form-check-label" for="goal-against">¿Autogol?</label></div>
+                                            <div class="form-check justify-content-center"><input class="form-check-input me-0" type="checkbox" id="goal-against" name="goal-against" onclick="javascript:against_goal();"><label class="form-check-label" for="goal-against">¿Autogol?</label></div>
                                         </div>
                                     </div>
                                     <div class="row my-1">
