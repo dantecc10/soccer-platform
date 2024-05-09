@@ -103,7 +103,7 @@ session_start();
                     option_inserter('goal-scorer-optgroup', 'home');
                 }
             } else {
-                const goal_team = (document.getElementById("goal-team").value == local_id) ? "local" : "visitor";
+                const goal_team = (document.getElementById("goal-team").value == local_id) ? "home" : "visitor";
                 option_inserter('goal-scorer-optgroup', goal_team);
             }
         }
