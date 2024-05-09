@@ -185,3 +185,30 @@ function foul_ajax(match, referee) {
 
     xhr.send(formData + "&match-id=" + match + "&referee-id=" + referee);
 }
+
+function goal_ajax(match, referee) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'php%20scripts/actions.php?type=foul', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            // La solicitud fue exitosa
+            var response = (xhr.responseText);
+            console.log("'" + response + "'");
+            if (response == "true") {
+                $('#modal-foul').modal('hide');
+            }
+        } else {
+            console.error('Error: ' + xhr.status);
+        }
+    };
+
+    xhr.onerror = function () {
+        console.error('Error de red');
+    };
+
+    var formData = $('#foul-form').serialize();
+
+    xhr.send(formData + "&match-id=" + match + "&referee-id=" + referee);
+}

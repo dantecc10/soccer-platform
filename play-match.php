@@ -639,7 +639,7 @@ session_start();
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer col-12 align-self-center justify-content-center main-border top-border"><button class="btn submain-bg-color main-color main-border rounded-4 col-5" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn main-bg-color submain-color main-border rounded-4 col-5" type="button">Agregar falta</button></div>
+                <div class="modal-footer col-12 align-self-center justify-content-center main-border top-border"><button class="btn submain-bg-color main-color main-border rounded-4 col-5" type="button" data-bs-dismiss="modal">Cancelar</button><button class="btn main-bg-color submain-color main-border rounded-4 col-5" type="button" onclick="javascript:goal_ajax(match, referee);">Agregar gol</button></div>
             </div>
         </div>
     </div>
