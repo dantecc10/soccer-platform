@@ -59,7 +59,7 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             $data[2] = $_POST['goal-type']; // ['goal-type']
             $data[3] = (isset($_POST['goal-against'])) ? 1 : 0;
             $data[4] = 4; // $_POST['foul-match']; // ['foul-match']
-            $data[5] = $_POST['goal-time']; // ['goal-time']
+            //$data[5] = $_POST['goal-time']; // ['goal-time']
             $data[6] = 2; // $_POST['foul-referee']; // ['foul-referee']
             //echo (add_goal($data) ? "true" : "false");
             break;
