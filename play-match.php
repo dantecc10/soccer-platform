@@ -102,6 +102,9 @@ session_start();
                 } else {
                     option_inserter('goal-player', 'home');
                 }
+            } else {
+                const goal_team = (document.getElementById("goal-team").value == local_id) ? "local" : "visitor";
+                option_inserter('goal-player', goal_team);
             }
         }
     </script>
