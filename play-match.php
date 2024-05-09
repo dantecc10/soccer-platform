@@ -90,8 +90,8 @@ session_start();
             var inserter = (team == 'home') ? local_players : visitor_players;
             target.innerHTML = inserter;
         }
-        const match = <?php echo ($_GET['id']); ?>;
-        const referee = <?php echo ($_SESSION['id_user']); ?>;
+        const match = "<?php echo ($_GET['id']); ?>";
+        const referee = "<?php echo ($_SESSION['id_user']); ?>";
     </script>
 
     <nav class="navbar navbar-expand-lg fixed-top bg-white clean-navbar main-bg-color navbar-light">
