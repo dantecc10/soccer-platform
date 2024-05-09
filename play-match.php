@@ -98,13 +98,13 @@ session_start();
             if (own_goal) {
                 const target = document.getElementById("goal-team").value;
                 if (target == local_id) {
-                    option_inserter('goal-player', 'visitor');
+                    option_inserter('goal-scorer-optgroup', 'visitor');
                 } else {
-                    option_inserter('goal-player', 'home');
+                    option_inserter('goal-scorer-optgroup', 'home');
                 }
             } else {
                 const goal_team = (document.getElementById("goal-team").value == local_id) ? "local" : "visitor";
-                option_inserter('goal-player', goal_team);
+                option_inserter('goal-scorer-optgroup', goal_team);
             }
         }
     </script>
