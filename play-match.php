@@ -76,8 +76,6 @@ session_start();
     }
     ?>
     <script lang="javascript">
-        const match = <?php echo ($_GET['id']); ?>;
-        const referee = <?php echo ($_SESSION['id_user']); ?>;
         const local_players = "<?php echo $local_p_js; ?>";
         const visitor_players = "<?php echo $visitor_p_js; ?>";
         const local_id = "<?php echo $match_info[12]; ?>";
@@ -92,6 +90,8 @@ session_start();
             var inserter = (team == 'home') ? local_players : visitor_players;
             target.innerHTML = inserter;
         }
+        const match = <?php echo ($_GET['id']); ?>;
+        const referee = <?php echo ($_SESSION['id_user']); ?>;
     </script>
 
     <nav class="navbar navbar-expand-lg fixed-top bg-white clean-navbar main-bg-color navbar-light">
