@@ -627,10 +627,9 @@ session_start();
                                     <div class="row my-1">
                                         <div class="col">
                                             <div class="input-group"><span class="input-group-text main-bg-color submain-color col-12 col-md-4 justify-content-center main-border">¿Gol especial?</span><select class="form-select form-control main-color submain-bg-color custom-font text-center main-border" id="goal-type" name="goal-type" style="border-width: 1px;">
-                                                    <optgroup label="This is a group">
-                                                        <option value="12" selected="">This is item 1</option>
-                                                        <option value="13">This is item 2</option>
-                                                        <option value="14">This is item 3</option>
+                                                    <optgroup label="¿Gol especial?">
+                                                        <option value="0" selected="">Normal</option>
+                                                        <option value="1">Penal / Shot</option>
                                                     </optgroup>
                                                 </select></div>
                                         </div>
