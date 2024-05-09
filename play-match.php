@@ -98,9 +98,9 @@ session_start();
             if (own_goal) {
                 const target = document.getElementById("goal-team").value;
                 if (target == local_id) {
-                    option_inserter('goal-scorer', 'visitor');
+                    option_inserter('goal-player', 'visitor');
                 } else {
-                    option_inserter('goal-scorer', 'home');
+                    option_inserter('goal-player', 'home');
                 }
             }
         }
