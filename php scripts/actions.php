@@ -52,6 +52,17 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             echo (add_foul($data) ? "true" : "false");
 
             break;
+        case 'goal':
+            $data = array();
+            $data[0] = $_POST['goal-team']; // ['goal-team']
+            $data[1] = $_POST['goal-player']; // ['goal-player']
+            $data[2] = $_POST['goal-type']; // ['goal-type']
+            $data[3] = (isset($_POST['goal-against'])) ? 1 : 0;
+            $data[4] = 4; // $_POST['foul-match']; // ['foul-match']
+            $data[5] = $_POST['goal-time']; // ['goal-time']
+            $data[6] = 2; // $_POST['foul-referee']; // ['foul-referee']
+            //echo (add_goal($data) ? "true" : "false");
+            break;
         default:
             // Error, redirigir al inicio
             break;
