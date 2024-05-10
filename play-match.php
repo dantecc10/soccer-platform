@@ -635,6 +635,7 @@ session_start();
                                                 </select></div>
                                         </div>
                                     </div>
+                                    <input type="number" value="<?php echo ($_GET['id']); ?>" readonly name="match_id_form" id="match_id_form_goal" class="visually-hidden">
                                 </form>
                             </div>
                         </div>
@@ -747,6 +748,7 @@ session_start();
                                                 </select></div>
                                         </div>
                                     </div>
+                                    <input type="number" value="<?php echo ($_GET['id']); ?>" readonly name="match_id_form" id="match_id_form_foul" class="visually-hidden">
                                 </form>
                             </div>
                         </div>
