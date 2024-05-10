@@ -26,12 +26,31 @@ include_once "soccer_queries.php";
 //debug_data_printer(sql_debug_fetcher('matches', $match_basic_data_fields, $match_basic_data_query));
 
 //debug_data_printer(sql_debug_fetcher('matches', $match_basic_data_fields, $match_basic_data_queries[0]));
-$temp = $match_basic_data_fields;
-$temp[] = 'id_match';
-$temp[] = 'status_match';
-
-$data = fetch_fields('matches', $temp, null, str_replace("?", 22, $match_basic_data_queries[3]));
-print_r($data);
+//$temp = $match_basic_data_fields;
+//$temp[] = 'id_match';
+//$temp[] = 'status_match';
+//
+//$data = fetch_fields('matches', $temp, null, str_replace("?", 22, $match_basic_data_queries[3]));
+//print_r($data);
 //echo (matches_output(fetch_matches(0)));
 
 //echo __DIR__;
+$fields = [
+    'id_stat',
+    'type_stat',
+    'timestamp_stat',
+    'stat_match_id',
+    'stat_player_id',
+    'stat_referee_id',
+    'stat_team_id',
+    'stat_details',
+    'name_player',
+    'nickname_player',
+    'last_names_player',
+    'icon_team'
+];
+$sql = "SELECT stats.*, players.name_player, players.nickname_player, players.last_names_player, teams.icon_team
+            FROM stats JOIN players ON stats.stat_player_id = players.id_player
+            JOIN teams ON players.player_team_id = teams.id_team WHERE stats.stat_match_id = $id
+        ORDER BY stats.timestamp_stat DESC;";
+debug_data_printer(sql_debug_fetcher('stats', $fields, $sql));
