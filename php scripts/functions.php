@@ -847,6 +847,6 @@ function match_events($id)
                 FROM stats JOIN players ON stats.stat_player_id = players.id_player
                 JOIN teams ON players.player_team_id = teams.id_team WHERE stats.stat_match_id = $id
             ORDER BY stats.timestamp_stat DESC;";
-    $data = fetch_fields("stats", $fields, 1, $sql);
+    $data = fetch_fields("stats", $fields, null, $sql);
     return $data;
 }
