@@ -195,9 +195,10 @@ function goal_ajax(match, referee) {
         if (xhr.status >= 200 && xhr.status < 300) {
             // La solicitud fue exitosa
             var response = (xhr.responseText);
-            console.log("'" + response + "'");
-            if (response == "true") { 
+            console.log(response);
+            if (response == "true") {
                 $('#modal-goal').modal('hide');
+                (local_id == document.getElementById('goal-team').value) ? document.querySelectorAll(".goal-container")[0].innerHTML = (parseInt($('.goal-container')[0].innerHTML) + 1) : document.querySelectorAll(".goal-container")[1].innerHTML = (parseInt($('.goal-container')[1].innerHTML) + 1);
             }
         } else {
             console.error('Error: ' + xhr.status);
