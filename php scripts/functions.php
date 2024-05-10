@@ -829,9 +829,9 @@ function add_goal($goal_info)
         $sql = "UPDATE `teams` SET `goals_against_team` = (`goals_against_team` + 1) WHERE (`id_team` = ?);";
         $stmt = $connection->prepare($sql);
         if ($_SESSION['teams'][0] == $team) {
-            $stmt->bind_param("i", $team);
-        } else {
             $stmt->bind_param("i", $_SESSION['teams'][1]);
+        } else {
+            $stmt->bind_param("i", $team);
         }
         if (!($stmt->execute())) {
             return false;
@@ -844,8 +844,6 @@ function add_goal($goal_info)
             return false;
         }
     }
-
-
 
     /* Añadir información de faltas y tipos de faltas al jugador */
     // Especificar amonestación
