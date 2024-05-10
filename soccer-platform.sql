@@ -51,7 +51,7 @@ CREATE TABLE `matches` (
   CONSTRAINT `matches_local_team_id` FOREIGN KEY (`local_team_id`) REFERENCES `teams` (`id_team`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `matches_referee_id` FOREIGN KEY (`match_referee_id`) REFERENCES `referees` (`id_referee`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `matches_visitor_team_id` FOREIGN KEY (`visitor_team_id`) REFERENCES `teams` (`id_team`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -108,10 +108,10 @@ CREATE TABLE `stats` (
   `id_stat` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `type_stat` varchar(255) NOT NULL,
   `timestamp_stat` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp(),
-  `stat_match_id` int(255) unsigned zerofill NOT NULL,
-  `stat_player_id` int(255) unsigned zerofill NOT NULL,
-  `stat_referee_id` int(255) unsigned zerofill DEFAULT NULL,
-  `stat_team_id` int(255) unsigned zerofill NOT NULL,
+  `stat_match_id` int(10) unsigned NOT NULL,
+  `stat_player_id` int(10) unsigned NOT NULL,
+  `stat_referee_id` int(10) unsigned DEFAULT NULL,
+  `stat_team_id` int(10) unsigned NOT NULL,
   `stat_details` text DEFAULT NULL,
   PRIMARY KEY (`id_stat`),
   KEY `stats_match_id` (`stat_match_id`),
@@ -122,7 +122,7 @@ CREATE TABLE `stats` (
   CONSTRAINT `stats_player_id` FOREIGN KEY (`stat_player_id`) REFERENCES `players` (`id_player`) ON DELETE NO ACTION ON UPDATE CASCADE,
   CONSTRAINT `stats_referee_id` FOREIGN KEY (`stat_referee_id`) REFERENCES `referees` (`id_referee`) ON DELETE NO ACTION ON UPDATE CASCADE,
   CONSTRAINT `stats_team_id` FOREIGN KEY (`stat_team_id`) REFERENCES `teams` (`id_team`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,4 +181,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-04  2:32:10
+-- Dump completed on 2024-05-10  1:39:13
