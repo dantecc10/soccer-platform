@@ -242,7 +242,7 @@ session_start();
                                     </div>
                                     <div class="col align-self-center col-3 col-sm-2 col-lg-1">
                                         <div class="row">
-                                            <div class="col px-xl-0">
+                                            <div class="col">
                                                 <span class="goal-container my-auto" style="font-size: 3rem;line-height: 250%;"><?php echo ($match_info[4]); ?></span>
                                                 <span class="fs-1 h-100 my-auto" style="font-size: 5rem;">-</span>
                                                 <span class="goal-container my-auto" style="font-size: 3rem;line-height: 250%;"><?php echo ($match_info[5]); ?></span>
