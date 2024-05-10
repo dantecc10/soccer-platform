@@ -749,22 +749,23 @@ function add_match($local, $visitor, $referee, $date, $time, $field, $matchday)
 function add_foul($foul_info)
 {
     include_once "connection.php";
-
-    $team = $foul_info[0];
-    $player = $foul_info[1];
-    $details = ($foul_info[2] . "/" . $foul_info[3] . "/" . $foul_info[4]);
+    $type = "foul";
+    //$timestamp = date('Y-m-d H:i:s');
     $match = $foul_info[5];
-    $time = $foul_info[6];
+    $player = $foul_info[1];
     $referee = $foul_info[7];
+    $team = $foul_info[0];
+    $details = ($foul_info[3] . "|" . $foul_info[4] . "|" . $foul_info[6]);
+    $time = $foul_info[6];
 
 
     // Cargar la falta a las estadísticas
-    //$sql = "INSERT INTO `stats` VALUES('', 'foul', CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?);";
-    //$stmt = $connection->prepare($sql);
-    //$stmt->bind_param("iiiis", $match, $player, $referee, $team, $details);
-    //if (!($stmt->execute())) {
-    //    return false;
-    //}
+    $sql = "INSERT INTO `stats` VALUES('', '$type', CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?);";
+    $stmt = $connection->prepare($sql);
+    $stmt->bind_param("iiiis", $match, $player, $referee, $team, $details);
+    if (!($stmt->execute())) {
+        return false;
+    }
 
 
     /* Añadir información de faltas y tipos de faltas al jugador */
