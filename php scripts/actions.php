@@ -61,6 +61,7 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             $data[4] = 22; // $_POST['foul-match']; // ['foul-match']
             $data[5] = (isset($_POST['goal-time']) ? $_POST['goal-time'] : 0); // ['goal-time']
             $data[6] = 2; // $_POST['foul-referee']; // ['foul-referee']
+            //$data[7] = ; // enviar localía o visita
             echo (add_goal($data) ? "true" : "false");
             break;
         default:

@@ -850,3 +850,48 @@ function match_events($id)
     $data = fetch_fields("stats", $fields, null, $sql);
     return $data;
 }
+function proccess_events($fetched_events, $teams)
+{
+    $local_team = $teams[0];
+    $visitor_team = $teams[1];
+    $q = "'";
+    $basic_event_dom = '
+    <div class="row my-3">
+        <div class="col align-self-center text-sm-center">
+            <span class="align-middle">home</span>
+        </div>
+        <div class="col align-self-center col-4 col-md-3 col-lg-2 px-0"></div>
+        <div class="col align-self-center">
+            <span class="align-middle">visitor</span>
+        </div>
+    </div>
+    ';
+
+    for ($i = 0; $i < sizeof($fetched_events); $i++) {
+        $event_data = $fetched_events[$i];
+        $locality = ($local_team == $event_data[6]) ? true : false;
+        $nickname = ($event_data[$i][9] != null && $event_data[$i][9] != "") ? (" '" . $event_data[$i][9] . "' ") : " ";
+        $full_name = ($event_data[$i][8] . $nickname . $event_data[$i][10]);
+        $span_inner_doms = [
+            ('<img src="' . $event_data[11] . '" class="rem-adjustment">' . $full_name),
+            ('<img src="' . $event_data[11] . '" class="rem-adjustment d-md-none">' . $full_name . '<img src="' . $event_data[11] . '" class="rem-adjustment d-none d-md-inline-block">')
+        ];
+
+        $basic_event_dom = ($locality) ? str_replace("home", $span_inner_doms[0], $basic_event_dom) : str_replace("visitor", $span_inner_doms[1], $basic_event_dom);
+        $basic_event_dom = ($locality) ? str_replace("visitor", "", $basic_event_dom) : str_replace("home", "", $basic_event_dom);
+        
+
+        switch ($event_data[1]) {
+            case 'goal':
+
+                break;
+            case 'foul':
+
+                break;
+
+            default:
+                continue;
+                break;
+        }
+    }
+}
