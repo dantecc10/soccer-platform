@@ -800,7 +800,7 @@ function add_foul($foul_info)
 function add_goal($goal_info)
 {
     include_once "connection.php";
-    $type = "foul";
+    $type = "goal";
     //$timestamp = date('Y-m-d H:i:s');
     $match = $foul_info[5];
     $player = $foul_info[1];
