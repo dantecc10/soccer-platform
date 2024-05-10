@@ -242,7 +242,11 @@ session_start();
                                     </div>
                                     <div class="col align-self-center col-3 col-sm-2 col-lg-1">
                                         <div class="row">
-                                            <div class="col px-xl-0"><span class="goal-container my-auto" style="font-size: 3.4rem;line-height: 250%;"><?php echo ($match_info[4]); ?></span><span class="fs-1 h-100 my-auto" style="font-size: 5rem;">-</span><span class="goal-container my-auto" style="font-size: 3.4rem;line-height: 250%;"><?php echo ($match_info[5]); ?></span></div>
+                                            <div class="col px-xl-0">
+                                                <span class="goal-container my-auto" style="font-size: 3rem;line-height: 250%;"><?php echo ($match_info[4]); ?></span>
+                                                <span class="fs-1 h-100 my-auto" style="font-size: 5rem;">-</span>
+                                                <span class="goal-container my-auto" style="font-size: 3rem;line-height: 250%;"><?php echo ($match_info[5]); ?></span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col align-self-center">
@@ -748,7 +752,7 @@ session_start();
                                                 </select></div>
                                         </div>
                                     </div>
-                                    <input type="number" value="<?php echo ($_GET['id']); ?>" readonly name="match_id_form" id="match_id_form_foul" class="visually-hidden">
+                                    <input type="number" value="<?php echo ($_GET['id']); ?>" readonly name="goal-container" id="match_id_form_foul" class="visually-hidden">
                                 </form>
                             </div>
                         </div>
