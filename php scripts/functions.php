@@ -819,7 +819,7 @@ function add_goal($goal_info)
 
     /* Añadir información de faltas y tipos de faltas al jugador */
     // Especificar amonestación
-    $sql = (!$goal_info[3]) ? "UPDATE `players` SET `goals_player` = (`goals_player` + 1) WHERE (`id_player` = ?);" : "UPDATE `players` SET `goals_player` = (`goals_player` + 0) WHERE (`id_player` = ?);";
+    $sql = ($goal_info[3] == 0) ? "UPDATE `players` SET `goals_player` = (`goals_player` + 1) WHERE (`id_player` = ?);" : "UPDATE `players` SET `goals_player` = (`goals_player` + 0) WHERE (`id_player` = ?);";
     $sql = "UPDATE `players` SET `goals_player` = (`goals_player` + 1) WHERE (`id_player` = ?);";
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("i", $player);
