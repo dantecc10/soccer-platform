@@ -755,7 +755,7 @@ function add_foul($foul_info)
     $player = $foul_info[1];
     $referee = $foul_info[7];
     $team = $foul_info[0];
-    $details = ($foul_info[3] . "|" . $foul_info[4] . "|" . $foul_info[6]);
+    $details = ($foul_info[2] . "|" . $foul_info[3] . "|" . $foul_info[4] . "|" . $foul_info[6]);
     $time = $foul_info[6];
 
     // Cargar la falta a las estadísticas
@@ -806,7 +806,7 @@ function add_goal($goal_info)
     $player = $foul_info[1];
     $referee = $foul_info[7];
     $team = $foul_info[0];
-    $details = ($foul_info[2] . "|" . $foul_info[3] . "|" . $foul_info[4] . "|" . $foul_info[6]);
+    $details = ($foul_info[3] . "|" . $foul_info[4] . "|" . $foul_info[6]);
     $time = $foul_info[6];
 
     // Cargar la falta a las estadísticas
