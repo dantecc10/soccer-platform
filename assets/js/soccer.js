@@ -204,7 +204,7 @@ function goal_ajax(match, referee) {
             console.error('Error: ' + xhr.status);
         }
     };
- 
+
     xhr.onerror = function () {
         console.error('Error de red');
     };
