@@ -802,12 +802,12 @@ function add_goal($goal_info)
     include_once "connection.php";
     $type = "goal";
     //$timestamp = date('Y-m-d H:i:s');
-    $match = $foul_info[5];
-    $player = $foul_info[1];
-    $referee = $foul_info[7];
-    $team = $foul_info[0];
-    $details = ($foul_info[3] . "|" . $foul_info[4] . "|" . $foul_info[6]);
-    $time = $foul_info[6];
+    $match = $goal_info[4];
+    $player = $goal_info[1];
+    $team = $goal_info[0];
+    $details = ($goal_info[3] . "|" . $goal_info[2] . "|" . $goal_info[5]);
+    $referee = $goal_info[6];
+    //$time = $goal_info[5];
 
     // Cargar la falta a las estadísticas
     $sql = "INSERT INTO `stats` VALUES('', '$type', CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?);";
@@ -819,25 +819,7 @@ function add_goal($goal_info)
 
     /* Añadir información de faltas y tipos de faltas al jugador */
     // Especificar amonestación
-    switch ($foul_info[3]) {
-        case 0:
-            $sql = "UPDATE `players` SET `fouls_player` = (`fouls_player` + 1) WHERE (`id_player` = ?);";
-            break;
-        case 1:
-            $sql = "UPDATE `players` SET `fouls_player` = (`fouls_player` + 1), `yellow_cards_player` = (`yellow_cards_player` + 1) WHERE (`id_player` = ?);";
-            break;
-        case 2:
-            $sql = "UPDATE `players` SET `fouls_player` = (`fouls_player` + 1), `yellow_cards_player` = (`yellow_cards_player` + 1), `red_cards_player` = (`red_cards_player` + 1) WHERE (`id_player` = ?);";
-            break;
-        case 3:
-            $sql = "UPDATE `players` SET `fouls_player` = (`fouls_player` + 1), `red_cards_player` = (`red_cards_player` + 1) WHERE (`id_player` = ?);";
-            break;
-
-        default:
-            # code...
-            break;
-    }
-
+    $sql = "UPDATE `players` SET `goals_player` = (`goals_player` + 1) WHERE (`id_player` = ?);";
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("i", $player);
 
