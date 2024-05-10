@@ -74,6 +74,7 @@ session_start();
         $nickname = ($visitor_players[$i][3] != null && $visitor_players[$i][3] != "") ? (" <i>'" . $visitor_players[$i][3] . "'</i> ") : " ";
         $visitor_p_js .= "<option class='player-option visitor' value='" . $visitor_players[$i][0] . "'>" . $visitor_players[$i][4] . " - " . $visitor_players[$i][1] . $nickname . $visitor_players[$i][2] . "</option>";
     }
+    $_SESSION['teams'] = [$match_info[12], $match_info[13]];
     ?>
     <script lang="javascript">
         const local_players = "<?php echo $local_p_js; ?>";

@@ -799,6 +799,7 @@ function add_foul($foul_info)
 }
 function add_goal($goal_info)
 {
+    session_start();
     include_once "connection.php";
     $type = "goal";
     //$timestamp = date('Y-m-d H:i:s');
@@ -816,6 +817,35 @@ function add_goal($goal_info)
     if (!($stmt->execute())) {
         return false;
     }
+
+    if (isset($_SESSION['teams'])) {
+        $sql = ($_SESSION['teams'][0] == $team) ? "UPDATE `matches` SET `local_goals_match` = (`local_goals_match` + 1) WHERE (`id_match` = ?);" : "UPDATE `matches` SET `visitor_goals_match` = (`visitor_goals_match` + 1) WHERE (`id_match` = ?);";
+        $stmt = $connection->prepare($sql);
+        $stmt->bind_param("i", $match);
+        if (!($stmt->execute())) {
+            return false;
+        }
+
+        $sql = "UPDATE `teams` SET `goals_against_team` = (`goals_against_team` + 1) WHERE (`id_team` = ?);";
+        $stmt = $connection->prepare($sql);
+        if ($_SESSION['teams'][0] == $team) {
+            $stmt->bind_param("i", $team);
+        } else {
+            $stmt->bind_param("i", $_SESSION['teams'][1]);
+        }
+        if (!($stmt->execute())) {
+            return false;
+        }
+
+        $sql = "UPDATE `teams` SET `goals_for_team` = (`goals_for_team` + 1) WHERE (`id_team` = ?);";
+        $stmt = $connection->prepare($sql);
+        $stmt->bind_param("i", $team);
+        if (!($stmt->execute())) {
+            return false;
+        }
+    }
+
+
 
     /* Añadir información de faltas y tipos de faltas al jugador */
     // Especificar amonestación
@@ -879,7 +909,7 @@ function proccess_events($fetched_events, $teams)
 
         $basic_event_dom = ($locality) ? str_replace("home", $span_inner_doms[0], $basic_event_dom) : str_replace("visitor", $span_inner_doms[1], $basic_event_dom);
         $basic_event_dom = ($locality) ? str_replace("visitor", "", $basic_event_dom) : str_replace("home", "", $basic_event_dom);
-        
+
 
         switch ($event_data[1]) {
             case 'goal':
