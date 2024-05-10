@@ -51,7 +51,7 @@ CREATE TABLE `matches` (
   CONSTRAINT `matches_local_team_id` FOREIGN KEY (`local_team_id`) REFERENCES `teams` (`id_team`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `matches_referee_id` FOREIGN KEY (`match_referee_id`) REFERENCES `referees` (`id_referee`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `matches_visitor_team_id` FOREIGN KEY (`visitor_team_id`) REFERENCES `teams` (`id_team`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +122,7 @@ CREATE TABLE `stats` (
   CONSTRAINT `stats_player_id` FOREIGN KEY (`stat_player_id`) REFERENCES `players` (`id_player`) ON DELETE NO ACTION ON UPDATE CASCADE,
   CONSTRAINT `stats_referee_id` FOREIGN KEY (`stat_referee_id`) REFERENCES `referees` (`id_referee`) ON DELETE NO ACTION ON UPDATE CASCADE,
   CONSTRAINT `stats_team_id` FOREIGN KEY (`stat_team_id`) REFERENCES `teams` (`id_team`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,4 +181,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-05-10  1:43:23
+-- Dump completed on 2024-05-10 14:40:08
