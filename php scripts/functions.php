@@ -758,7 +758,6 @@ function add_foul($foul_info)
     $details = ($foul_info[3] . "|" . $foul_info[4] . "|" . $foul_info[6]);
     $time = $foul_info[6];
 
-
     // Cargar la falta a las estadísticas
     $sql = "INSERT INTO `stats` VALUES('', '$type', CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?);";
     $stmt = $connection->prepare($sql);
@@ -767,6 +766,56 @@ function add_foul($foul_info)
         return false;
     }
 
+    /* Añadir información de faltas y tipos de faltas al jugador */
+    // Especificar amonestación
+    switch ($foul_info[3]) {
+        case 0:
+            $sql = "UPDATE `players` SET `fouls_player` = (`fouls_player` + 1) WHERE (`id_player` = ?);";
+            break;
+        case 1:
+            $sql = "UPDATE `players` SET `fouls_player` = (`fouls_player` + 1), `yellow_cards_player` = (`yellow_cards_player` + 1) WHERE (`id_player` = ?);";
+            break;
+        case 2:
+            $sql = "UPDATE `players` SET `fouls_player` = (`fouls_player` + 1), `yellow_cards_player` = (`yellow_cards_player` + 1), `red_cards_player` = (`red_cards_player` + 1) WHERE (`id_player` = ?);";
+            break;
+        case 3:
+            $sql = "UPDATE `players` SET `fouls_player` = (`fouls_player` + 1), `red_cards_player` = (`red_cards_player` + 1) WHERE (`id_player` = ?);";
+            break;
+
+        default:
+            # code...
+            break;
+    }
+
+    $stmt = $connection->prepare($sql);
+    $stmt->bind_param("i", $player);
+
+    $stmt->execute();
+    if ($stmt->affected_rows === 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+function add_goal($goal_info)
+{
+    include_once "connection.php";
+    $type = "foul";
+    //$timestamp = date('Y-m-d H:i:s');
+    $match = $foul_info[5];
+    $player = $foul_info[1];
+    $referee = $foul_info[7];
+    $team = $foul_info[0];
+    $details = ($foul_info[2] . "|" . $foul_info[3] . "|" . $foul_info[4] . "|" . $foul_info[6]);
+    $time = $foul_info[6];
+
+    // Cargar la falta a las estadísticas
+    $sql = "INSERT INTO `stats` VALUES('', '$type', CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?);";
+    $stmt = $connection->prepare($sql);
+    $stmt->bind_param("iiiis", $match, $player, $referee, $team, $details);
+    if (!($stmt->execute())) {
+        return false;
+    }
 
     /* Añadir información de faltas y tipos de faltas al jugador */
     // Especificar amonestación

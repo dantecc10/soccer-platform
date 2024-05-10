@@ -61,7 +61,7 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             $data[4] = 4; // $_POST['foul-match']; // ['foul-match']
             // $data[5] = $_POST['goal-time']; // ['goal-time']
             $data[6] = 2; // $_POST['foul-referee']; // ['foul-referee']
-            // echo (add_goal($data) ? "true" : "false");
+            echo (add_goal($data) ? "true" : "false");
             break;
         default:
             // Error, redirigir al inicio
