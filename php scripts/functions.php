@@ -831,7 +831,7 @@ function add_goal($goal_info)
         if ($_SESSION['teams'][0] == $team) {
             $stmt->bind_param("i", $_SESSION['teams'][1]);
         } else {
-            $stmt->bind_param("i", $team);
+            $stmt->bind_param("i", $_SESSION['teams'][0]);
         }
         if (!($stmt->execute())) {
             return false;
