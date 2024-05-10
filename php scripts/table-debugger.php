@@ -49,6 +49,7 @@ $fields = [
     'last_names_player',
     'icon_team'
 ];
+$id = 22;
 $sql = "SELECT stats.*, players.name_player, players.nickname_player, players.last_names_player, teams.icon_team
             FROM stats JOIN players ON stats.stat_player_id = players.id_player
             JOIN teams ON players.player_team_id = teams.id_team WHERE stats.stat_match_id = $id
