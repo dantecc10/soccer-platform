@@ -826,3 +826,27 @@ function add_goal($goal_info)
 
     return ($stmt->execute()) ? true : false;
 }
+
+function match_events($id)
+{
+    $fields = [
+        'id_stat',
+        'type_stat',
+        'timestamp_stat',
+        'stat_match_id',
+        'stat_player_id',
+        'stat_referee_id',
+        'stat_team_id',
+        'stat_details',
+        'name_player',
+        'nickname_player',
+        'last_names_player',
+        'icon_team'
+    ];
+    $sql = "SELECT stats.*, players.name_player, players.nickname_player, players.last_names_player, teams.icon_team
+                FROM stats JOIN players ON stats.stat_player_id = players.id_player
+                JOIN teams ON players.player_team_id = teams.id_team WHERE stats.stat_match_id = $id
+            ORDER BY stats.timestamp_stat DESC;";
+    $data = fetch_fields("stats", $fields, 1, $sql);
+    return $data;
+}
