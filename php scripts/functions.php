@@ -920,7 +920,7 @@ function proccess_events($fetched_events, $teams)
                 break;
 
             default:
-                continue;
+                //continue;
                 break;
         }
     }
