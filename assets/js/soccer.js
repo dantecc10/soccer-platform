@@ -210,7 +210,7 @@ function goal_ajax(match, referee) {
     };
 
     var formData = $('#goal-form').serialize();
-
+    (local_id == document.getElementById('goal-team').value) ? "&local=true" : "&visitor=true";  
     xhr.send(formData + "&match-id=" + match + "&referee-id=" + referee + "&match-score=" + match_score());
 }
 
