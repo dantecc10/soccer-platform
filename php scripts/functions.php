@@ -806,6 +806,11 @@ function add_goal($goal_info)
     $match = $goal_info[4];
     $player = $goal_info[1];
     $team = $goal_info[0];
+
+    if (isset($_SESSION['teams'])) {
+        $goal_info[8] = ($_SESSION['teams'][0] == $team) ? increment_string_score($goal_info[8], 0) : increment_string_score($goal_info[8], 1);
+    }
+
     $details = ($goal_info[3] . "|" . $goal_info[2] . "|" . $goal_info[5] . "|" . $goal_info[8]);
     $referee = $goal_info[6];
     //$time = $goal_info[5];
@@ -922,4 +927,11 @@ function proccess_events($fetched_events, $teams)
                 break;
         }
     }
+}
+
+function increment_string_score($string_score, $team)
+{
+    $goals = explode(',', $string_score);
+    ($team == 0) ? $goals[0]++ : $goals[1]++;
+    return ($goals[0] . ',' . $goals[1]);
 }
