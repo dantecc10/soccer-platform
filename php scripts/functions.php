@@ -933,5 +933,5 @@ function increment_string_score($string_score, $team)
 {
     $goals = explode(',', $string_score);
     ($team == 0) ? $goals[0]++ : $goals[1]++;
-    return ($goals[0] . ',' . $goals[1]);
+    return (implode(',', $goals));
 }
