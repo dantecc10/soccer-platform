@@ -63,6 +63,7 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             $data[6] = 2; // $_POST['foul-referee']; // ['foul-referee']
             //$data[7] = ; // enviar localía o visita
             echo (add_goal($data) ? "true" : "false");
+            echo ($_POST['match-id']."/".$_POST['referee-id']."/".$_POST['match-score']);
             break;
         default:
             // Error, redirigir al inicio
