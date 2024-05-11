@@ -806,7 +806,7 @@ function add_goal($goal_info)
     $match = $goal_info[4];
     $player = $goal_info[1];
     $team = $goal_info[0];
-    $details = ($goal_info[3] . "|" . $goal_info[2] . "|" . $goal_info[5]);
+    $details = ($goal_info[3] . "|" . $goal_info[2] . "|" . $goal_info[5] . "|" . $goal_info[8]);
     $referee = $goal_info[6];
     //$time = $goal_info[5];
 

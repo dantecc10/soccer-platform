@@ -62,8 +62,9 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             $data[5] = (isset($_POST['goal-time']) ? $_POST['goal-time'] : 0); // ['goal-time']
             $data[6] = $_POST['referee-id']; // ['foul-referee']
             //$data[7] = ; // enviar localía o visita
+            $data[8] = $_POST['match-score']; // ['match-score']
             echo (add_goal($data) ? "true" : "false");
-            echo ($_POST['match-id']."/".$_POST['referee-id']."/".$_POST['match-score']);
+            //echo ($_POST['match-id']."/".$_POST['referee-id']."/".$_POST['match-score']);
             break;
         default:
             // Error, redirigir al inicio
