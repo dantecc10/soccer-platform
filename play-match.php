@@ -244,7 +244,7 @@ session_start();
                                         <div class="row">
                                             <div class="col">
                                                 <span class="goal-container my-auto" style="font-size: 3rem;line-height: 250%;"><?php echo ($match_info[4]); ?></span>
-                                                <span class="fs-1 h-100 my-auto" style="font-size: 5rem;">-</span>
+                                                <span class="fs-6 h-100 my-auto" style="font-size: 5rem;">-</span>
                                                 <span class="goal-container my-auto" style="font-size: 3rem;line-height: 250%;"><?php echo ($match_info[5]); ?></span>
                                             </div>
                                         </div>
