@@ -2,6 +2,9 @@
 include_once "php scripts/functions.php";
 include_once "php scripts/soccer_queries.php";
 session_start();
+if (!isset($_SESSION["referee_id_user"])) {
+    header("Location: login.php?error=not_a_referee");
+};
 ?>
 <!DOCTYPE html>
 <html data-bs-theme="dark" lang="es-mx">
