@@ -913,6 +913,7 @@ function proccess_events($fetched_events, $teams)
 
         $details = array();
         $details = explode('|', $event_data[7]);
+        print_r($details);
         switch ($event_data[1]) {
             case 'goal':
                 $score = explode(',', $details[3]);
