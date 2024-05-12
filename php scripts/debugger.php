@@ -21,6 +21,6 @@ session_start();
 //echo (isset($_SESSION["referee_id_user"]) ? $_SESSION["referee_id_user"] : "No referee");
 //echo (isset($_SESSION["email_user"]) ? $_SESSION["email_user"] : "No email");
 
-echo proccess_events(match_events(23), [2, 1]);
+echo proccess_events(match_events(24), [2, 3]);
 
 //print_r(match_events(23)[2]);
