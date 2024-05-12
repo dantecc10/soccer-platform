@@ -912,9 +912,10 @@ function proccess_events($fetched_events, $teams)
         $custom_event_dom = "";
 
         $details = explode('|', $event_data[7]);
+        $temp = $details[3];
         switch ($event_data[1]) {
             case 'goal':
-                $score = explode(',', $details[3]);
+                $score = explode(',', $temp);
                 $goal_dom = flag_replacer($goal_dom, 'GOAL', [$score[0], $score[1]], [0, 1]);
                 $goal_dom = str_replace("MINUTE", (($details[2] == 0) ? "?" : $details[2]), $goal_dom);
                 $custom_event_dom = str_replace("CUSTOM-EVENT", $goal_dom, $basic_event_dom);
