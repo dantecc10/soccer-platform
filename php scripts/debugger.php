@@ -23,4 +23,4 @@ session_start();
 
 //echo proccess_events(match_events(23), [2, 1]);
 
-print_r(match_events(23));
+print_r(match_events(23)[2]);
