@@ -17,4 +17,5 @@ include_once "functions.php";
 //    echo ($_SESSION['error']);
 //}
 
-print_r(match_events(22));
+//print_r(match_events(22));
+echo (isset($_SESSION["referee_id_user"]) ? $_SESSION["referee_id_user"] : "No referee");
