@@ -911,8 +911,10 @@ function proccess_events($fetched_events, $teams)
         $basic_event_dom = ($locality) ? str_replace("visitor", "", $basic_event_dom) : str_replace("home", "", $basic_event_dom);
         $custom_event_dom = "";
 
-        $details = array();
+        print_r($event_data[7]);
+        $details =;array();
         $details = explode('|', $event_data[7]);
+        echo(" ... ");
         print_r($details);
         switch ($event_data[1]) {
             case 'goal':
