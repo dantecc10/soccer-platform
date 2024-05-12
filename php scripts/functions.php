@@ -912,9 +912,9 @@ function proccess_events($fetched_events, $teams)
         $custom_event_dom = "";
 
         print_r($event_data[7]);
-        $details =;array();
+        $details = array();
         $details = explode('|', $event_data[7]);
-        echo(" ... ");
+        echo (" ... ");
         print_r($details);
         switch ($event_data[1]) {
             case 'goal':
