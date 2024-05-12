@@ -911,14 +911,13 @@ function proccess_events($fetched_events, $teams)
         $basic_event_dom = ($locality) ? str_replace("visitor", "", $basic_event_dom) : str_replace("home", "", $basic_event_dom);
         $custom_event_dom = "";
 
-        print_r($event_data[7]);
+        //print_r($event_data[7]);
         $details = array();
         $details = explode('|', $event_data[7]);
-        echo (" ... ");
-        print_r($details);
+        $string_score = $details[3];
         switch ($event_data[1]) {
             case 'goal':
-                $score = explode(',', $details[3]);
+                $score = explode(',', $string_score);
                 $goal_dom = flag_replacer($goal_dom, 'GOAL', [$score[0], $score[1]], [0, 1]);
                 $goal_dom = str_replace("MINUTE", (($details[2] == 0) ? "?" : $details[2]), $goal_dom);
                 $custom_event_dom = str_replace("CUSTOM-EVENT", $goal_dom, $basic_event_dom);
