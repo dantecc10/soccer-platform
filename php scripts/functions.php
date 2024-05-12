@@ -900,8 +900,8 @@ function proccess_events($fetched_events, $teams)
     for ($i = 0; $i < sizeof($fetched_events); $i++) {
         $event_data = $fetched_events[$i];
         $locality = ($local_team == $event_data[6]) ? true : false;
-        $nickname = ($event_data[$i][9] != null && $event_data[$i][9] != "") ? (" '" . $event_data[$i][9] . "' ") : " ";
-        $full_name = ($event_data[$i][8] . $nickname . $event_data[$i][10]);
+        $nickname = ($event_data[9] != null && $event_data[9] != "") ? (" '" . $event_data[9] . "' ") : " ";
+        $full_name = ($event_data[8] . $nickname . $event_data[10]);
         $span_inner_doms = [
             ('<img src="' . $event_data[11] . '" class="rem-adjustment">' . $full_name),
             ('<img src="' . $event_data[11] . '" class="rem-adjustment d-md-none">' . $full_name . '<img src="' . $event_data[11] . '" class="rem-adjustment d-none d-md-inline-block">')
