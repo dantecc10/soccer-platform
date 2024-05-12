@@ -45,6 +45,9 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
                     $data[3] = (isset($_POST['foul-double-yellow-card'])) ? 2 : 3;
                 }
             }
+            /*
+            Correct this code!
+            */
             $data[4] = $_POST['foul-consequence']; // ['foul-consequence']
             $data[5] = 22; // $_POST['foul-match']; // ['foul-match']
             $data[6] = (isset($_POST['foul-time'])) ? ($_POST['foul-time']) : 0; // ['foul-time']
