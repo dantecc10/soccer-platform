@@ -915,7 +915,7 @@ function proccess_events($fetched_events, $teams)
         $details = array();
         $details = explode('|', $event_data[7]);
         $string_score = $details[3];
-        echo ($string_score . " -.- ");
+        //echo ($string_score . " -.- ");
         switch ($event_data[1]) {
             case 'goal':
                 $score = explode(',', $string_score);
