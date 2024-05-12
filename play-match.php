@@ -284,6 +284,14 @@ if (!isset($_SESSION["referee_id_user"])) {
                                                                     <hr class="my-0 main-color main-bg-color mx-3" style="border: 1.5px solid var(--main-background-color);">
                                                                 </div>
                                                             </div>
+                                                            <!-- Eventos dinámicos -->
+
+                                                            <?php
+                                                            echo (proccess_events(match_events($_GET['id']), [$_SESSION['teams'][0], $_SESSION['teams'][1]]));
+                                                            ?>
+
+                                                            <!-- Eventos dinámicos -->
+
                                                             <div class="row my-3">
                                                                 <div class="col align-self-center text-sm-end"><span class="align-middle"><img class="rem-adjustment" src="assets/img/samples/logo-bayern.png?h=689f785b0d375e5269cde4eff9a00b5c">&nbsp;Serge Gnabry</span></div>
                                                                 <div class="col align-self-center col-4 col-md-3 col-lg-2 px-0"><span class="py-1 px-3 px-sm-4 col-12 rounded-4 text-nowrap match-stat goal"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
