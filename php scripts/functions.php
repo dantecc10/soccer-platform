@@ -945,6 +945,7 @@ function proccess_events($fetched_events, $teams)
                 break;
             case 'foul':
                 $string_score = $details[4];
+                print_r($details);
                 $score = explode(',', $string_score);
                 $amontest = intval($details[1]);
                 switch ($amontest) {
