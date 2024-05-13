@@ -911,13 +911,29 @@ function proccess_events($fetched_events, $teams)
                     </g>
                 </svg>&nbsp;MINUTE' . $q . '</span>
     ');
-    $base_red_card_dom = ('');
+    $base_red_card_dom = ('
+    <span class="py-1 px-3 px-sm-4 col-12 rounded-4 text-nowrap match-stat foul red-card"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-rectangle-vertical-filled">
+                                                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                                            <path d="M17 2h-10a3 3 0 0 0 -3 3v14a3 3 0 0 0 3 3h10a3 3 0 0 0 3 -3v-14a3 3 0 0 0 -3 -3z" stroke-width="0" fill="currentColor"></path>
+                                                                        </svg>&nbsp;GOAL - GOAL :&nbsp;<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                                                                            <g>
+                                                                                <rect fill="none" height="24" width="24"></rect>
+                                                                            </g>
+                                                                            <g>
+                                                                                <g>
+                                                                                    <rect height="2" width="6" x="9" y="1"></rect>
+                                                                                    <path d="M19.03,7.39l1.42-1.42c-0.43-0.51-0.9-0.99-1.41-1.41l-1.42,1.42C16.07,4.74,14.12,4,12,4c-4.97,0-9,4.03-9,9 c0,4.97,4.02,9,9,9s9-4.03,9-9C21,10.88,20.26,8.93,19.03,7.39z M13,14h-2V8h2V14z"></path>
+                                                                                </g>
+                                                                            </g>
+                                                                        </svg>&nbsp;MINUTE' . $q . '</span>
+    ');
     $base_double_yellow_card_dom = ('');
 
     for ($i = 0; $i < sizeof($fetched_events); $i++) {
         $basic_event_dom = $base_event_dom;
         $goal_dom = $base_goal_dom;
         $foul_yellow_dom = $base_yellow_card_dom;
+        $foul_red_dom = $base_red_card_dom;
         $event_data = $fetched_events[$i];
         $locality = ($local_team == $event_data[6]) ? true : false;
         $nickname = ($event_data[9] != null && $event_data[9] != "") ? (" '" . $event_data[9] . "' ") : " ";
@@ -953,6 +969,11 @@ function proccess_events($fetched_events, $teams)
                         $foul_yellow_dom = flag_replacer($foul_yellow_dom, 'GOAL', [$score[0], $score[1]], [0, 1]);
                         $foul_yellow_dom = str_replace("MINUTE", (($details[3] == 0) ? "?" : $details[3]), $foul_yellow_dom);
                         $custom_event_dom = str_replace("CUSTOM-EVENT", $foul_yellow_dom, $basic_event_dom);
+                        break;
+                    case 3:
+                        $foul_red_dom = flag_replacer($foul_red_dom, 'GOAL', [$score[0], $score[1]], [0, 1]);
+                        $foul_red_dom = str_replace("MINUTE", (($details[3] == 0) ? "?" : $details[3]), $foul_red_dom);
+                        $custom_event_dom = str_replace("CUSTOM-EVENT", $foul_red_dom, $basic_event_dom);
                         break;
                     default:
                         //echo ("Error en la selección de amonestación.");
