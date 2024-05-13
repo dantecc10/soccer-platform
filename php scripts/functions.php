@@ -755,8 +755,11 @@ function add_foul($foul_info)
     $player = $foul_info[1];
     $referee = $foul_info[7];
     $team = $foul_info[0];
-    $details = ($foul_info[2] . "|" . $foul_info[3] . "|" . $foul_info[4] . "|" . $foul_info[6]);
     $time = $foul_info[6];
+    if (isset($_SESSION['teams'])) {
+        $foul_info[8] = ($_SESSION['teams'][0] == $team) ? increment_string_score($foul_info[8], 0) : increment_string_score($foul_info[8], 1);
+    }
+    $details = ($foul_info[2] . "|" . $foul_info[3] . "|" . $foul_info[4] . "|" . $foul_info[6] . "|" . $foul_info[8]); // type, amontest, consequence, time, score
 
     // Cargar la falta a las estadísticas
     $sql = "INSERT INTO `stats` VALUES('', '$type', CURRENT_TIMESTAMP(), ?, ?, ?, ?, ?);";
