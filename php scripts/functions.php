@@ -916,10 +916,10 @@ function proccess_events($fetched_events, $teams)
         //print_r($event_data[7]);
         $details = array();
         $details = explode('|', $event_data[7]);
-        $string_score = $details[3];
         //echo ($string_score . " -.- ");
         switch ($event_data[1]) {
             case 'goal':
+                $string_score = $details[3];
                 $score = explode(',', $string_score);
                 $goal_dom = flag_replacer($goal_dom, 'GOAL', [$score[0], $score[1]], [0, 1]);
                 $goal_dom = str_replace("MINUTE", (($details[2] == 0) ? "?" : $details[2]), $goal_dom);
