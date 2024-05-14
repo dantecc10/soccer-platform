@@ -152,7 +152,7 @@ session_start();
                                 <div id="pills-live" class="tab-pane fade" role="tabpanel" aria-labbeledby="pills-live-tab">
                                     <div class="col px-3 py-0">
                                         <?php
-                                        echo (matches_output(fetch_matches(1, null)));
+                                        echo (detailed_matches_output());
                                         ?>
                                         <div class="row text-center rounded-3 my-2" style="border: 1px solid var(--submain-background-color);background: linear-gradient(90deg, var(--main-background-color), rgba(173,238,0,0.54));">
                                             <div class="col"><a class="submain-color" href="matches.html#jugados"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-time-duration-90">
@@ -167,7 +167,7 @@ session_start();
                                 <div id="pills-next" class="tab-pane fade" role="tabpanel" aria-labbeledby="pills-next-tab">
                                     <div class="col px-3 py-0">
                                         <?php
-                                        echo (detailed_matches_output());
+                                        echo (matches_output(fetch_matches(2, null)));
                                         ?>
                                         <div class="row text-center rounded-3 my-2" style="border: 1px solid var(--submain-background-color);background: linear-gradient(90deg, var(--main-background-color), rgba(173,238,0,0.54));">
                                             <div class="col"><a class="submain-color" href="matches.html#jugados"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-time-duration-90">
