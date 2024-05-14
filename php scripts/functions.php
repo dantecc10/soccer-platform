@@ -1026,7 +1026,7 @@ function detailed_matches_output()
     WHERE (m.status_match = 1);';
 
     if(!include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php"){
-        include "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php"
+        include "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
     }
     $result = $connection->query($sql);
     $data = array();
