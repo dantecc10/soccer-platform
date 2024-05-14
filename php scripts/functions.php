@@ -1151,8 +1151,8 @@ function detailed_matches_output()
         $temp_dom = str_ireplace('IJ', $i, $temp_dom);
         /*if (($matches[0][$i][$fields[4]] == NULL) or ($matches[0][$i][$fields[4]] == '')) { $matches[0][$i][$fields[4]] == 0; }
         if (($matches[0][$i][$fields[5]] == NULL) or ($matches[0][$i][$fields[5]] == '')) { $matches[0][$i][$fields[5]] == 0; }*/
-        $temp_dom = flag_replacer($temp_dom, 'FLAG', [$matches[0][$i][0], $matches[0][$i][1], $matches[0][$i][2], $matches[0][$i][3], $matches[0][$i][4], $matches[0][$i][5], $matches[0][$i][6], $matches[0][$i][7], $matches[0][$i][8], $matches[0][$i][9]], [2, 3, 2, 4, 5, 7, 6, 7, 1]);
-        $events = proccess_events(match_events(intval($matches[0][$i][10])), [intval($matches[0][$i][12]), intval($matches[0][$i][13])]);
+        $temp_dom = flag_replacer($temp_dom, 'FLAG', [$matches[$i][0], $matches[$i][1], $matches[0][$i][2], $matches[$i][3], $matches[$i][4], $matches[$i][5], $matches[$i][6], $matches[$i][7], $matches[$i][8], $matches[$i][9]], [2, 3, 2, 4, 5, 7, 6, 7, 1]);
+        $events = proccess_events(match_events(intval($matches[$i][10])), [intval($matches[$i][12]), intval($matches[$i][13])]);
         $temp_dom = str_replace('EVENTS', $events, $temp_dom);
         $dom_acumulator .= $temp_dom;
     }
