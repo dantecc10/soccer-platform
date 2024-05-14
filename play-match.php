@@ -278,7 +278,7 @@ if (!isset($_SESSION["referee_id_user"])) {
                                                 <h2 class="accordion-header" style="background-color: rgba(255,255,255,0);border-color: var(--main-background-color);"><button class="btn accordion-button px-6 main-color py-2" type="button" style="background-color: rgba(255,255,255,0);" data-bs-toggle="collapse" data-bs-target="#accordion-1-section-1" aria-expanded="true" aria-controls="accoridion-1-section-1"><span class="align-self-center fs-5 text-center col-10">Mostrar detalles y EVENTOS DEL PARTIDO</span></button></h2>
                                                 <div id="accordion-1-section-1" class="accordion-collapse collapse show">
                                                     <div class="accordion-body p-1">
-                                                        <div class="col">
+                                                        <div class="col events-container">
                                                             <div class="row my-3">
                                                                 <div class="col align-self-center"><span class="align-middle main-color">Finalizado</span>
                                                                     <hr class="my-0 main-color main-bg-color mx-3" style="border: 1.5px solid var(--main-background-color);">

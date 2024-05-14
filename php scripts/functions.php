@@ -885,6 +885,9 @@ function match_events($id)
 }
 function proccess_events($fetched_events, $teams)
 {
+    if ($fetched_events == null) {
+        return null;
+    }
     $events_dom = "";
     $local_team = $teams[0];
     $visitor_team = $teams[1];
