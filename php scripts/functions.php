@@ -1024,7 +1024,27 @@ function detailed_matches_output()
     FROM matches m
     JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
     WHERE (m.status_match = 1);';
-    $matches = fetch_fields('matches', $fields, '', $sql);
+
+    include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
+    $result = $connection->query($query);
+    // Verificar si se encontró un usuario válido
+    if ($result->num_rows > 0) {
+        
+            $i = 0;
+            // Hacer fetch a los datos
+            while ($row = $result->fetch_array()) {
+                // Procesar cada registro obtenido
+                $n = sizeof($fields);
+                for ($j = 0; $j < $n; $j++) {
+                    $data[$i][$j] = $row[$fields[$j]]
+                }
+                $i++;
+            }
+    }
+    $connection->close();
+
+    $matches = $data;
+
     $q = "'";
     $dom_acumulator = "";
     $dom_pattern = ('
@@ -1126,7 +1146,6 @@ function detailed_matches_output()
         $temp_dom = flag_replacer($temp_dom, 'FLAG', [$matches[0][$i][0], $matches[0][$i][1], $matches[0][$i][2], $matches[0][$i][3], $matches[0][$i][4], $matches[0][$i][5], $matches[0][$i][6], $matches[0][$i][7], $matches[0][$i][8], $matches[0][$i][9]], [2, 3, 2, 4, 5, 7, 6, 7, 1]);
         $temp_dom = str_replace('EVENTS', proccess_events(match_events($matches[0][$i][10]), [$matches[0][$i][12], $matches[0][$i][13]]), $temp_dom);
         $dom_acumulator .= $temp_dom;
-
     }
     return $dom_acumulator;
 }
