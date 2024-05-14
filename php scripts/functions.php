@@ -1131,14 +1131,14 @@ function detailed_matches_output()
     ');
 
     for ($i = 0; $i < sizeof($matches); $i++) {
-        /*switch ($matches[0][$i][11]) {
-            case 0: replace = "Programado"; break;
-            case 1: replace = "1er tiempo"; break;
-            case 2: replace = "Descanso"; break;
-            case 3: replace = "2do tiempo"; break;
+        switch ($matches[0][$i][11]) {
+            case 0: $replace = "Programado"; break;
+            case 1: $replace = "1er tiempo"; break;
+            case 2: $replace = "Descanso"; break;
+            case 3: $replace = "2do tiempo"; break;
             default: echo "Finalizado"; break;
             str_replace("STATUS", $replace, $dom_pattern);
-        }*/
+        }
         $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[$i][0])], [0]);
         $temp_dom = str_ireplace('IJ', $i, $temp_dom);
         /*if (($matches[0][$i][$fields[4]] == NULL) or ($matches[0][$i][$fields[4]] == '')) { $matches[0][$i][$fields[4]] == 0; }
