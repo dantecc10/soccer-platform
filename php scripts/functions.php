@@ -1132,7 +1132,7 @@ function detailed_matches_output()
     ');
 
     for ($i = 0; $i < sizeof($matches); $i++) {
-        switch ($matches[0][$i][11]) {
+        switch ($matches[$i][11]) {
             case 0: $replace = "Programado"; break;
             case 1: $replace = "1er tiempo"; break;
             case 2: $replace = "Descanso"; break;
