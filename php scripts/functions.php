@@ -1000,7 +1000,7 @@ function increment_string_score($string_score, $team)
     return (implode(',', $goals));
 }
 
-function detailed_matches_output()
+function detailed_matches_output($time)
 {
     $fields = [
         'start_schedule_match',
@@ -1018,12 +1018,12 @@ function detailed_matches_output()
         'local_team_id',
         'visitor_team_id'
     ];
-    $sql = 'SELECT m.start_schedule_match, m.field_match, t1.name_team AS local_name_team, t1.icon_team AS local_icon_team, m.local_goals_match,
+    $sql = ('SELECT m.start_schedule_match, m.field_match, t1.name_team AS local_name_team, t1.icon_team AS local_icon_team, m.local_goals_match,
        m.visitor_goals_match, t2.icon_team AS visitor_icon_team, t2.name_team AS visitor_name_team,
        r.name_referee, r.last_names_referee, m.id_match, m.status_match, m.local_team_id, m.visitor_team_id
     FROM matches m
     JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
-    WHERE (m.status_match = 1) ORDER BY `start_schedule_match` DESC;';
+    WHERE (m.status_match = ' . $time . ') ORDER BY `start_schedule_match` DESC;');
 
     include_once "php scripts/credentials.php";
     $data = generatePasskey('sql');
