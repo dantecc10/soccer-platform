@@ -1024,7 +1024,7 @@ function detailed_matches_output($time)
     FROM matches m
     JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
     WHERE (m.status_match = ' . $time . ') ORDER BY `start_schedule_match` DESC;') :
-    'SELECT m.start_schedule_match, m.field_match, t1.name_team AS local_name_team, t1.icon_team AS local_icon_team, m.local_goals_match,
+        'SELECT m.start_schedule_match, m.field_match, t1.name_team AS local_name_team, t1.icon_team AS local_icon_team, m.local_goals_match,
     m.visitor_goals_match, t2.icon_team AS visitor_icon_team, t2.name_team AS visitor_name_team,
     r.name_referee, r.last_names_referee, m.id_match, m.status_match, m.local_team_id, m.visitor_team_id
  FROM matches m
@@ -1157,7 +1157,7 @@ function detailed_matches_output($time)
         }
         $dom_pattern = str_replace("STATUS", $replace, $dom_pattern);
         $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[$i][0])], [0]);
-        $temp_dom = str_ireplace('IJ', $i, $temp_dom);
+        $temp_dom = str_ireplace('IJ', ($i . "-" . $matches[$i][11]), $temp_dom);
         /*if (($matches[0][$i][$fields[4]] == NULL) or ($matches[0][$i][$fields[4]] == '')) { $matches[0][$i][$fields[4]] == 0; }
         if (($matches[0][$i][$fields[5]] == NULL) or ($matches[0][$i][$fields[5]] == '')) { $matches[0][$i][$fields[5]] == 0; }*/
         $temp_dom = flag_replacer($temp_dom, 'FLAG', [$matches[$i][0], $matches[$i][1], $matches[$i][2], $matches[$i][3], $matches[$i][4], $matches[$i][5], $matches[$i][6], $matches[$i][7], $matches[$i][8], $matches[$i][9]], [2, 3, 2, 4, 5, 7, 6, 7, 1]);
