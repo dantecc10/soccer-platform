@@ -25,4 +25,4 @@ session_start();
 
 //print_r(match_events(23)[2]);
 
-echo (matches_output(fetch_matches(1, null)));
+echo (detailed_matches_output(fetch_matches(1, null)));
