@@ -1152,7 +1152,7 @@ function detailed_matches_output()
         /*if (($matches[0][$i][$fields[4]] == NULL) or ($matches[0][$i][$fields[4]] == '')) { $matches[0][$i][$fields[4]] == 0; }
         if (($matches[0][$i][$fields[5]] == NULL) or ($matches[0][$i][$fields[5]] == '')) { $matches[0][$i][$fields[5]] == 0; }*/
         $temp_dom = flag_replacer($temp_dom, 'FLAG', [$matches[0][$i][0], $matches[0][$i][1], $matches[0][$i][2], $matches[0][$i][3], $matches[0][$i][4], $matches[0][$i][5], $matches[0][$i][6], $matches[0][$i][7], $matches[0][$i][8], $matches[0][$i][9]], [2, 3, 2, 4, 5, 7, 6, 7, 1]);
-        $temp_dom = str_replace('EVENTS', proccess_events(match_events($matches[0][$i][10]), [$matches[0][$i][12], $matches[0][$i][13]]), $temp_dom);
+        $temp_dom = str_replace('EVENTS', proccess_events(match_events(intval($matches[0][$i][10])), [$matches[0][$i][12], $matches[0][$i][13]]), $temp_dom);
         $dom_acumulator .= $temp_dom;
     }
     return $dom_acumulator;
