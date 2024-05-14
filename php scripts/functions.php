@@ -1036,7 +1036,7 @@ function detailed_matches_output()
                 // Procesar cada registro obtenido
                 $n = sizeof($fields);
                 for ($j = 0; $j < $n; $j++) {
-                    $data[$i][$j] = $row[$fields[$j]]
+                    $data[$i][$j] = $row[$fields[$j]];
                 }
                 $i++;
             }
