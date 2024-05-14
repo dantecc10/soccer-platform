@@ -1074,6 +1074,7 @@ function detailed_matches_output($matches)
                                             </div>
                                         </div>
                                         <!-- Eventos dinámicos -->
+                                        EVENTS
                                         <!-- Eventos dinámicos -->
                                     </div>
                                 </div>
@@ -1085,6 +1086,22 @@ function detailed_matches_output($matches)
         </div>
     </div>
     ');
+    $fields = [
+        'start_schedule_match',
+        'field_match',
+        'local_name_team',
+        'local_icon_team',
+        'local_goals_match',
+        'visitor_goals_match',
+        'visitor_icon_team',
+        'visitor_name_team',
+        'name_referee',
+        'last_names_referee',
+        'id_match',
+        'status_match',
+        'local_team_id',
+        'visitor_team_id'
+    ];
 
     for ($i = 0; $i < sizeof($matches[0]); $i++) {
         /*switch ($matches[0][]) {
@@ -1094,11 +1111,15 @@ function detailed_matches_output($matches)
             case 3: echo "2do tiempo"; break;
             default: echo "Finalizado"; break;
         }*/
-        $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0][$i][$matches[1][0]])], [0]);
+        $sql = "SELECT `teams`.`icon_team` FROM `teams` WHERE `teams`.`id_team`;";
+        $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0][$i][$fields[0]])], [0]);
         $temp_dom = str_ireplace('IJ', $i, $temp_dom);
-        /*if (($matches[0][$i][$matches[1][4]] == NULL) or ($matches[0][$i][$matches[1][4]] == '')) { $matches[0][$i][$matches[1][4]] == 0; }
-        if (($matches[0][$i][$matches[1][5]] == NULL) or ($matches[0][$i][$matches[1][5]] == '')) { $matches[0][$i][$matches[1][5]] == 0; }*/
-        $dom_acumulator .= flag_replacer($temp_dom, 'FLAG', [$matches[0][$i][$matches[1][0]], $matches[0][$i][$matches[1][1]], $matches[0][$i][$matches[1][2]], $matches[0][$i][$matches[1][3]], $matches[0][$i][$matches[1][4]], $matches[0][$i][$matches[1][5]], $matches[0][$i][$matches[1][6]], $matches[0][$i][$matches[1][7]], $matches[0][$i][$matches[1][8]], $matches[0][$i][$matches[1][9]]], [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+        /*if (($matches[0][$i][$fields[4]] == NULL) or ($matches[0][$i][$fields[4]] == '')) { $matches[0][$i][$fields[4]] == 0; }
+        if (($matches[0][$i][$fields[5]] == NULL) or ($matches[0][$i][$fields[5]] == '')) { $matches[0][$i][$fields[5]] == 0; }*/
+        $temp_dom = flag_replacer($temp_dom, 'FLAG', [$matches[0][$i][0], $matches[0][$i][1], $matches[0][$i][2], $matches[0][$i][3], $matches[0][$i][4], $matches[0][$i][5], $matches[0][$i][6], $matches[0][$i][7], $matches[0][$i][8], $matches[0][$i][9]], [2, 3, 2, 4, 5, 7, 6, 7, 1]);
+        $temp_dom = str_replace('EVENTS', proccess_events(match_events($matches[0][$i][10]), [$matches[0][$i][12], $matches[0][$i][13]]), $temp_dom);
+        $dom_acumulator .= $temp_dom;
+
     }
     return $dom_acumulator;
 }
