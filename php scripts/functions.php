@@ -1027,20 +1027,17 @@ function detailed_matches_output()
 
     include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
     $result = $connection->query($sql);
-    // Verificar si se encontró un usuario válido
-
     $data = array();
     if ($result->num_rows > 0) {
-            $i = 0;
-            // Hacer fetch a los datos
-            while ($row = $result->fetch_array()) {
-                // Procesar cada registro obtenido
-                $n = sizeof($fields);
-                for ($j = 0; $j < $n; $j++) {
-                    $data[$i][$j] = $row[$fields[$j]];
-                }
-                $i++;
+        $i = 0;
+        while ($row = $result->fetch_array()) {
+            // Procesar cada registro obtenido
+            $n = sizeof($fields);
+            for ($j = 0; $j < $n; $j++) {
+                $data[$i][$j] = $row[$fields[$j]];
             }
+            $i++;
+        }
     }
     $connection->close();
 
@@ -1133,11 +1130,21 @@ function detailed_matches_output()
 
     for ($i = 0; $i < sizeof($matches); $i++) {
         switch ($matches[$i][11]) {
-            case 0: $replace = "Programado"; break;
-            case 1: $replace = "1er tiempo"; break;
-            case 2: $replace = "Descanso"; break;
-            case 3: $replace = "2do tiempo"; break;
-            default: echo "Finalizado"; break;
+            case 0:
+                $replace = "Programado";
+                break;
+            case 1:
+                $replace = "1er tiempo";
+                break;
+            case 2:
+                $replace = "Descanso";
+                break;
+            case 3:
+                $replace = "2do tiempo";
+                break;
+            default:
+                echo "Finalizado";
+                break;
         }
         str_replace("STATUS", $replace, $dom_pattern);
         $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[$i][0])], [0]);
