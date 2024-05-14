@@ -1114,8 +1114,8 @@ function detailed_matches_output($time)
                 <div class="col px-0">
                     <div id="accordion-IJ" class="accordion">
                         <div class="accordion-item" style="background-color: rgba(255,255,255,0);border-color: var(--main-background-color);">
-                            <h2 class="accordion-header" style="background-color: rgba(255,255,255,0);border-color: var(--main-background-color);"><button class="btn accordion-button px-6 main-color py-2" type="button" style="background-color: rgba(255,255,255,0);" data-bs-toggle="collapse" data-bs-target="#accordion-1-section-1" aria-expanded="true" aria-controls="accoridion-1-section-1"><span class="align-self-center fs-5 text-center col-10">Mostrar detalles y eventos del partido</span></button></h2>
-                            <div id="accordion-1-section-1" class="accordion-collapse collapse show">
+                            <h2 class="accordion-header" style="background-color: rgba(255,255,255,0);border-color: var(--main-background-color);"><button class="btn accordion-button px-6 main-color py-2" type="button" style="background-color: rgba(255,255,255,0);" data-bs-toggle="collapse" data-bs-target="#accordion-1-section-1" aria-expanded="true" aria-controls="accoridion-IJ-section-1"><span class="align-self-center fs-5 text-center col-10">Mostrar detalles y eventos del partido</span></button></h2>
+                            <div id="accordion-IJ-section-1" class="accordion-collapse collapse show">
                                 <div class="accordion-body p-1">
                                     <div class="col events-container">
                                         <div class="row my-3">
