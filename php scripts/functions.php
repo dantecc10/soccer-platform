@@ -1023,7 +1023,7 @@ function detailed_matches_output()
        r.name_referee, r.last_names_referee, m.id_match, m.status_match, m.local_team_id, m.visitor_team_id
     FROM matches m
     JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
-    WHERE (m.status_match = 1);';
+    WHERE (m.status_match = 1) ORDER BY `start_schedule_match` DESC;';
 
     include_once "php scripts/credentials.php";
     $data = generatePasskey('sql');
