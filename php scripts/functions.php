@@ -1152,7 +1152,7 @@ function detailed_matches_output($time)
                 $replace = "2do tiempo";
                 break;
             default:
-                echo "Finalizado";
+                $replace = "Finalizado";
                 break;
         }
         $dom_pattern = str_replace("STATUS", $replace, $dom_pattern);
