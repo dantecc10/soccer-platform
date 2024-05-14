@@ -1025,7 +1025,9 @@ function detailed_matches_output()
     JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
     WHERE (m.status_match = 1);';
 
-    include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
+    if(!include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php"){
+        include "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php"
+    }
     $result = $connection->query($sql);
     $data = array();
     if ($result->num_rows > 0) {
