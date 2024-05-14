@@ -1119,7 +1119,7 @@ function detailed_matches_output()
             default: echo "Finalizado"; break;
             str_replace("STATUS", $replace, $dom_pattern);
         }*/
-        $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0][$i][$fields[0]])], [0]);
+        $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0][$i][0])], [0]);
         $temp_dom = str_ireplace('IJ', $i, $temp_dom);
         /*if (($matches[0][$i][$fields[4]] == NULL) or ($matches[0][$i][$fields[4]] == '')) { $matches[0][$i][$fields[4]] == 0; }
         if (($matches[0][$i][$fields[5]] == NULL) or ($matches[0][$i][$fields[5]] == '')) { $matches[0][$i][$fields[5]] == 0; }*/
