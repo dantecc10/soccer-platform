@@ -1006,111 +1006,98 @@ function detailed_matches_output($matches)
     $dom_acumulator = "";
     $dom_pattern = ('
     <div class="row text-center rounded-3 my-2 live-match-container" style="border: 1px solid var(--main-background-color);background: linear-gradient(90deg, #406f10, #203103);">
-                            <div class="col">
-                                <div class="row rounded-top" style="background-color: var(--submain-background-color);">
-                                    <div class="col"><span class="fs-4"><i class="la la-trophy"></i>&nbsp;EXAGON CHAMPIONS</span></div>
-                                </div>
-                                <div class="row rounded-4">
-                                    <div class="col"><span class="fs-4">STATUS</span></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col" style="height: 2rem !important;"><span class="px-4 py-1 mt-1 rounded-3" style="background-color: orangered;">EN VIVO</span></div>
-                                </div>
-                                <div class="row py-2">
-                                    <div class="col align-self-center">
-                                        <div class="row">
-                                            <div class="col align-self-center px-0 d-lg-none" style="font-size: 1.2rem;text-align: center;"><span class="fs-2">FLAG</span></div>
-                                            <div class="col col-12 col-lg-6 col-xl-7">
-                                                <div class="row">
-                                                    <div class="col px-0" style="max-height: 5rem;">
-                                                        <div style="max-height: inherit;">
-                                                            <div class="p-0 text-lg-end pe-lg-3" style="max-height: inherit;"><img src="FLAG" style="max-height: inherit;"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col align-self-center px-0 d-none d-lg-block" style="font-size: 1.2rem;text-align: center;"><span class="fs-2">FLAG</span></div>
-                                        </div>
-                                    </div>
-                                    <div class="col align-self-center col-3 col-sm-2 col-lg-1">
-                                        <div class="row">
-                                            <div class="col">
-                                                <span class="goal-container my-auto" style="font-size: 3rem;line-height: 250%;">FLAG</span>
-                                                <span class="fs-6 h-100 my-auto" style="font-size: 5rem;">-</span>
-                                                <span class="goal-container my-auto" style="font-size: 3rem;line-height: 250%;">FLAG</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col align-self-center">
-                                        <div class="row">
-                                            <div class="col align-self-center px-0" style="font-size: 1.2rem;text-align: center;"><span class="fs-2">FLAG</span></div>
-                                            <div class="col col-12 col-lg-6 col-xl-7">
-                                                <div class="row">
-                                                    <div class="col px-0" style="max-height: 5rem;">
-                                                        <div style="max-height: inherit;">
-                                                            <div class="p-0 p-0 text-lg-start ps-lg-3" style="max-height: inherit;"><img src="FLAG" style="max-height: inherit;"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col align-self-center px-0 d-none" style="font-size: 1.2rem;text-align: center;"><span>FLAG</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col"><span style="height: .3rem !important;">DATE |&nbsp; FLAG</span></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col px-0">
-                                        <div id="accordion-1" class="accordion">
-                                            <div class="accordion-item" style="background-color: rgba(255,255,255,0);border-color: var(--main-background-color);">
-                                                <h2 class="accordion-header" style="background-color: rgba(255,255,255,0);border-color: var(--main-background-color);"><button class="btn accordion-button px-6 main-color py-2" type="button" style="background-color: rgba(255,255,255,0);" data-bs-toggle="collapse" data-bs-target="#accordion-1-section-1" aria-expanded="true" aria-controls="accoridion-1-section-1"><span class="align-self-center fs-5 text-center col-10">Mostrar detalles y eventos del partido</span></button></h2>
-                                                <div id="accordion-1-section-1" class="accordion-collapse collapse show">
-                                                    <div class="accordion-body p-1">
-                                                        <div class="col events-container">
-                                                            <div class="row my-3">
-                                                                <div class="col align-self-center"><span class="align-middle main-color">Finalizado</span>
-                                                                    <hr class="my-0 main-color main-bg-color mx-3" style="border: 1.5px solid var(--main-background-color);">
-                                                                </div>
-                                                            </div>
-                                                            <!-- Eventos dinámicos -->
-                                                            <!-- Eventos dinámicos -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+        <div class="col">
+            <div class="row rounded-top" style="background-color: var(--submain-background-color);">
+                <div class="col"><span class="fs-4"><i class="la la-trophy"></i>&nbsp;EXAGON CHAMPIONS</span></div>
+            </div>
+            <div class="row rounded-4">
+                <div class="col"><span class="fs-4">STATUS</span></div>
+            </div>
+            <div class="row">
+                <div class="col" style="height: 2rem !important;"><span class="px-4 py-1 mt-1 rounded-3" style="background-color: orangered;">EN VIVO</span></div>
+            </div>
+            <div class="row py-2">
+                <div class="col align-self-center">
+                    <div class="row">
+                        <div class="col align-self-center px-0 d-lg-none" style="font-size: 1.2rem;text-align: center;"><span class="fs-2">FLAG</span></div>
+                        <div class="col col-12 col-lg-6 col-xl-7">
+                            <div class="row">
+                                <div class="col px-0" style="max-height: 5rem;">
+                                    <div style="max-height: inherit;">
+                                        <div class="p-0 text-lg-end pe-lg-3" style="max-height: inherit;"><img src="FLAG" style="max-height: inherit;"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col align-self-center px-0 d-none d-lg-block" style="font-size: 1.2rem;text-align: center;"><span class="fs-2">FLAG</span></div>
+                    </div>
+                </div>
+                <div class="col align-self-center col-3 col-sm-2 col-lg-1">
+                    <div class="row">
+                        <div class="col">
+                            <span class="goal-container my-auto" style="font-size: 3rem;line-height: 250%;">FLAG</span>
+                            <span class="fs-6 h-100 my-auto" style="font-size: 5rem;">-</span>
+                            <span class="goal-container my-auto" style="font-size: 3rem;line-height: 250%;">FLAG</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col align-self-center">
+                    <div class="row">
+                        <div class="col align-self-center px-0" style="font-size: 1.2rem;text-align: center;"><span class="fs-2">FLAG</span></div>
+                        <div class="col col-12 col-lg-6 col-xl-7">
+                            <div class="row">
+                                <div class="col px-0" style="max-height: 5rem;">
+                                    <div style="max-height: inherit;">
+                                        <div class="p-0 p-0 text-lg-start ps-lg-3" style="max-height: inherit;"><img src="FLAG" style="max-height: inherit;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col align-self-center px-0 d-none" style="font-size: 1.2rem;text-align: center;"><span>FLAG</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"><span style="height: .3rem !important;">DATE |&nbsp; FLAG</span></div>
+            </div>
+            <div class="row">
+                <div class="col px-0">
+                    <div id="accordion-IJ" class="accordion">
+                        <div class="accordion-item" style="background-color: rgba(255,255,255,0);border-color: var(--main-background-color);">
+                            <h2 class="accordion-header" style="background-color: rgba(255,255,255,0);border-color: var(--main-background-color);"><button class="btn accordion-button px-6 main-color py-2" type="button" style="background-color: rgba(255,255,255,0);" data-bs-toggle="collapse" data-bs-target="#accordion-1-section-1" aria-expanded="true" aria-controls="accoridion-1-section-1"><span class="align-self-center fs-5 text-center col-10">Mostrar detalles y eventos del partido</span></button></h2>
+                            <div id="accordion-1-section-1" class="accordion-collapse collapse show">
+                                <div class="accordion-body p-1">
+                                    <div class="col events-container">
+                                        <div class="row my-3">
+                                            <div class="col align-self-center"><span class="align-middle main-color">Finalizado</span>
+                                                <hr class="my-0 main-color main-bg-color mx-3" style="border: 1.5px solid var(--main-background-color);">
+                                            </div>
+                                        </div>
+                                        <!-- Eventos dinámicos -->
+                                        <!-- Eventos dinámicos -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     ');
 
     for ($i = 0; $i < sizeof($matches[0]); $i++) {
         /*switch ($matches[0][]) {
-            case 0:
-                echo "Programado";
-                break;
-            case 1:
-                echo "1er tiempo";
-                break;
-            case 2:
-                echo "Descanso";
-                break;
-            case 3:
-                echo "2do tiempo";
-                break;
-            default:
-                echo "Finalizado";
-                break;
+            case 0: echo "Programado"; break;
+            case 1: echo "1er tiempo"; break;
+            case 2: echo "Descanso"; break;
+            case 3: echo "2do tiempo"; break;
+            default: echo "Finalizado"; break;
         }*/
         $temp_dom = flag_replacer($dom_pattern, 'DATE', [match_start_schedule_formatter($matches[0][$i][$matches[1][0]])], [0]);
-        if (($matches[0][$i][$matches[1][4]] == NULL) or ($matches[0][$i][$matches[1][4]] == '')) {
-            $matches[0][$i][$matches[1][4]] == 0;
-        }
-        if (($matches[0][$i][$matches[1][5]] == NULL) or ($matches[0][$i][$matches[1][5]] == '')) {
-            $matches[0][$i][$matches[1][5]] == 0;
-        }
+        $temp_dom = str_ireplace('IJ', $i, $temp_dom);
+        /*if (($matches[0][$i][$matches[1][4]] == NULL) or ($matches[0][$i][$matches[1][4]] == '')) { $matches[0][$i][$matches[1][4]] == 0; }
+        if (($matches[0][$i][$matches[1][5]] == NULL) or ($matches[0][$i][$matches[1][5]] == '')) { $matches[0][$i][$matches[1][5]] == 0; }*/
         $dom_acumulator .= flag_replacer($temp_dom, 'FLAG', [$matches[0][$i][$matches[1][0]], $matches[0][$i][$matches[1][1]], $matches[0][$i][$matches[1][2]], $matches[0][$i][$matches[1][3]], $matches[0][$i][$matches[1][4]], $matches[0][$i][$matches[1][5]], $matches[0][$i][$matches[1][6]], $matches[0][$i][$matches[1][7]], $matches[0][$i][$matches[1][8]], $matches[0][$i][$matches[1][9]]], [1, 2, 3, 4, 5, 6, 7, 8, 9]);
     }
     return $dom_acumulator;
