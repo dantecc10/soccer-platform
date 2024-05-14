@@ -50,6 +50,38 @@ session_start();
 
         gtag('config', 'G-LTBB1G44GJ');
     </script>
+    <script>
+        function update_event_data(mode) {
+            var xhr = new XMLHttpRequest();
+            var url = 'php scripts/actions.php?type=update-event-data';
+
+            var data = {
+                numero: Math.random();
+            };
+
+            var jsonData = JSON.stringify(data);
+
+            xhr.open('POST', url, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log('Solicitud enviada correctamente.');
+                    return xhr.responseText;
+                }
+            };
+            xhr.send(jsonData);
+        }
+
+        function prepare_updates() {
+            const updating_targets = document.querySelectorAll('.fetched-events-container');
+            for (let index = 0; index < updating_targets.length; index++) {
+                const element = updating_targets[index];
+                element.innerHTML = update_event_data();
+            }
+        }
+        setInterval(update_event_data, 20000);
+    </script>
 </head>
 
 <body>
@@ -135,7 +167,7 @@ session_start();
                             </ul>
                             <div id="pills-tabContent" class="tab-content custom-font rounded-3" style="background-color: #2e4000;border: 1px solid var(--main-background-color);">
                                 <div id="pills-previus" class="show active tab-pane fade" role="tabpanel" aria-labbeledby="pills-previus-tab">
-                                    <div class="col px-3 py-0">
+                                    <div class="col px-3 py-0 fetched-events-container">
                                         <?php
                                         echo (detailed_matches_output(4));
                                         ?>
@@ -150,7 +182,7 @@ session_start();
                                     </div>
                                 </div>
                                 <div id="pills-live" class="tab-pane fade" role="tabpanel" aria-labbeledby="pills-live-tab">
-                                    <div class="col px-3 py-0">
+                                    <div class="col px-3 py-0 fetched-events-container">
                                         <?php
                                         echo (detailed_matches_output(null));
                                         ?>
@@ -165,7 +197,7 @@ session_start();
                                     </div>
                                 </div>
                                 <div id="pills-next" class="tab-pane fade" role="tabpanel" aria-labbeledby="pills-next-tab">
-                                    <div class="col px-3 py-0">
+                                    <div class="col px-3 py-0 fetched-events-container">
                                         <?php
                                         //echo (matches_output(fetch_matches(2, null)));
                                         echo (detailed_matches_output(0));

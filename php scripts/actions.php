@@ -70,6 +70,9 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             echo (add_goal($data) ? "true" : "false");
             //echo ($_POST['match-id']."/".$_POST['referee-id']."/".$_POST['match-score']);
             break;
+        case 'update-event-data':
+
+            break;
         default:
             // Error, redirigir al inicio
             break;
