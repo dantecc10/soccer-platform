@@ -1026,7 +1026,7 @@ function detailed_matches_output()
     WHERE (m.status_match = 1);';
 
     include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
-    $result = $connection->query($query);
+    $result = $connection->query($sql);
     // Verificar si se encontró un usuario válido
     if ($result->num_rows > 0) {
         
