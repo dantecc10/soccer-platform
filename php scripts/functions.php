@@ -1000,7 +1000,7 @@ function increment_string_score($string_score, $team)
     return (implode(',', $goals));
 }
 
-function detailed_matches_output($time)
+function detailed_matches_output($time, $match_fetching_id)
 {
     $fields = [
         'start_schedule_match',
