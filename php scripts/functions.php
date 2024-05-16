@@ -1163,7 +1163,7 @@ function detailed_matches_output($time)
         $temp_dom = flag_replacer($temp_dom, 'FLAG', [$matches[$i][0], $matches[$i][1], $matches[$i][2], $matches[$i][3], $matches[$i][4], $matches[$i][5], $matches[$i][6], $matches[$i][7], $matches[$i][8], $matches[$i][9]], [2, 3, 2, 4, 5, 7, 6, 7, 1]);
         $events = proccess_events(match_events(intval($matches[$i][10])), [intval($matches[$i][12]), intval($matches[$i][13])]);
         $temp_dom = str_replace('EVENTS', $events, $temp_dom);
-        $temp_dom = str_replace('<div class="col events-container">', ('<div id="' + $matches[$i][10] + '" class="col events-container">'), $temp_dom);
+        $temp_dom = str_replace('<div class="col events-container">', ('<div id="' . $matches[$i][10] . '" class="col events-container">'), $temp_dom);
         $dom_acumulator .= $temp_dom;
     }
     return $dom_acumulator;
