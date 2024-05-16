@@ -22,8 +22,9 @@ function update_event_data(id) {
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            return xhr.responseText;
             console.log('Solicitud enviada correctamente.');
+            console.log(xhr.response);
+            return xhr.response;
         }
     };
     xhr.send(id);
