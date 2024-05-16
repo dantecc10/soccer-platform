@@ -51,36 +51,36 @@ session_start();
         gtag('config', 'G-LTBB1G44GJ');
     </script>
     <script>
-        function update_event_data(mode) {
-            var xhr = new XMLHttpRequest();
-            var url = 'php scripts/actions.php?type=update-event-data';
-
-            var data = {
-                numero: Math.random();
-            };
-
-            var jsonData = JSON.stringify(data);
-
-            xhr.open('POST', url, true);
-            xhr.setRequestHeader('Content-Type', 'application/json');
-
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    console.log('Solicitud enviada correctamente.');
-                    return xhr.responseText;
-                }
-            };
-            xhr.send(jsonData);
-        }
-
-        function prepare_updates() {
-            const updating_targets = document.querySelectorAll('.fetched-events-container');
-            for (let index = 0; index < updating_targets.length; index++) {
-                const element = updating_targets[index];
-                element.innerHTML = update_event_data();
-            }
-        }
-        setInterval(update_event_data, 20000);
+//        function update_event_data(mode) {
+//            var xhr = new XMLHttpRequest();
+//            var url = 'php scripts/actions.php?type=update-event-data';
+//
+//            var data = {
+//                numero: Math.random();
+//            };
+//
+//            var jsonData = JSON.stringify(data);
+//
+//            xhr.open('POST', url, true);
+//            xhr.setRequestHeader('Content-Type', 'application/json');
+//
+//            xhr.onreadystatechange = function() {
+//                if (xhr.readyState === 4 && xhr.status === 200) {
+//                    console.log('Solicitud enviada correctamente.');
+//                    return xhr.responseText;
+//                }
+//            };
+//            xhr.send(jsonData);
+//        }
+//
+//        function prepare_updates() {
+//            const updating_targets = document.querySelectorAll('.fetched-events-container');
+//            for (let index = 0; index < updating_targets.length; index++) {
+//                const element = updating_targets[index];
+//                element.innerHTML = update_event_data();
+//            }
+//        }
+//        setInterval(update_event_data, 20000);
     </script>
 </head>
 
