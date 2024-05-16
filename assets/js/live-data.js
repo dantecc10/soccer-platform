@@ -27,5 +27,5 @@ function update_event_data(id) {
             return xhr.response;
         }
     };
-    xhr.send(id);
+    xhr.send("id="+id);
 }
