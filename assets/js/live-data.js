@@ -8,3 +8,17 @@ function update_live_stats() {
     }
     console.log("Hubo " + containers_array.length + " elementos");
 }
+
+function update_event_data(id) {
+    var xhr = new XMLHttpRequest();
+    var url = 'php scripts/actions.php?type=update-event-data';
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log('Solicitud enviada correctamente.');
+            return xhr.responseText;
+        }
+    };
+    xhr.send(id);
+}
