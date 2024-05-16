@@ -265,6 +265,7 @@ session_start();
     <script src="assets/js/vanilla-zoom.js?h=6a37ea9c996b05f763161c73127d66bc"></script>
     <script src="assets/js/theme.js?h=a083aeb15550c5e1266c666e8a5846d9"></script>
     <script src="assets/js/soccer.js?h=c9bb1747acaae394e9a5fb06a69ee776"></script>
+    <script src="assets/js/live-data.js"></script>
     <script lang="javascript">
         function fix_table() {
             var collection = document.querySelectorAll("section#table td");
