@@ -71,7 +71,8 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             //echo ($_POST['match-id']."/".$_POST['referee-id']."/".$_POST['match-score']);
             break;
         case 'update-event-data':
-
+            $id = $_POST['id'];
+            echo (detailed_matches_output(null, $id));
             break;
         default:
             // Error, redirigir al inicio

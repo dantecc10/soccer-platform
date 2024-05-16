@@ -1030,7 +1030,7 @@ function detailed_matches_output($time, $match_fetching_id)
  FROM matches m
  JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
  WHERE (m.status_match > 0 AND m.status_match < 4) ORDER BY `start_schedule_match` DESC;';
-    
+
     if (isset($match_fetching_id)) {
         $sql = (($match_fetching_id != null) && ($match_fetching_id != '')) ? (str_replace("(m.status_match > 0 AND m.status_match < 4) ORDER BY", ("(`id_match` = " . intval($match_fetching_id) . ") ORDER BY"), $sql)) : $sql;
     }
@@ -1166,8 +1166,13 @@ function detailed_matches_output($time, $match_fetching_id)
         if (($matches[0][$i][$fields[5]] == NULL) or ($matches[0][$i][$fields[5]] == '')) { $matches[0][$i][$fields[5]] == 0; }*/
         $temp_dom = flag_replacer($temp_dom, 'FLAG', [$matches[$i][0], $matches[$i][1], $matches[$i][2], $matches[$i][3], $matches[$i][4], $matches[$i][5], $matches[$i][6], $matches[$i][7], $matches[$i][8], $matches[$i][9]], [2, 3, 2, 4, 5, 7, 6, 7, 1]);
         $events = proccess_events(match_events(intval($matches[$i][10])), [intval($matches[$i][12]), intval($matches[$i][13])]);
+        if (isset($match_fetching_id)) {
+            if (($match_fetching_id != null) && ($match_fetching_id != '')) {
+                return $events;
+            }
+        }
         $temp_dom = str_replace('EVENTS', $events, $temp_dom);
-        $temp_dom = str_replace('<div class="col events-container">', ('<div id="' . $matches[$i][10] . '" class="col events-container">'), $temp_dom);
+        $temp_dom = str_replace('<div class="col events-container">', ('<div id="match-' . $matches[$i][10] . '" class="col events-container">'), $temp_dom);
         $dom_acumulator .= $temp_dom;
     }
     return $dom_acumulator;
