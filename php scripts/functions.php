@@ -1030,6 +1030,10 @@ function detailed_matches_output($time)
  FROM matches m
  JOIN teams t1 ON m.local_team_id = t1.id_team JOIN teams t2 ON m.visitor_team_id = t2.id_team JOIN referees r ON m.match_referee_id = r.id_referee
  WHERE (m.status_match > 0 AND m.status_match < 4) ORDER BY `start_schedule_match` DESC;';
+    
+    if (isset($id)) {
+        $sql = (($id != null) && ($id != '')) ? (str_replace("ORDER BY", ("AND (`id_match` = " . intval($id) . ") ORDER BY"), $sql)) : $sql;
+    }
 
     include_once "php scripts/credentials.php";
     $data = generatePasskey('sql');
