@@ -1036,7 +1036,7 @@ function detailed_matches_output($time, $match_fetching_id)
         //echo ($sql);
     }
 
-    include_once "php scripts/credentials.php";
+    include_once "connection.php";
     //include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/credentials.php";
     $data = generatePasskey('sql');
     $connection = new mysqli('localhost', $data[0], $data[1], $data[2]);
