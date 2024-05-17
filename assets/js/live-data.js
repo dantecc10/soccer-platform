@@ -27,5 +27,6 @@ function update_event_data(id) {
             return xhr.response;
         }
     };
-    xhr.send("id=" + id);
+    var data = JSON.stringify({ id: id });
+    xhr.send(data);
 }
