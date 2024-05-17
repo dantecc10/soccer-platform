@@ -79,7 +79,7 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             } else {
                 $id = null;
             }
-            echo (detailed_matches_output(null, intval($id)));
+            echo (detailed_matches_output(null, $id));
             break;
         default:
             // Error, redirigir al inicio
