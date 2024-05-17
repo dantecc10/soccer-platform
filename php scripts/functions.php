@@ -1170,8 +1170,8 @@ function detailed_matches_output($time, $match_fetching_id)
         $events = proccess_events(match_events(intval($matches[$i][10])), [intval($matches[$i][12]), intval($matches[$i][13])]);
         if (isset($match_fetching_id)) {
             if (($match_fetching_id != null) AND ($match_fetching_id != '')) {
-                $events = proccess_events(match_events($match_fetching_id), [intval($matches[$i][12]), intval($matches[$i][13])]);
-                echo ($events);
+                //$events = proccess_events(match_events($match_fetching_id), [intval($matches[$i][12]), intval($matches[$i][13])]);
+                //echo ($events);
                 return $events;
             }
         }
