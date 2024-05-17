@@ -31,3 +31,4 @@ function update_event_data(id) {
     xhr.send(data);
 }
 
+setInterval(update_live_stats, 5000);
