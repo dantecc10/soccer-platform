@@ -37,7 +37,8 @@ function update_event_data(element, id) {
 
 function update_goal_container(element, new_score) {
     const base = element.closest('.live-match-container');
-    const score_array = new_score.split("-");
+    let score_array;
+    score_array = new_score.split("-");
     const targets = base.querySelectorAll('.goal-container');
     targets[0].innerHTML = score_array[0];
     targets[1].innerHTML = score_array[1];
