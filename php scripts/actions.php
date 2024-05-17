@@ -71,7 +71,14 @@ if (isset($_SESSION['id']) || isset($_GET['type'])) {
             //echo ($_POST['match-id']."/".$_POST['referee-id']."/".$_POST['match-score']);
             break;
         case 'update-event-data':
-            $id = $_POST['id'];
+            $data = file_get_contents('php://input');
+            $json = json_decode($data, true);
+
+            if ($json && isset($json['id'])) {
+                $id = $json['id'];
+            } else {
+                $id = null;
+            }
             echo (detailed_matches_output(null, $id));
             break;
         default:
