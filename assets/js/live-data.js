@@ -14,12 +14,11 @@ function update_live_stats() {
     }
     console.log("Hubo " + containers_array.length + " elementos");
 }
-
 function update_event_data(id) {
     var xhr = new XMLHttpRequest();
     var url = 'php scripts/actions.php?type=update-event-data';
     xhr.open('POST', url, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             console.log('Solicitud enviada correctamente.');
@@ -27,6 +26,7 @@ function update_event_data(id) {
             return xhr.response;
         }
     };
-    var data = JSON.stringify({ id: id });
+    var data = 'id=' + encodeURIComponent(id);
     xhr.send(data);
 }
+
