@@ -6,7 +6,7 @@ function update_live_stats() {
     for (let index = 0; index < containers_array.length; index++) {
         const element = containers_array[index];
         const id = element.getAttribute('id');
-        id_string = id.substr(5, id.length);
+        id_string = id.substr(6, id.length);
         id_number = parseInt(id_string);
         element.innerHTML = (update_event_data(id_number));
 
