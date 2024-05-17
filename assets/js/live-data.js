@@ -21,8 +21,8 @@ function update_event_data(element, id) {
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log(xhr.response);
             const response_array = xhr.response.split("*");
+            console.log(response_array[0] + ":" + response_array[1]);
             if (element != null) {
                 element.innerHTML = response_array[0];
             } else {
