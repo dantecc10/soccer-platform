@@ -8,13 +8,13 @@ function update_live_stats() {
         const id = element.getAttribute('id');
         id_string = id.substr(6, id.length);
         id_number = parseInt(id_string);
-        update_event_data(id_number);
+        update_event_data(element, id_number);
 
         console.log("Elemento " + index + "; id: " + id_number);
     }
     console.log("Hubo " + containers_array.length + " elementos");
 }
-function update_event_data(id) {
+function update_event_data(element, id) {
     var xhr = new XMLHttpRequest();
     var url = 'php scripts/actions.php?type=update-event-data';
     xhr.open('POST', url, true);
@@ -23,16 +23,20 @@ function update_event_data(id) {
         if (xhr.readyState === 4 && xhr.status === 200) {
             console.log(xhr.response);
             const response_array = xhr.response.split("*");
-            document.getElementById('match-' + id).innerHTML = response_array[0];
-            update_goal_container(id, response_array[1]);
+            if (element != null) {
+                element.innerHTML = response_array[0];
+            } else {
+                document.getElementById('match-' + id).innerHTML = response_array[0];
+            }
+            update_goal_container(element, id, response_array[1]);
         }
     };
     var data = 'id=' + encodeURIComponent(id);
     xhr.send(data);
 }
 
-function update_goal_container(id, new_score){
-    const base = document.getElementById('match-' + id).closest('.live-match-container');
+function update_goal_container(element, new_score) {
+    const base = element.closest('.live-match-container');
     const score_array = new_score.split("-");
     const targets = base.querySelectorAll('.goal-container');
     targets[0].innerHTML = score_array[0];
