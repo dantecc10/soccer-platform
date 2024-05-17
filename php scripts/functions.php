@@ -1057,6 +1057,7 @@ function detailed_matches_output($time, $match_fetching_id)
     $connection->close();
 
     $matches = $data;
+    print_r($matches);
 
     $q = "'";
     $dom_acumulator = "";
