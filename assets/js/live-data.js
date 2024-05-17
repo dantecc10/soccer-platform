@@ -8,7 +8,7 @@ function update_live_stats() {
         const id = element.getAttribute('id');
         id_string = id.substr(5, id.length);
         id_number = parseInt(id_string);
-        element.innerHTML(update_event_data(id_number));
+        element.innerHTML = (update_event_data(id_number));
 
         console.log("Elemento " + index + "; id: " + id_number);
     }
