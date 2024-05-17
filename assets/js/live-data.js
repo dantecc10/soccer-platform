@@ -21,19 +21,22 @@ function update_event_data(id) {
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log('Solicitud enviada correctamente.');
             console.log(xhr.response);
             const response_array = xhr.response.split("*");
-            document.getElementById('match-' + id).innerHTML = xhr.response;
-            //return xhr.response;
+            document.getElementById('match-' + id).innerHTML = response_array[0];
+            update_goal_container(id, response_array[1]);
         }
     };
     var data = 'id=' + encodeURIComponent(id);
     xhr.send(data);
 }
 
-function update_goal_container(){
-
+function update_goal_container(id, new_score){
+    const base = document.getElementById('match-' + id);
+    const score_array = new_score.split("-");
+    const targets = base.querySelectorAll('.goal-container');
+    targets[0].innerHTML = score_array[0];
+    targets[1].innerHTML = score_array[1];
 }
 
 setInterval(update_live_stats, 8000);
