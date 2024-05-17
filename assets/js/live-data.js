@@ -23,6 +23,7 @@ function update_event_data(id) {
         if (xhr.readyState === 4 && xhr.status === 200) {
             console.log('Solicitud enviada correctamente.');
             console.log(xhr.response);
+            const response_array = xhr.response.split("*");
             document.getElementById('match-' + id).innerHTML = xhr.response;
             //return xhr.response;
         }
@@ -31,4 +32,8 @@ function update_event_data(id) {
     xhr.send(data);
 }
 
-setInterval(update_live_stats, 5000);
+function update_goal_container(){
+
+}
+
+setInterval(update_live_stats, 8000);
