@@ -1033,6 +1033,7 @@ function detailed_matches_output($time, $match_fetching_id)
 
     if (isset($match_fetching_id)) {
         $sql = (($match_fetching_id != null) && ($match_fetching_id != '')) ? (str_replace("(m.status_match > 0 AND m.status_match < 4) ORDER BY", ("(`id_match` = " . intval($match_fetching_id) . ") ORDER BY"), $sql)) : $sql;
+        echo ($sql);
     }
 
     //include_once "php scripts/credentials.php";
