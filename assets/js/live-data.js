@@ -32,7 +32,7 @@ function update_event_data(id) {
 }
 
 function update_goal_container(id, new_score){
-    const base = document.getElementById('match-' + id).closest('live-match-container');
+    const base = document.getElementById('match-' + id).closest('.live-match-container');
     const score_array = new_score.split("-");
     const targets = base.querySelectorAll('.goal-container');
     targets[0].innerHTML = score_array[0];
