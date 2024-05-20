@@ -1,5 +1,6 @@
 <?php
 include_once "php scripts/functions.php";
+
 session_start();
 ?>
 <!DOCTYPE html>
