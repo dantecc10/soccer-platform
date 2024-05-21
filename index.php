@@ -51,36 +51,36 @@ session_start();
         gtag('config', 'G-LTBB1G44GJ');
     </script>
     <script>
-//        function update_event_data(mode) {
-//            var xhr = new XMLHttpRequest();
-//            var url = 'php scripts/actions.php?type=update-event-data';
-//
-//            var data = {
-//                numero: Math.random();
-//            };
-//
-//            var jsonData = JSON.stringify(data);
-//
-//            xhr.open('POST', url, true);
-//            xhr.setRequestHeader('Content-Type', 'application/json');
-//
-//            xhr.onreadystatechange = function() {
-//                if (xhr.readyState === 4 && xhr.status === 200) {
-//                    console.log('Solicitud enviada correctamente.');
-//                    return xhr.responseText;
-//                }
-//            };
-//            xhr.send(jsonData);
-//        }
-//
-//        function prepare_updates() {
-//            const updating_targets = document.querySelectorAll('.fetched-events-container');
-//            for (let index = 0; index < updating_targets.length; index++) {
-//                const element = updating_targets[index];
-//                element.innerHTML = update_event_data();
-//            }
-//        }
-//        setInterval(update_event_data, 20000);
+        //        function update_event_data(mode) {
+        //            var xhr = new XMLHttpRequest();
+        //            var url = 'php scripts/actions.php?type=update-event-data';
+        //
+        //            var data = {
+        //                numero: Math.random();
+        //            };
+        //
+        //            var jsonData = JSON.stringify(data);
+        //
+        //            xhr.open('POST', url, true);
+        //            xhr.setRequestHeader('Content-Type', 'application/json');
+        //
+        //            xhr.onreadystatechange = function() {
+        //                if (xhr.readyState === 4 && xhr.status === 200) {
+        //                    console.log('Solicitud enviada correctamente.');
+        //                    return xhr.responseText;
+        //                }
+        //            };
+        //            xhr.send(jsonData);
+        //        }
+        //
+        //        function prepare_updates() {
+        //            const updating_targets = document.querySelectorAll('.fetched-events-container');
+        //            for (let index = 0; index < updating_targets.length; index++) {
+        //                const element = updating_targets[index];
+        //                element.innerHTML = update_event_data();
+        //            }
+        //        }
+        //        setInterval(update_event_data, 20000);
     </script>
 </head>
 
@@ -89,6 +89,7 @@ session_start();
         <div class="container"><a class="navbar-brand logo" href="#"><img class="bs-icon-sm" src="assets/img/deportex/Dep_Dark.png?h=6baf041d5b489f75a71934a78277e96f" style="max-height: 45px !important;"></a><button data-bs-toggle="collapse" class="navbar-toggler submain-bg-color" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
+                    <!--    comentario-->
                     <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color rem-adjustment" href="/#table"><img src="../assets/img/deportex/campeonato.svg?h=75f1c01ec367425d54761cc2d03b86b7">&nbsp;TABLA</a></li>
                     <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color rem-adjustment" href="/#matches"><img src="../assets/img/deportex/partidos.svg?h=1fd7a22190fe07882dd12f90bcdafbee">&nbsp;PARTIDOS</a></li>
                     <li class="nav-item px-0 pe-lg-4 pe-xl-5"><a class="nav-link text-center custom-font third-color rem-adjustment" href="teams.php"><img src="../assets/img/deportex/equipos.svg?h=1fd7a22190fe07882dd12f90bcdafbee">&nbsp;EQUIPOS</a></li>
