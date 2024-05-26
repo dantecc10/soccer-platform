@@ -286,8 +286,6 @@ if (!isset($_SESSION["referee_id_user"])) {
                                                                     <hr class="my-0 main-color main-bg-color mx-3" style="border: 1.5px solid var(--main-background-color);">
                                                                 </div>
                                                             </div>
-                                                            <!-- Eventos dinámicos -->
-
                                                             <?php
                                                             echo (proccess_events(match_events($_GET['id']), [$_SESSION['teams'][0], $_SESSION['teams'][1]]));
                                                             ?>
