@@ -204,17 +204,31 @@ if (!isset($_SESSION["referee_id_user"])) {
                                 <div class="row rounded-4">
                                     <div class="col"><span class="fs-4">
                                             <?php
+
                                             switch ($match_info[11]) {
-                                                case 0: echo "Programado"; break;
-                                                case 1: echo "1er tiempo"; break;
-                                                case 2: echo "Descanso"; break;
-                                                case 3: echo "2do tiempo"; break;
-                                                default: echo "Finalizado"; break;
+                                                case 0:
+                                                    echo "Programado";
+                                                    break;
+                                                case 1:
+                                                    echo "1er tiempo";
+                                                    break;
+                                                case 2:
+                                                    echo "Descanso";
+                                                    break;
+                                                case 3:
+                                                    echo "2do tiempo";
+                                                    break;
+                                                default:
+                                                    echo "Finalizado";
+                                                    break;
                                             }
+
                                             ?>
                                         </span></div>
                                 </div>
-                                <div class="row"><div class="col" style="height: 2rem !important;"><span class="px-4 py-1 mt-1 rounded-3" style="background-color: orangered;">EN VIVO</span></div></div>
+                                <div class="row">
+                                    <div class="col" style="height: 2rem !important;"><span class="px-4 py-1 mt-1 rounded-3" style="background-color: orangered;">EN VIVO</span></div>
+                                </div>
                                 <div class="row py-2">
                                     <div class="col align-self-center">
                                         <div class="row">
