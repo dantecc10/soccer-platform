@@ -1,5 +1,5 @@
 <?php
-include_once "php scripts/functions.php";
+include_once "php-scripts/functions.php";
 session_start();
 ?>
 <!DOCTYPE html>
@@ -68,7 +68,7 @@ session_start();
                 </div>
                 <div class="row align-items-center">
                     <div class="col">
-                        <form id="add-team-form" class="custom-font" action="php scripts/actions.php?type=add-team" method="post" enctype="multipart/form-data">
+                        <form id="add-team-form" class="custom-font" action="php-scripts/actions.php?type=add-team" method="post" enctype="multipart/form-data">
                             <div class="col">
                                 <div class="row">
                                     <div class="col my-2">

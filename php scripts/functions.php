@@ -367,7 +367,7 @@ function create_match($info)
 
 function fetch_matches($time, $id)
 {
-    include "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
+    include "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php-scripts/connection.php";
     include "soccer_queries.php";
     // Previous = 0, Current = 1, Next = 2 -- $sql = $match_basic_data_queries[$time];
     $sql = ($id == null || $id = "" || $id == 0) ? $match_basic_data_queries[$time] : $match_basic_data_queries[3];
@@ -491,7 +491,7 @@ function match_start_schedule_formatter($start_date)
 // Función para manejar de forma centralizada las operaciones CRUD que involucra una decisión arbitral
 function referee_action()
 {
-    include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
+    include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php-scripts/connection.php";
     include "soccer_queries.php";
     // Goal: 0, Foul: 1, Card: 2
     $sql = $match_basic_data_queries[$time];
@@ -506,7 +506,7 @@ function referee_action()
 }
 function add_team($league, $team, $logo, $couch, $description, $name_user, $last_names_user, $email_user, $password_user, $role_user)
 {
-    include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/connection.php";
+    include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php-scripts/connection.php";
     $sql = "INSERT INTO `teams` VALUES('', ?, ?, NULL, NULL, NULL, NULL, NULL, NULL, ?, ?);";
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("ssss", $team, $couch, $description, $logo['name']);
@@ -1036,7 +1036,7 @@ function detailed_matches_output($time, $match_fetching_id)
     }
 
     include_once "connection.php";
-    //include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php scripts/credentials.php";
+    //include_once "/var/www/vhosts/castelancarpinteyro.com/soccer.castelancarpinteyro.com/php-scripts/credentials.php";
     $data = generatePasskey('sql');
     $connection = new mysqli('localhost', $data[0], $data[1], $data[2]);
 

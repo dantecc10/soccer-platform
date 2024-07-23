@@ -2,7 +2,7 @@
 if (!isset($_GET['team-id'])) {
     header("Location: teams.php");
 }
-include_once "php scripts/functions.php";
+include_once "php-scripts/functions.php";
 session_start();
 if (!logged_in()) {
     header("Location: teams.php?error=notloggedin");
@@ -78,7 +78,7 @@ if (!logged_in()) {
                 </div>
                 <div class="row align-items-center">
                     <div class="col">
-                        <form id="add-players-form" class="custom-font" action="php scripts/actions.php?type=load-players" method="post" enctype="multipart/form-data">
+                        <form id="add-players-form" class="custom-font" action="php-scripts/actions.php?type=load-players" method="post" enctype="multipart/form-data">
                             <div class="col">
                                 <div class="row">
                                     <div class="col my-2 text-center">

@@ -60,7 +60,7 @@
         <section id="team-detail" class="custom-font mt-4 pt-4">
             <div class="container">
                 <?php
-                include "php scripts/functions.php";
+                include "php-scripts/functions.php";
                 echo (team_data($_GET['id']));
                 ?>
             </div>
@@ -876,7 +876,7 @@
         </section>
         <section id="players" class="custom-font mt-4 py-4 main-bg-color">
             <?php
-            include "php scripts/soccer_queries.php";
+            include "php-scripts/soccer_queries.php";
             ?>
             <div class="container py-1">
                 <div class="row py-4 main-color submain-bg-color rounded-5" style="border: 5px solid var(--submain-background-color);">

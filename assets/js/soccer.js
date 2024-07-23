@@ -103,7 +103,7 @@ $(document).ready(function () {
         // Envía los datos mediante AJAX
         $.ajax({
             type: 'POST',
-            url: 'php scripts/actions.php?type=foul',
+            url: 'php-scripts/actions.php?type=foul',
             data: formData,
             success: function (response) {
                 console.log(response);

@@ -1,5 +1,5 @@
 <?php
-include_once "php scripts/functions.php";
+include_once "php-scripts/functions.php";
 
 session_start();
 ?>
@@ -54,7 +54,7 @@ session_start();
     <script>
         //        function update_event_data(mode) {
         //            var xhr = new XMLHttpRequest();
-        //            var url = 'php scripts/actions.php?type=update-event-data';
+        //            var url = 'php-scripts/actions.php?type=update-event-data';
         //
         //            var data = {
         //                numero: Math.random();
@@ -121,7 +121,7 @@ session_start();
                 <div class="row justify-content-center">
                     <div class="col">
                         <?php
-                        include_once "php scripts/functions.php";
+                        include_once "php-scripts/functions.php";
                         echo (generate_league_table());
                         ?>
                     </div>

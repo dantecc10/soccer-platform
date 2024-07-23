@@ -1,5 +1,5 @@
 <?php
-include_once "php scripts/functions.php";
+include_once "php-scripts/functions.php";
 session_start();
 if (!isset($_SESSION['id_user']) && !isset($_SESSION['logged_in'])) {
     //header("Location: login.php");
@@ -71,10 +71,10 @@ if (!isset($_SESSION['id_user']) && !isset($_SESSION['logged_in'])) {
                 </div>
                 <div class="row align-items-center">
                     <div class="col">
-                        <form id="add-match-form" class="custom-font" action="php scripts/actions.php?type=add-match" method="post">
+                        <form id="add-match-form" class="custom-font" action="php-scripts/actions.php?type=add-match" method="post">
                             <div class="col">
                                 <?php
-                                include "php scripts/soccer_queries.php";
+                                include "php-scripts/soccer_queries.php";
                                 $teams = fetch_fields("teams", ['id_team', 'name_team'], null, null);
                                 ?>
                                 <div class="row fs-5">

@@ -15,7 +15,7 @@ function update_live_stats() {
 }
 function update_event_data(element, id) {
     var xhr = new XMLHttpRequest();
-    var url = 'php scripts/actions.php?type=update-event-data';
+    var url = 'php-scripts/actions.php?type=update-event-data';
     xhr.open('POST', url, true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function () {
