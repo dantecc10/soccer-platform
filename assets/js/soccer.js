@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var formData = $('#foul-form').serialize();
 
         $.ajax({
-            url: '../php%20scripts/actions.php?type=foul',
+            url: '../php-scripts/actions.php?type=foul',
             type: 'POST',
             data: formData,
             success: function (response) {
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function foul_ajax(match, referee) {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'php%20scripts/actions.php?type=foul', true);
+    xhr.open('POST', 'php-scripts/actions.php?type=foul', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onload = function () {
@@ -188,7 +188,7 @@ function foul_ajax(match, referee) {
 
 function goal_ajax(match, referee) {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'php%20scripts/actions.php?type=goal', true);
+    xhr.open('POST', 'php-scripts/actions.php?type=goal', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onload = function () {
