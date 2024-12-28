@@ -147,7 +147,7 @@ if (!logged_in()) {
                     <h5 style="filter: blur(0px) !important;">Empieza</h5>
                     <ul>
                         <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Iniciar sesión</a></li>
+                        <li><a href="login.php">Iniciar sesión</a></li>
                         <li><a href="#">Descargas</a></li>
                     </ul>
                 </div>
