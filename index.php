@@ -203,7 +203,7 @@ session_start();
                                         <?php
                                         //echo (matches_output(fetch_matches(2, null)));
                                         //Disable warnings
-                                        error_reporting(E_ERROR | E_PARSE);
+                                        //error_reporting(E_ERROR | E_PARSE);
                                         echo (detailed_matches_output(0, null));
                                         ?>
                                         <div class="row text-center rounded-3 my-2" style="border: 1px solid var(--submain-background-color);background: linear-gradient(90deg, var(--main-background-color), rgba(173,238,0,0.54));">
