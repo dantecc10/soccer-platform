@@ -103,7 +103,7 @@ $(document).ready(function () {
         // Envía los datos mediante AJAX
         $.ajax({
             type: 'POST',
-            url: 'php-scripts/actions.php?type=foul',
+            url: 'php scripts/actions.php?type=foul',
             data: formData,
             success: function (response) {
                 console.log(response);
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var formData = $('#foul-form').serialize();
 
         $.ajax({
-            url: '../php-scripts/actions.php?type=foul',
+            url: '../php%20scripts/actions.php?type=foul',
             type: 'POST',
             data: formData,
             success: function (response) {
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function foul_ajax(match, referee) {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'php-scripts/actions.php?type=foul', true);
+    xhr.open('POST', 'php%20scripts/actions.php?type=foul', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onload = function () {
@@ -188,7 +188,7 @@ function foul_ajax(match, referee) {
 
 function goal_ajax(match, referee) {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'php-scripts/actions.php?type=goal', true);
+    xhr.open('POST', 'php%20scripts/actions.php?type=goal', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     xhr.onload = function () {
@@ -210,9 +210,10 @@ function goal_ajax(match, referee) {
     };
 
     var formData = $('#goal-form').serialize();
-    (local_id == document.getElementById('goal-team').value) ? "&local=true" : "&visitor=true";
+
     xhr.send(formData + "&match-id=" + match + "&referee-id=" + referee + "&match-score=" + match_score());
 }
+
 function match_score() {
     return (document.querySelectorAll(".goal-container")[0].innerHTML + "," + document.querySelectorAll(".goal-container")[1].innerHTML);
 }
