@@ -111,7 +111,7 @@ session_start();
     <main class="page landing-page" style="background-color: var(--third-background-color);">
         <section class="clean-block clean-hero p-0" style="color: rgba(26,38,0,0.75);background: url(&quot;assets/img/deportex/field-4.png?h=1fd7a22190fe07882dd12f90bcdafbee&quot;) center / cover;">
             <div class="text">
-                <h2 class="custom-font custom-shadow d-flex align-items-center text-center justify-content-center main-color" style="max-height: 3.5rem;">¡Bienvenido a&nbsp;<img src="assets/img/deportex/deportex_logo_bienvenida_lime.svg?h=365c85da4681217dad3862b272e0f3bf" width="129" height="20" style="max-height: 5rem;width: auto;">!</h2>
+                <h2 class="custom-font custom-shadow d-flex align-items-center text-center justify-content-center main-color" style="max-height: 3.5rem;">¡Bienvenido a&nbsp;<img src="assets/img/deportex/soccer-field-banner.webp" width="129" height="20" style="max-height: 5rem;width: auto;">!</h2>
                 <p class="custom-font main-color" style="font-size: 2rem;">Una plataforma hecha para administrar la pasión de tu liga de fútbol, ¡bienvenido, hincha!</p><a class="btn btn-outline btn-lg custom-font main-color submain-bg-color" href="#table" type="button" style="border: 1px solid white;">Consultar</a>
             </div>
         </section>
